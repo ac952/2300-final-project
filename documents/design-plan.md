@@ -1,6 +1,6 @@
 # Project 4 - Design & Plan
 
-Your Team Name: [your team name]
+Your Team Name: White Wolf
 
 ## Milestone 1, Part II: Client Selection
 
@@ -9,6 +9,7 @@ Your Team Name: [your team name]
 [Tell us about your client. Who is your client? What kind of website do they want? What are their key goals?]
 
 [NOTE: If you are redesigning an existing website, give us the current URL and some screenshots of the current site. Tell us how you plan to update the site in a significant way that meets the final project requirements.]
+
 
 ## Milestone 1, Part III: Client Requirements
 

@@ -31,10 +31,10 @@ clear understanding of what the client wants and needs.
 
 
 6. What roles will we create? Include a description of exactly what each role is responsible for.
-UX designer
-Project manager
-Front-end web developer
-Back-end web developer (2)
+UX designer: List out user requirements and how we will fulfill them, sketching and wireframing.
+Point-of-contact: contact client, schedule client-development meetings and communicate their needs to rest of team/
+Front-end web developer: Code in HTMl and CSS, JavaScript/
+Back-end web developer (2): Code the backbones of website, code in PHP.
 
 
 7. How will we hold ourselves and one another accountable? What (exactly) will we say to a team member who appears not to be contributing equally? To a team member who fails to deliver what was promised?
