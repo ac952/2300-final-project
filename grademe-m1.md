@@ -26,10 +26,10 @@ Note: Forgetting to commit, push, or check your assignment before the deadline i
 
 We affirm our awareness of the standards of the Cornell Code of Academic Integrity.
 
-Full Names:
-Net IDs:
+Full Names: George Mao, Jessica Zhao, Aileen Cai, Kathy Wang, and Shaina Verma
+Net IDs: gjm222, jwz23, ac952, kw496, and sv377
 (Only include the names/NetIDs of team members who contributed to this milestone.)
 
-Date:
+Date: 4/16/18
 
 ---

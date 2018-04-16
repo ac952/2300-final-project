@@ -8,6 +8,8 @@ Your Team Name: White Wolf
 
 [Tell us about your client. Who is your client? What kind of website do they want? What are their key goals?]
 
+Our client is Circle K International, a community service club on Cornell's campus. They host multiple fundraisers and local charity events throughout the year. They want a website that students can use to find information about the club, upcoming events, current e-board, and pictures from previous events. Their key goals are to make sure that their members and the general student body have digital access to up-to-date information so that they can maximize volunteer participation and club awareness.
+
 [NOTE: If you are redesigning an existing website, give us the current URL and some screenshots of the current site. Tell us how you plan to update the site in a significant way that meets the final project requirements.]
 
 
@@ -17,32 +19,46 @@ Your Team Name: White Wolf
 
 [Tell us about the potential audience for this website. How, when, and where would they interact with the website? Get as much detail as possible from the client to help you find representative users.]
 
+The target audience is undergraduate Cornell students, most likely freshmen and sophomores, who are looking for information on community service opportunities. They would interact with the website on their computers during the school week, after club fest, or on the weekends before service events.
+
 ### Purpose & Content
 
 [Tell us the purpose of the website and what it is all about.]
+The purpose of the website is to inform potential new members and current members about the mission of the club, their involvement with the Ithaca community and global charities, their current leadership board members, and schedule of events and meetings. We will have five pages: an About page, E-board page, Gallery page, Log-In, and Upcoming Events page.
 
 ### Needs and Wants
 
 [Collect your client's and target audience's needs and wants for the website. Come up with several appropriate design ideas on how those needs may be met. In the **Memo** field, justify your ideas and add any additional comments you have. There is no specific number of needs required for this, but you need enough to do the job.]
 
-Example:
 * Needs/Wants #1
   * **Needs and Wants** (What does your client and audience need and want?)
-    * Client wants to cater to people who speak different languages.
+    * Client wants current members to be able to log in and update event schedule as well as add/delete images to the gallery.
   * **Design Ideas and Choices** (How will you meet those needs and wants?)
-    * Create web-pages manually in multiple languages.
-    * Use google translate to auto-translate the site on the fly.
+    * Use session ID and methods learned in class/lab to log in current members to show pages that are accessible to current members only. Clear log-in and log-out messages to let users know about their log-in status.
+    * API that syncs Facebook updates to the website
   * **Memo** (Justify your decisions; additional notes.)
-    * Creating multiple pages manually would require manual skills, effort and time that we do not have.
-    * Using auto-translate using Google-Translate API is an easier way to go. Plus, we would like to learn the Google Translate API.
+    * Log-in and session functionality can be done through modeling the techniques learned in class.
+    * API would involve a steep learning curve and would be less feasible given our current knowledge.
+
+    * Needs/Wants #2
+      * **Needs and Wants** (What does your client and audience need and want?)
+        * Client wants website to be eye-catching but not too colorful. They want the site to reflect the personality of the philanthropic personality of their club.
+      * **Design Ideas and Choices** (How will you meet those needs and wants?)
+        * Incorporate their logo and a color scheme consistent with their club's colors
+        * A modern and intuitive yet professional styling on fonts, font sizes, headers, footers, and organization of body information.
+      * **Memo** (Justify your decisions; additional notes.)
+        * Logo and colors can be modified through diligent CSS styling
+        * Styling on fonts and information can be optimized through visual design techniques learned in lecture.
 
 ### Hosting Plan
 
 [What is your plan for hosting your client's website?]
+We will inform the client about multiple paid and free options for hosting, such as Heroku. They will decide which platform is most suitable to their budget and usability.
 
 ### Client's Edits
 
 [Does the client need the ability to edit the site after the end of the semester? If **Yes**, tell us how you site fit your client's need. If **No**, write down N/A.]
+Yes, we want logged-in users to be able to continue to edit events, pictures, and e-board. General users will remain unable to edit the site in any manner.
 
 ### Information Architecture, Content, and Navigation
 
@@ -53,16 +69,18 @@ Example:
 Example:
 * Content #1
   * **Main Navigation** (List your site's navigation here.)
-    * Portfolio
+    * About Us, Upcoming Events, Gallery, E-board, Log-In
   * **Sub-Categories** (List any sub-categories of under the main navigation.)
-    * Websites
-    * Mobile Apps
-    * Tablets
+    * N/A
   * **Content** (List all the content corresponding to main navigation and sub-categories.)
-    * *Portfolio*: list all the projects (as images) this client has worked on. When the image is hovered over, display a description of the project; add a search function to enable users search for specific projects;
-    * *Websites*: showcase all the websites designed by the client, with thumbnail images and a brief description for each design;
-    * *Mobile Apps*: showcase all the mobile apps designed by the client, with thumbnail images and a brief description for each design;
-    * *Tablets*: showcase all the tablet applications designed by the client, with thumbnail images and a brief description for each design;
+    * *Main Navigation* : Horizontal navigation bar that highlights tabs when hovered over
+    * *About Us*: list the mission statement, history, philanthropy initiatives, tenets, and awards/achievements.
+    * *Upcoming Events*: list all dates and times for upcoming events for the current semester, including district and national events. Log-in members should be able to edit events on this page.
+    * *Gallery*: display a slideshow of photos showcasing volunteers at a wide range of events
+    * *E-board*: photos and short biographies of current e-board members in the club so that users can put a face to the leaders of the club
+    * *Log-in*: A page with a log-in and password box for members to log-in to make changes to gallery and event schedule
+    * *Contact*: Contact information will be in footer of page
+
 
 ### Interactivity
 
@@ -70,21 +88,43 @@ Example:
 
 [Much of this is up to you, however, implementing a login system is **required**. Logging in should not be required to view the site, however it must unlock extra functionality, e.g., admin functionality, comment posting, etc.]
 
+* Log-in system that will unlock adding/deleting of events on the events page and adding/deleting images on the gallery page. General users will be able to view this information but not edit it.
+* A slideshow for images to allow users to transition between image viewing smoothly
+* Hover and highlight feature that lets users know which page they are on
+
 [Also, describe how the interactivity connects with the needs of the clients/target audience.]
+* Logging in allows the client's members to control the content of the website to keep it up-to-date with service events and images while also preventing non-members from making changes
+* A slideshow will allow viewers to move seamlessly through the photo gallery and give users a better sense of what the club does/what they are like, thereby encouraging them to join.
+* Hover and highlight features will allow users to keep track of their position through the website and make clear their actions in regards to navigation, which fulfills client's desires to have a modern and intuitive website design
 
 ### External Code
 
 [What libraries (e.g. editor.js, jQuery Cookie, Image Sliders, jQuery) are you planning to use for the site? What do you have to do to incorporate those libraries? How much of your own code will satisfy the project requirements?]
+* javascript for the slideshow
+* 90% of our code will be our own, with the rest coming from references to class code and external code. We will have a javascript folder under our styles folder.
 
 ### Scale
 
 [How large will the site be (approximate number of pages) and how many hours of work will be required to complete it?]
+The site will be approximately 5 pages (perhaps an extra one or two pages that users will be redirected to for editing) and will require 120 hours of work, with approximately 30 hours of work a week (6 hours per team member per week).
 
 ## Milestone 1, Part IV: Work Distribution
 
 [Describe how each of your responsibilities will be distributed among your group members.]
 
 [Set internal deadlines. Determine your internal dependencies. Whose task needs to be completed first in order for another person's task to be relevant? Be specific in your task descriptions so that everyone knows what needs to be done and can track the progress effectively. Consider how much time will be needed to review and integrate each other's work. Most of all, make sure that tasks are balanced across the team.]
+
+Jessica & Aileen: heavily involved in back-end coding
+Shaina: information architecture and content, some coding both on back and front end
+Kathy: front-end design, javascript, some back-end
+George: heavily involved in front-end design, javascript, and some back-end
+Everyone will review everyone else's work and help out wherever possible.
+
+Aim for milestones to be finished by Monday so that we have a buffer of time.
+Wireframing and sketching done by Thursday (George, Kathy).
+Back-end coding needs to be done first to set infrastructure for design and fine-tuning of interactivity (Jessica, Aileen).
+Start coding and have a skeleton site ready by the end of Milestone 2. Full engagement in coding begins after Milestone 2 (Everyone).
+Draft of site should be well-rounded by end of Milestone 3. Perfecting details and functionality throughout Milestone 4 to 5.
 
 ## Milestone 1, Part V: Additional Comments
 
