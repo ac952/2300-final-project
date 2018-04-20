@@ -114,10 +114,11 @@ The site will be approximately 5 pages (perhaps an extra one or two pages that u
 
 [Set internal deadlines. Determine your internal dependencies. Whose task needs to be completed first in order for another person's task to be relevant? Be specific in your task descriptions so that everyone knows what needs to be done and can track the progress effectively. Consider how much time will be needed to review and integrate each other's work. Most of all, make sure that tasks are balanced across the team.]
 
-Jessica & Aileen: heavily involved in back-end coding
-Shaina: information architecture and content, some coding both on back and front end
-Kathy: front-end design, javascript, some back-end
-George: heavily involved in front-end design, javascript, and some back-end
+Everyone will be involved in the coding, with all the languages.
+Jessica & Aileen: planning databases, testing
+Shaina: information architecture and content
+Kathy: sketches, wireframing
+George: sketches, wireframing
 Everyone will review everyone else's work and help out wherever possible.
 
 Aim for milestones to be finished by Monday so that we have a buffer of time.
@@ -135,6 +136,8 @@ Draft of site should be well-rounded by end of Milestone 3. Perfecting details a
 ## Milestone 2, Part I: PHP Interactivity
 
 [Describe here what you plan to do for your PHP Interactivity requirement.]
+* Log-in system that will unlock adding/deleting of events on the events page, adding/deleting images on the gallery page, and editing the eboard information. General users will be able to view this information but not edit it. Use PHP to show the tables, and control whether or not a user can see the content.
+* Hover and highlight feature that lets users know which page they are on. Use an array that contains all the tabs. Add an if statement in the header (if we are on a certain page, then highlight the text of the tab). 
 
 ## Milestone 2, Part II: Sketches, Navigation & Wireframes
 
