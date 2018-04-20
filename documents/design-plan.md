@@ -230,32 +230,125 @@ Table: movies
 
 * index.php - main page.
 * includes/init.php - stuff that useful for every web page.
-* TODO
+* header.php
+* footer.php
+* gallery.php
+* login.php 
+* logout.php
+* events.php
+* eboard.php
 
 ### Pseudocode
 
 [For each PHP file, plan out your pseudocode. You probably want a subheading for each file.]
 
+We will have five pages: an About page, E-board page, Gallery page, Log-In, and Upcoming Events page.
+
+#### header.php
+
+```
+title of website
+
+for loop iterating through navigation links of pages that will be available for user. Pages that show will depend on:
+- whether admin is logged in or logged out
+- styled depending on which page user is currently on
+
+show message whether a user is currently logged in or not.
+```
+
+#### footer.php
+
+```
+credits to us (names and net ids)
+
+```
 #### index.php
 
 ```
-Pseudocode for index.php...
+includes header and footer at top and bottom of page
 
-include init.php
+text with formatting for:
+- mission statement
+- history
+- philanthropy initiatives
+- awards/recognition
 
-TODO
 ```
-
 #### includes/init.php
 
 ```
-messages = array to store messages for user (you may remove this)
+array of all pages used in header
 
-// DB helper functions (you do not need to write this out since they are provided.)
+messages = array to store messages for user
+
+// DB helper functions
 
 db = connect to db
 
-...
+login and logout functions
+
+checking if user is logged in
+
+```
+#### eboard.php
+
+```
+includes header and footer at top and bottom of page
+
+show profiles of e-board members (formatted text and images)
+- name
+- major
+- title
+- info
+- profile photo
+
+```
+#### gallery.php
+
+```
+includes header and footer at top and bottom of page
+
+slideshow of photos with captions
+ - formatted using Javascript
+ - making sql query
+ - executing sql query
+ - iterating through records of photos and displaying them in slideshow
+
+if statement giving a link to edit photos if admin is logged in
+
+```
+#### events.php
+
+```
+includes header and footer at top and bottom of page
+
+formatted table with upcoming events with fields containing date, info, etc. from our database
+- making sql query
+- executing sql query
+- iterating through event and event details to show in table
+
+```
+
+#### login.php
+
+```
+includes header and footer at top and bottom of page
+
+only shows in header if user is not logged in
+
+will have a form that allows users to put in usernames and passwords and a submit button
+
+will filter input and escape output
+
+```
+#### logout.php
+
+```
+includes header and footer at top and bottom of page
+
+only shows in header once user is logged in
+
+clear session and display message to user whether or not log out was successful
 
 ```
 
