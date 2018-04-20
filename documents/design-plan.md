@@ -137,7 +137,7 @@ Draft of site should be well-rounded by end of Milestone 3. Perfecting details a
 
 [Describe here what you plan to do for your PHP Interactivity requirement.]
 * Log-in system that will unlock adding/deleting of events on the events page, adding/deleting images on the gallery page, and editing the eboard information. General users will be able to view this information but not edit it. Use PHP to show the tables, and control whether or not a user can see the content.
-* Hover and highlight feature that lets users know which page they are on. Use an array that contains all the tabs. Add an if statement in the header (if we are on a certain page, then highlight the text of the tab). 
+* Hover and highlight feature that lets users know which page they are on. Use an array that contains all the tabs. Add an if statement in the header (if we are on a certain page, then highlight the text of the tab).
 
 ## Milestone 2, Part II: Sketches, Navigation & Wireframes
 
@@ -236,7 +236,7 @@ Table: movies
 * header.php
 * footer.php
 * gallery.php
-* login.php 
+* login.php
 * logout.php
 * events.php
 * eboard.php
@@ -305,7 +305,17 @@ show profiles of e-board members (formatted text and images)
 - info
 - profile photo
 
+include delete button near every eboard member, include add button, include edit button near every eboard member
+
 ```
+
+#### edit_eboard.php
+
+```
+form that allows you to edit information on specific eboart member
+
+```
+
 #### gallery.php
 
 ```
