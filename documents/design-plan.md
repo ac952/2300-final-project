@@ -136,6 +136,8 @@ Draft of site should be well-rounded by end of Milestone 3. Perfecting details a
 ## Milestone 2, Part I: PHP Interactivity
 
 [Describe here what you plan to do for your PHP Interactivity requirement.]
+* Log-in system that will unlock adding/deleting of events on the events page, adding/deleting images on the gallery page, and editing the eboard information. General users will be able to view this information but not edit it. Use PHP to show the tables, and control whether or not a user can see the content.
+* Hover and highlight feature that lets users know which page they are on. Use an array that contains all the tabs. Add an if statement in the header (if we are on a certain page, then highlight the text of the tab). 
 
 ## Milestone 2, Part II: Sketches, Navigation & Wireframes
 
