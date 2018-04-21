@@ -144,6 +144,12 @@ Draft of site should be well-rounded by end of Milestone 3. Perfecting details a
 ### Sketches
 
 [Insert your sketches here.]
+![](sketch1_about.jpg)
+![](sketch2_eboard.jpg)
+![](sketch3_events.jpg)
+![](sketch4_gallery.jpg)
+![](sketch5_login.jpg)
+
 
 ### Navigation
 
