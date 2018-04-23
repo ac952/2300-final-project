@@ -169,8 +169,8 @@ Example:
 
 [Insert your wireframes here.]
 ![](images/About.png)
-![](images/Events.png)
 ![](images/Executive_Board.png)
+![](images/Events.png)
 ![](images/Gallery.png)
 ![](images/Login.png)
 
