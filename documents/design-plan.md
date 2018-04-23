@@ -168,6 +168,11 @@ Example:
 ### Wireframes
 
 [Insert your wireframes here.]
+![](About.png)
+![](Events.png)
+![](Executive_Board.png)
+![](Gallery.png)
+![](Login.png)
 
 ## Milestone 2, Part III: Evaluate your Design
 
