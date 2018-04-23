@@ -240,7 +240,7 @@ Table: movies
 * logout.php
 * events.php
 * eboard.php
-* eboart_edit.php
+* eboard_edit.php
 
 ### Pseudocode
 
