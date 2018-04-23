@@ -144,11 +144,11 @@ Draft of site should be well-rounded by end of Milestone 3. Perfecting details a
 ### Sketches
 
 [Insert your sketches here.]
-![](sketch1_about.jpg)
-![](sketch2_eboard.jpg)
-![](sketch3_events.jpg)
-![](sketch4_gallery.jpg)
-![](sketch5_login.jpg)
+![](images/sketch1_about.jpg)
+![](images/sketch2_eboard.jpg)
+![](images/sketch3_events.jpg)
+![](images/sketch4_gallery.jpg)
+![](images/sketch5_login.jpg)
 
 
 ### Navigation
@@ -168,11 +168,11 @@ Example:
 ### Wireframes
 
 [Insert your wireframes here.]
-![](About.png)
-![](Events.png)
-![](Executive_Board.png)
-![](Gallery.png)
-![](Login.png)
+![](images/About.png)
+![](images/Events.png)
+![](images/Executive_Board.png)
+![](images/Gallery.png)
+![](images/Login.png)
 
 ## Milestone 2, Part III: Evaluate your Design
 
