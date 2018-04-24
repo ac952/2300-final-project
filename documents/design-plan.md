@@ -157,14 +157,11 @@ Draft of site should be well-rounded by end of Milestone 3. Perfecting details a
 
 [Tip: If you use card sorting for your navigation, show us that work by including a picture!]
 
-Example:
-- Home
 - About
 - Executive Board
 - Events
 - Gallery
-- Login
-- Logout
+- Login/Logout
 
 ### Wireframes
 
@@ -474,6 +471,8 @@ Task 3: Determine when and where the weekly meetings are held.
 
 We realized that the wording for the Eboard page - and all the pages - must be gender-inclusive. Members are diverse and can be anywhere on the fluid gender spectrum, and the website should reflect and project the welcoming and inclusive nature of the organization both to uphold its values and to put potential new members at ease. We will work on the labels and wording for the form and for the content to ensure that the whole website is gender-inclusive - however, currently we have a skeleton website this so this is not visible. We also noticed that deciding on a location for the weekly meetings could be difficult - it is not entirely intuitive which tab it should be placed under. Further user testing will be required to determine which tab is the most suitable (currently, it seems to be between About and Events - user testing in future rounds will clarify which is the most sensible option)
 
+Moreover, most of the navigation features on our website do not require much tinkering or carry much risk, as they resemble standard navigation features one sees on any website. Thus, we purposefully designed our website in a way that would allow both males and females to feel at ease during use.
+
 [Did you discover any issues with your design? What were they? How did you change your design to address the gender-inclusiveness bugs you discovered?]
 
 [Your responses here should be very thorough and thoughtful.]
@@ -620,6 +619,10 @@ include delete button near every eboard member, include add button, include edit
 ```
 form that allows you to edit information on specific eboard member
 
+escape output for htmlspecialchars, trim
+
+SELECT eboard_image FROM eboard WHERE eboard_image = $record[id]
+
 ```
 
 #### gallery.php
@@ -627,13 +630,13 @@ form that allows you to edit information on specific eboard member
 ```
 includes header and footer at top and bottom of page
 
-slideshow of photos with captions
- - formatted using Javascript
- - making sql query
- - executing sql query
- - iterating through records of photos and displaying them in slideshow
+gallery of photos with captions
 
 if statement giving a link to edit photos if admin is logged in
+
+SELECT g_image FROM gallery WHERE g_image = $record[id]
+
+DELETE FROM gallery WHERE id = $record[id];
 
 ```
 #### events.php
@@ -645,6 +648,11 @@ formatted table with upcoming events with fields containing date, info, etc. fro
 - making sql query
 - executing sql query
 - iterating through event and event details to show in table
+
+filter input for event date (make sure it's a valid date), event name (escape for htmlspecialchars, trim), event time (make sure it's a vlid time), and location (escape for htmlspecialchars, trim)
+INSERT INTO events(event_name, date, time, location, description) VALUES (:event_name, :date, :time, :location, :description);
+
+DELETE FROM events WHERE id = $record[id];
 
 ```
 
