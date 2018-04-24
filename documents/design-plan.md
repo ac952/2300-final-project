@@ -137,7 +137,7 @@ Draft of site should be well-rounded by end of Milestone 3. Perfecting details a
 
 [Describe here what you plan to do for your PHP Interactivity requirement.]
 * Log-in system that will unlock adding/deleting of events on the events page, adding/deleting images on the gallery page, and editing the eboard information. General users will be able to view this information but not edit it. Use PHP to show the tables, and control whether or not a user can see the content.
-* Hover and highlight feature that lets users know which page they are on. Use an array that contains all the tabs. Add an if statement in the header (if we are on a certain page, then highlight the text of the tab). 
+* Hover and highlight feature that lets users know which page they are on. Use an array that contains all the tabs. Add an if statement in the header (if we are on a certain page, then highlight the text of the tab).
 
 ## Milestone 2, Part II: Sketches, Navigation & Wireframes
 
@@ -169,7 +169,7 @@ Example:
 
 [Pick a persona that you believe will help you address the gender bias within your design.]
 
-I've selected **[Abby/Patricia/Patrick/Tim]** as my persona.
+I've selected **Abby** as my persona.
 
 I've selected my persona because... [Tell us why you picked your persona in 1-3 sentences. Your explanation should include why your persona will help you address gender-inclusiveness bugs in your design.]
 
@@ -199,11 +199,92 @@ Task 3:
 
 [You may need to add additional subgoals and/or actions for each task.]
 
+**Task name: Find the name and contact details of the VP of Finance**
+
+**Subgoal # 1 : Navigate to eBoard tab**
+
+  - Will [persona name] have formed this sub-goal as a step to their overall goal?
+    - Yes, maybe or no: Yes
+    - Why? (Especially consider [persona name]'s Motivations/Strategies.)
+
+        [Tell us why..]
+
+[Add as many actions as you need...]
+**Action # [action number] : [action name]**
+	(e.g., "# 1 : Put the mouse at the beginning of the section you want to print")
+
+  - Will [persona name] know what to do at this step?
+    - Yes, maybe or no: [yes/maybe/no]
+    - Why? (Especially consider [persona name]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
+
+        [Tell us why...]
+
+  - If [persona name] does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+    - Yes, maybe or no: [yes/maybe/no]
+    - Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
+
+        [Tell us why...]
+
+
 #### Task 2 - Cognitive Walkthrough
 
+**Task name: [name of task]**
+
+[Add as many subgoals as you needs]
+**Subgoal # [subgoal number] : [subgoal name]**
+	(e.g., "# 1 : Select the section of the document you want to print")
+
+  - Will [persona name] have formed this sub-goal as a step to their overall goal?
+    - Yes, maybe or no: [yes/maybe/no]
+    - Why? (Especially consider [persona name]'s Motivations/Strategies.)
+
+        [Tell us why..]
+
+[Add as many actions as you need...]
+**Action # [action number] : [action name]**
+	(e.g., "# 1 : Put the mouse at the beginning of the section you want to print")
+
+  - Will [persona name] know what to do at this step?
+    - Yes, maybe or no: [yes/maybe/no]
+    - Why? (Especially consider [persona name]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
+
+        [Tell us why...]
+
+  - If [persona name] does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+    - Yes, maybe or no: [yes/maybe/no]
+    - Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
+
+        [Tell us why...]
 
 #### Task 3 - Cognitive Walkthrough
 
+**Task name: [name of task]**
+
+[Add as many subgoals as you needs]
+**Subgoal # [subgoal number] : [subgoal name]**
+	(e.g., "# 1 : Select the section of the document you want to print")
+
+  - Will [persona name] have formed this sub-goal as a step to their overall goal?
+    - Yes, maybe or no: [yes/maybe/no]
+    - Why? (Especially consider [persona name]'s Motivations/Strategies.)
+
+        [Tell us why..]
+
+[Add as many actions as you need...]
+**Action # [action number] : [action name]**
+	(e.g., "# 1 : Put the mouse at the beginning of the section you want to print")
+
+  - Will [persona name] know what to do at this step?
+    - Yes, maybe or no: [yes/maybe/no]
+    - Why? (Especially consider [persona name]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
+
+        [Tell us why...]
+
+  - If [persona name] does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+    - Yes, maybe or no: [yes/maybe/no]
+    - Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
+
+        [Tell us why...]
 
 ### Cognitive Walk-though Results
 
@@ -236,7 +317,7 @@ Table: movies
 * header.php
 * footer.php
 * gallery.php
-* login.php 
+* login.php
 * logout.php
 * events.php
 * eboard.php
