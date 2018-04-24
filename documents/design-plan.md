@@ -144,6 +144,12 @@ Draft of site should be well-rounded by end of Milestone 3. Perfecting details a
 ### Sketches
 
 [Insert your sketches here.]
+![](images/sketch1_about.jpg)
+![](images/sketch2_eboard.jpg)
+![](images/sketch3_events.jpg)
+![](images/sketch4_gallery.jpg)
+![](images/sketch5_login.jpg)
+
 
 ### Navigation
 
@@ -162,6 +168,11 @@ Example:
 ### Wireframes
 
 [Insert your wireframes here.]
+![](images/About.png)
+![](images/Executive_Board.png)
+![](images/Events.png)
+![](images/Gallery.png)
+![](images/Login.png)
 
 ## Milestone 2, Part III: Evaluate your Design
 
@@ -298,13 +309,51 @@ Task 3:
 
 [Describe the structure of your database. You may use words or a picture. A bulleted list is probably the simplest way to do this.]
 
-Table: movies
-* field 1: description...
-* field...
+Our website will consist of four tables in our database. Table1 will contain user accounts for current members, Table2 will store photos for our gallery, Table3 will have current members and the fourth table will contain information about upcoming events. The table will also be updated as the members add events.
+
+Table: accounts
+* field 1: id INTEGER {PRIMARY KEY, NOT NULL, AUTO INCREMENT,UNIQUE}
+* field 2: username {TEXT NOT NULL UNIQUE}
+* field 3: password {TEXT NOT NULL UNIQUE}
+* field 4: session {TEXT UNIQUE}
+
+Table: gallery
+* field 1: id INTEGER {PRIMARY KEY, NOT NULL, AUTO INCREMENT,UNIQUE}
+* field 2: g_image {TEXT NOT NULL}
+* field 3: g_image_name {TEXT NOT NULL}
+
+Table: eboard
+* field 1: id INTEGER {PRIMARY KEY, NOT NULL, AUTO INCREMENT,UNIQUE}
+* field 2: eboard_image {TEXT NOT NULL}
+* field 3: eboard_name {TEXT NOT NULL}
+
+Table: events
+* field 1: id INTEGER {PRIMARY KEY, NOT NULL, AUTO INCREMENT,UNIQUE}
+* field 2: event_name {TEXT NOT NULL}
+* field 3: date {TEXT NOT NULL UNIQUE}
+* field 4: time {TEXT NOT NULL}
+* field 5: location {TEXT NOT NULL}
+* field 6: description {TEXT NOT NULL}
 
 ### Database Queries
 
 [Plan your database queries. You may use natural language, pseudocode, or SQL.]
+* Inserting Query for events table (adding information)
+
+"INSERT INTO events(event_name, date, time, location, description) VALUES (:event_name, :date, :time, :location, :description)";
+
+* Deleting Query for events and images
+Note: delete button will be placed underneath photo. Once user clicks on delete
+button, run the query to delete the image by its id.
+
+"DELETE FROM events WHERE id = $record[id]";
+
+"DELETE FROM gallery WHERE id = $record[id]";
+
+* Selecting Query for edits
+SELECT g_image FROM gallery WHERE g_image = $record[id]"
+
+SELECT eboard_image FROM eboard WHERE eboard_image = $record[id]"
 
 ## Milestone 2, Part V: Structure and Pseudocode
 
@@ -321,6 +370,7 @@ Table: movies
 * logout.php
 * events.php
 * eboard.php
+* eboard_edit.php
 
 ### Pseudocode
 
@@ -386,7 +436,17 @@ show profiles of e-board members (formatted text and images)
 - info
 - profile photo
 
+include delete button near every eboard member, include add button, include edit button near every eboard member
+
 ```
+
+#### edit_eboard.php
+
+```
+form that allows you to edit information on specific eboart member
+
+```
+
 #### gallery.php
 
 ```
