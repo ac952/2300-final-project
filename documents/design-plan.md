@@ -158,12 +158,13 @@ Draft of site should be well-rounded by end of Milestone 3. Perfecting details a
 [Tip: If you use card sorting for your navigation, show us that work by including a picture!]
 
 Example:
-* Products (top-level)
-  * Shoes (sub-page)
-  * Pants
-  * Shirts
-* Shopping Cart
-* Contact
+- Home
+- About
+- Executive Board
+- Events
+- Gallery
+- Login
+- Logout
 
 ### Wireframes
 
