@@ -58,7 +58,7 @@ We will inform the client about multiple paid and free options for hosting, such
 ### Client's Edits
 
 [Does the client need the ability to edit the site after the end of the semester? If **Yes**, tell us how you site fit your client's need. If **No**, write down N/A.]
-Yes, we want logged-in users to be able to continue to edit events, pictures, and e-board. General users will remain unable to edit the site in any manner.
+Yes, we want logged-in users to be able to continue to edit events and pictures. General users will remain unable to edit the site in any manner.
 
 ### Information Architecture, Content, and Navigation
 
@@ -256,7 +256,7 @@ Task 3: Determine when and where the weekly meetings are held.
 
 #### Task 2 - Cognitive Walkthrough
 
-**Task name: Login and update the Recruitment Chair's photo.**
+**Task name: Login and update the gallery photo.**
 
 **Subgoal #1 : Login**
 
@@ -294,7 +294,7 @@ Task 3: Determine when and where the weekly meetings are held.
         - Yes, maybe or no: Yes
         - Why? We will code the CSS so that if you hover over a link in the nav bar, it will stand out in some way (e.g. highlight, change color etc). This is common practice across many webpages, and will likely be a familiar signifier to Abby that she is on the right track.
 
-    **Action #4 : Click on the Eboard tab**
+    **Action #4 : Click on the Gallery tab**
 
       - Will Abby know what to do at this step?
         - Yes, maybe or no: Yes
