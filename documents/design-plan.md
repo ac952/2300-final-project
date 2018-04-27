@@ -544,7 +544,6 @@ SELECT eboard_image FROM eboard WHERE eboard_image = $record[id]"
 * logout.php
 * events.php
 * eboard.php
-* eboard_edit.php
 
 ### Pseudocode
 
