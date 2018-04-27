@@ -1,11 +1,28 @@
 <?php
 
+// An array to deliver messages to the user.
+$messages = array();
+
+// Record a message to display to the user.
+function record_message($message) {
+  global $messages;
+  array_push($messages, $message);
+}
+
 function exec_sql_query($db, $sql, $params = array()) {
   $query = $db->prepare($sql);
   if ($query and $query->execute($params)) {
     return $query;
   }
   return NULL;
+}
+
+// Write out any messages to the user.
+function print_messages() {
+  global $messages;
+  foreach ($messages as $message) {
+    echo "<p><strong>" . htmlspecialchars($message) . "</strong></p>\n";
+  }
 }
 
 // YOU MAY COPY & PASTE THIS FUNCTION WITHOUT ATTRIBUTION.

@@ -5,8 +5,7 @@ include('includes/init.php');
 $current_page_id="index";
 
 const IMG_UPLOADS_PATH = "uploads/images/";
-
-echo "hello";
+const MAX_FILE_SIZE = 1000000;
 
 if (isset($_POST['delete_photo'])) {
   $delete_photo = TRUE;
@@ -21,8 +20,6 @@ else {
 }
 
 //adding a photo
-const MAX_FILE_SIZE = 1000000;
-const IMG_UPLOADS_PATH = "uploads/images/";
 
 //performing upload
 if (isset($_POST["submit_upload"])) {
@@ -59,7 +56,7 @@ if (isset($_POST["submit_upload"])) {
   else {
     array_push($messages, "Failed to upload file.");
   }
-
+}
 ?>
 
 <!DOCTYPE html>
@@ -91,7 +88,7 @@ if (isset($_POST["submit_upload"])) {
       <h1 id="article-title">Browse Gallery</h1>
         <p>Browse gallery.</p>
 
-        <form id="uploadFile" action="gallery.php" method="post" enctype="multipart/form-data">
+      <form id="uploadFile" action="gallery.php" method="post" enctype="multipart/form-data">
       <ul>
         <li>
           <label>Upload File:</label>
@@ -104,36 +101,38 @@ if (isset($_POST["submit_upload"])) {
       </ul>
     </form>
 
-          <?php
-            $records = exec_sql_query($db, "SELECT * FROM images")->fetchAll(PDO::FETCH_ASSOC);
-            foreach($records as $record){
-              echo "<img src=\"" .IMG_UPLOADS_PATH. htmlspecialchars($record["id"].".".$record["img_ext"]) .
-              "\">" ."</a></div>";
+    <?php
+      $records = exec_sql_query($db, "SELECT * FROM images")->fetchAll(PDO::FETCH_ASSOC);
+      foreach($records as $record){
+        echo "<img src=\"" .IMG_UPLOADS_PATH. htmlspecialchars($record["id"].".".$record["img_ext"]) .
+        "\">" ."</a></div>";
 
-              //checks if user is owner and logged in before showing delete option
-              $sql = "SELECT * FROM images WHERE id = :img_id";
-              $params = array(
-                ':img_id' => $record["id"]
-              );
-              $records = exec_sql_query($db, $sql, $params)->fetchAll();
-              foreach($records as $record){
-                $owner_id = $record["user_id"];
-               echo htmlspecialchars($record["id"]);
-              //if($current_user) {
-              //if($current_user==$owner_id){?>
+        //checks if user is owner and logged in before showing delete option
+        $sql = "SELECT * FROM images WHERE id = :img_id";
+        $params = array(
+          ':img_id' => $record["id"]
+        );
+        $records = exec_sql_query($db, $sql, $params)->fetchAll();
+        foreach($records as $record){
+          $owner_id = $record["user_id"];
+         echo htmlspecialchars($record["id"]);
+        //if($current_user) {
+        //if($current_user==$owner_id){?>
 
-                <form id="uploadFile" action=<?php echo "gallery.php" ?>
-                  method="post" enctype="multipart/form-data">
-                  <ul>
-                    <li>
-                      <label>Delete this photo:</label>
-                    </li>
-                    <li>
-                      <input type="submit" name="delete_photo" value="Delete">
-                    </li>
-                  </ul>
-                </form>
-              <?php }} ?>
+          <form id="uploadFile" action=<?php echo "gallery.php" ?>
+            method="post" enctype="multipart/form-data">
+            <ul>
+              <li>
+                <label>Delete this photo:</label>
+              </li>
+              <li>
+                <input type="submit" name="delete_photo" value="Delete">
+              </li>
+            </ul>
+          </form>
+        <?php }}
+            //}}
+         ?>
     </div>
   </body>
 
