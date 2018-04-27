@@ -354,13 +354,13 @@ Task 3: Determine when and where the weekly meetings are held.
       - Yes, maybe or no: Yes
       - Why? Either the webpage will confirm she is logged in as the user provided, or will provide an error message stating that either the username or password is incorrect, in which case she can double check she inputted both correctly.
 
-**Subgoal #2 : Change the Recruitment Chair's photo**
+**Subgoal #2 : Add a new photo to the gallery **
 
     - Will Abby have formed this sub-goal as a step to their overall goal?
       - Yes, maybe or no: Yes
       - Why? This is the main thing that is required of her in the task.
 
-    **Action #1 : Move the mouse to the Eboard tab in the navigation**
+    **Action #1 : Move the mouse to the Gallery tab in the navigation**
 
         - Will Abby know what to do at this step?
           - Yes, maybe or no: Yes
@@ -370,7 +370,7 @@ Task 3: Determine when and where the weekly meetings are held.
           - Yes, maybe or no: Yes
           - Why? We will code the CSS so that if you hover over a link in the nav bar, it will stand out in some way (e.g. highlight, change color etc). This is common practice across many webpages, and will likely be a familiar signifier to Abby that she is on the right track.
 
-    **Action #2 : Click on the Eboard tab**
+    **Action #2 : Click on the Gallery tab**
 
         - Will Abby know what to do at this step?
           - Yes, maybe or no: Yes
@@ -380,7 +380,7 @@ Task 3: Determine when and where the weekly meetings are held.
           - Yes, maybe or no: Yes
           - Why? She will see that the page she is looking for has loaded.
 
-  **Action #3 : Scroll through the page until they find the Recruitment Chair**
+  **Action #3 : Scroll through the page until they find the button to add a photo.**
 
         - Will Abby know what to do at this step?
           - Yes, maybe or no: Yes
@@ -390,7 +390,7 @@ Task 3: Determine when and where the weekly meetings are held.
           - Yes, maybe or no: Yes
           - Why? The members and their roles are clearly labeled so will be quickly visible to a viewer, and she should easily be able to identify the profile of the Recruitment Chair.
 
-  **Action #4 : Click the edit button near the Recruitment Chair's profile**
+  **Action #4 : Click the add photo button on the page.**
 
         - Will Abby know what to do at this step?
           - Yes, maybe or no: Yes
@@ -398,7 +398,7 @@ Task 3: Determine when and where the weekly meetings are held.
 
         - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
           - Yes, maybe or no: Yes
-          - Why? The page will redirect to eboard_edit.php, which allows a logged-in user to make edits via a form. It will be clear to her how to change the information in the Recruitment Chair's profile, in this case their photo.
+          - Why? The page will allow a logged-in user to make edits via a form. It will be clear to her how to upload a photo.
 
   **Action #5 : Click on 'upload image'**
 
