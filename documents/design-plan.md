@@ -492,8 +492,8 @@ Table: accounts
 
 Table: gallery
 * field 1: id INTEGER {PRIMARY KEY, NOT NULL, AUTO INCREMENT,UNIQUE}
-* field 2: g_image {TEXT NOT NULL}
-* field 3: g_image_name {TEXT NOT NULL}
+* field 2: img_name {TEXT NOT NULL}
+* field 2: img_ext {TEXT NOT NULL}
 
 Table: events
 * field 1: id INTEGER {PRIMARY KEY, NOT NULL, AUTO INCREMENT,UNIQUE}
