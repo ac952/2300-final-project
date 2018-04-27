@@ -136,7 +136,7 @@ Draft of site should be well-rounded by end of Milestone 3. Perfecting details a
 ## Milestone 2, Part I: PHP Interactivity
 
 [Describe here what you plan to do for your PHP Interactivity requirement.]
-* Log-in system that will unlock adding/deleting of events on the events page, adding/deleting images on the gallery page, and editing the eboard information. General users will be able to view this information but not edit it. Use PHP to show the tables, and control whether or not a user can see the content.
+* Log-in system that will unlock adding/deleting of events on the events page and adding/deleting images on the gallery page. General users will be able to view this information but not edit it. Use PHP to show the tables, and control whether or not a user can see the content.
 * Hover and highlight feature that lets users know which page they are on. Use an array that contains all the tabs. Add an if statement in the header (if we are on a certain page, then highlight the text of the tab).
 
 ## Milestone 2, Part II: Sketches, Navigation & Wireframes
@@ -496,11 +496,6 @@ Table: gallery
 * field 2: g_image {TEXT NOT NULL}
 * field 3: g_image_name {TEXT NOT NULL}
 
-Table: eboard
-* field 1: id INTEGER {PRIMARY KEY, NOT NULL, AUTO INCREMENT,UNIQUE}
-* field 2: eboard_image {TEXT NOT NULL}
-* field 3: eboard_name {TEXT NOT NULL}
-
 Table: events
 * field 1: id INTEGER {PRIMARY KEY, NOT NULL, AUTO INCREMENT,UNIQUE}
 * field 2: event_name {TEXT NOT NULL}
@@ -526,8 +521,6 @@ button, run the query to delete the image by its id.
 
 * Selecting Query for edits
 SELECT g_image FROM gallery WHERE g_image = $record[id]"
-
-SELECT eboard_image FROM eboard WHERE eboard_image = $record[id]"
 
 ## Milestone 2, Part V: Structure and Pseudocode
 
