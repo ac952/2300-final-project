@@ -193,7 +193,7 @@ Task 1: Find the name and contact details for the VP of Finance.
   2. Click on the Eboard tab.
   3. Scroll through the page until they find the VP of Finance and their information.
 
-Task 2: Login and update the Recruitment Chair's photo.
+Task 2: Login and add a gallery photo.
 
 1. Move the mouse to the Login tab in the navigation.
 2. Click on the Login tab.
@@ -202,9 +202,8 @@ Task 2: Login and update the Recruitment Chair's photo.
 5. Select the password field by clicking on it.
 6. Enter the password (provided)
 7. Click on the Login button.
-8. Move the mouse to the Eboard tab in the navigation.
-9. Scroll through the page to find the Recruitment Chair.
-10. Click the edit button near the Recruitment Chair's profile (it will redirect to eboard_edit.php, which allows a logged-in user to make edits via a form).
+8. Move the mouse to the Gallery tab in the navigation.
+10. Click the add button near on the page, which allows a logged-in user to make edits via a form.
 11. Click on 'upload image'.
 12. Select image from the desktop (provided).
 13. Click on submit button.
