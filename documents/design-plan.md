@@ -613,17 +613,6 @@ include delete button near every eboard member, include add button, include edit
 
 ```
 
-#### edit_eboard.php
-
-```
-form that allows you to edit information on specific eboard member
-
-escape output for htmlspecialchars, trim
-
-SELECT eboard_image FROM eboard WHERE eboard_image = $record[id]
-
-```
-
 #### gallery.php
 
 ```
