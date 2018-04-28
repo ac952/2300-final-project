@@ -7,17 +7,21 @@ $events = exec_sql_query($db, "SELECT DISTINCT event_name FROM events", NULL)->f
 
 if (isset($_POST["submit_insert"])) {
   $event_name = filter_input(INPUT_POST, 'event_name', FILTER_SANITIZE_STRING);
-  $event_date = filter_input(INPUT_POST, 'event_date', FILTER_VALIDATE_STRING);
-  $event_time = filter_input(INPUT_POST, 'event_time', FILTER_VALIDATE_STRING);
+  $event_date = filter_input(INPUT_POST, 'event_date', FILTER_VALIDATE_INT);
+  $event_time = filter_input(INPUT_POST, 'event_time', FILTER_SANITIZE_STRING);
   $location = filter_input(INPUT_POST, 'location', FILTER_SANITIZE_STRING);
-  $description = filter_input(INPUT_POST, 'description', FILTER_VALIDATE_STRING);
+  $description = filter_input(INPUT_POST, 'description', FILTER_SANITIZE_STRING);
 
   if ( !in_array($event_name, $events) ) {
-    $invalid_review = TRUE;
+    $invalid_review = FALSE;
   }
+  // var_dump("no");
+
   if ($invalid_review) {
     array_push($messages, "Failed to add event.");
+      // var_dump("no");
   } else {
+
     $sql = "INSERT INTO events (event_name, event_date , event_time, location, description)
     VALUES (:event_name, :event_date, :event_time, :location, :description)";
     $params = array(
@@ -28,6 +32,8 @@ if (isset($_POST["submit_insert"])) {
       ':description' => $description
     );
 
+    // var_dump('yes');
+
     $result = exec_sql_query($db, $sql, $params);
     if ($result) {
       array_push($messages, "Your event has been added.");
@@ -36,8 +42,9 @@ if (isset($_POST["submit_insert"])) {
     }
   }
 }
+?>
 
-
+<?php
 function print_event($record) {
   ?>
   <tr>
@@ -51,11 +58,8 @@ function print_event($record) {
 }
 ?>
 
-
-?>
 <!DOCTYPE html>
 <html lang ="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -86,7 +90,7 @@ function print_event($record) {
         }
         ?>
       </table>
-    ?>
+
     <h2>Add an Event</h2>
     <form id="addevent" action="events.php" method="post">
       <ul>
@@ -96,7 +100,9 @@ function print_event($record) {
         </li>
         <li>
           <label>Date:</label>
-          <input type="text" name="event_date" required/>
+          <input type="number" name="event_date" placeholder="MM" required/>/
+          <input type="number" name="event_date" placeholder="DD" required/>/
+          <input type="number" name="event_date" placeholder="YYYY" required/>
         </li>
         <li>
           <label>Time:</label>
@@ -110,7 +116,7 @@ function print_event($record) {
           <label>Description:</label>
         </li>
         <li>
-          <textarea name="comment" cols="40" rows="5"></textarea>
+          <textarea name="description" cols="40" rows="5"></textarea>
         </li>
         <li>
           <button name="submit_insert" type="submit">Add Event</button>
