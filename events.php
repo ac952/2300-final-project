@@ -7,26 +7,39 @@ $events = exec_sql_query($db, "SELECT DISTINCT event_name FROM events", NULL)->f
 
 if (isset($_POST["submit_insert"])) {
   $event_name = filter_input(INPUT_POST, 'event_name', FILTER_SANITIZE_STRING);
+  $event_month = filter_input(INPUT_POST, 'event_month', FILTER_VALIDATE_INT);
   $event_date = filter_input(INPUT_POST, 'event_date', FILTER_VALIDATE_INT);
+  $event_year = filter_input(INPUT_POST, 'event_year', FILTER_VALIDATE_INT);
   $event_time = filter_input(INPUT_POST, 'event_time', FILTER_SANITIZE_STRING);
   $location = filter_input(INPUT_POST, 'location', FILTER_SANITIZE_STRING);
   $description = filter_input(INPUT_POST, 'description', FILTER_SANITIZE_STRING);
 
+
+  $invalid_review = TRUE;
+
   if ( !in_array($event_name, $events) ) {
     $invalid_review = FALSE;
   }
-  // var_dump("no");
+
+  // regex
+  // if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
+  //     $nameErr = "Only letters and white space allowed";
+  //   }
 
   if ($invalid_review) {
     array_push($messages, "Failed to add event.");
       // var_dump("no");
   } else {
 
-    $sql = "INSERT INTO events (event_name, event_date , event_time, location, description)
-    VALUES (:event_name, :event_date, :event_time, :location, :description)";
+    $sql = "INSERT INTO events (event_name, event_month, event_date ,
+      event_year, event_time, location, description)
+    VALUES (:event_name, :event_month, :event_date,:event_year,
+       :event_time, :location, :description)";
     $params = array(
       ':event_name' => $event_name,
+      ':event_month' => $event_month,
       ':event_date' => $event_date,
+      ':event_year' => $event_year,
       ':event_time' => $event_time,
       ':location' => $location,
       ':description' => $description
@@ -49,7 +62,9 @@ function print_event($record) {
   ?>
   <tr>
     <td><?php echo htmlspecialchars($record["event_name"]);?></td>
-    <td><?php echo htmlspecialchars($record["event_date"]);?></td>
+    <td><?php echo htmlspecialchars($record["event_month"]);
+    ?>/<?php echo htmlspecialchars($record["event_date"]);
+    ?>/<?php echo htmlspecialchars($record["event_year"]);?></td>
     <td><?php echo htmlspecialchars($record["event_time"]);?></td>
     <td><?php echo htmlspecialchars($record["location"]);?></td>
     <td><?php echo htmlspecialchars($record["description"]);?></td>
@@ -75,6 +90,7 @@ function print_event($record) {
     $params = array();
     $records = exec_sql_query($db, $sql, $params)->fetchAll();
     ?>
+
       <table>
         <tr>
           <th>Event Name</th>
@@ -91,6 +107,7 @@ function print_event($record) {
         ?>
       </table>
 
+
     <h2>Add an Event</h2>
     <form id="addevent" action="events.php" method="post">
       <ul>
@@ -100,9 +117,9 @@ function print_event($record) {
         </li>
         <li>
           <label>Date:</label>
-          <input type="number" name="event_date" placeholder="MM" required/>/
+          <input type="number" name="event_month" placeholder="MM" required/>/
           <input type="number" name="event_date" placeholder="DD" required/>/
-          <input type="number" name="event_date" placeholder="YYYY" required/>
+          <input type="number" name="event_year" placeholder="YYYY" required/>
         </li>
         <li>
           <label>Time:</label>
