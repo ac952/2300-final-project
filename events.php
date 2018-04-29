@@ -14,7 +14,6 @@ if (isset($_POST["submit_insert"])) {
   $location = filter_input(INPUT_POST, 'location', FILTER_SANITIZE_STRING);
   $description = filter_input(INPUT_POST, 'description', FILTER_SANITIZE_STRING);
 
-
   $invalid_review = TRUE;
 
   if ( !in_array($event_name, $events) ) {
@@ -45,8 +44,6 @@ if (isset($_POST["submit_insert"])) {
       ':description' => $description
     );
 
-    // var_dump('yes');
-
     $result = exec_sql_query($db, $sql, $params);
     if ($result) {
       array_push($messages, "Your event has been added.");
@@ -68,6 +65,11 @@ function print_event($record) {
     <td><?php echo htmlspecialchars($record["event_time"]);?></td>
     <td><?php echo htmlspecialchars($record["location"]);?></td>
     <td><?php echo htmlspecialchars($record["description"]);?></td>
+    <td>
+      <form id="editevent" action="edit_events.php" method="post">
+        <button name="submit_edit" type="submit">Edit</button>
+      </form>
+    </td>
   </tr>
   <?php
 }
@@ -90,7 +92,6 @@ function print_event($record) {
     $params = array();
     $records = exec_sql_query($db, $sql, $params)->fetchAll();
     ?>
-
       <table>
         <tr>
           <th>Event Name</th>
@@ -100,7 +101,6 @@ function print_event($record) {
           <th>Description</th>
         </tr>
         <?php
-
         foreach($records as $record) {
           print_event($record);
         }
@@ -123,7 +123,7 @@ function print_event($record) {
         </li>
         <li>
           <label>Time:</label>
-          <input type="text" name="event_time" required/>
+          <input type="text" name="event_time" placeholder="format: 4:00pm" required/>
         </li>
         <li>
           <label>Location:</label>
