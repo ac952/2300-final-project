@@ -24,7 +24,7 @@ CREATE TABLE `events`(
 
 INSERT INTO events (id, event_name, event_month, event_date, event_year, event_time, location, description) VALUES (1,'djknkwe', 05,28,18,'4:00pm','Uris', 'gngkbml');
 INSERT INTO events (id, event_name, event_month, event_date, event_year, event_time, location, description) VALUES (2,'nwe',05,24,18,'2:00pm','Olin', 'gngdkbml');
-INSERT INTO events (id, event_name, event_month, event_date, event_year, event_time, location, description) VALUES (3,'dkwe',05,18.18,'1:00pm','Klarman', 'gngfweckbml');
+INSERT INTO events (id, event_name, event_month, event_date, event_year, event_time, location, description) VALUES (3,'dkwe',05,18,18,'1:00pm','Klarman', 'gngfweckbml');
 
 
 /* TODO: initial seed data */
