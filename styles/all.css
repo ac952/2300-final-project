@@ -47,3 +47,17 @@ footer {
   color: black;
   padding: 2px 2px 2px 2px;
 }
+
+#facebook_logo {
+  float: right;
+}
+
+#copyright_message {
+  float: left;
+}
+.site-footer {
+  padding: 10px 10px;
+  background-color: #A80F2A;
+  color: white;
+  height: 90px;
+}
