@@ -1,5 +1,14 @@
 <?php
 
+$title = "Kathy's Portfolio";
+
+$pages = array(
+  "index" => "About",
+  "eboard" => "Eboard",
+  "events" => "Events",
+  "gallery" => "Gallery",
+  "login" => "Login");
+
 // An array to deliver messages to the user.
 $messages = array();
 
