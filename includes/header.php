@@ -1,7 +1,7 @@
 <header>
   <div class = "title_div">
     <a href = "index.php">
-      <img id = "cornellcircleklogo" src = "images/cornellcirclek_logo.png" alt = "Cornell Circle K Logo"> </a>
+      <img id = "cornellcircleklogo" src = "uploads/images/cornellcirclek_logo.png" alt = "Cornell Circle K Logo"> </a>
   </div>
   <div class = "title_div">
     <h1 id="title">Cornell Circle K</h1>
