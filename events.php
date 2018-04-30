@@ -19,12 +19,10 @@ if (isset($_POST["submit_insert"])) {
   if ( !in_array($event_name, $events) ) {
     $invalid_review = FALSE;
   }
-
   // regex
   // if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
   //     $nameErr = "Only letters and white space allowed";
   //   }
-
   if ($invalid_review) {
     array_push($messages, "Failed to add event.");
       // var_dump("no");
@@ -55,6 +53,25 @@ if (isset($_POST["submit_insert"])) {
 ?>
 
 <?php
+// if click on delete, delete row in db by event name (make unique)
+// var_dump(no);
+if(isset($_POST['submit_delete'])){
+  // $sql = "SELECT * FROM events";
+  // var_dump('yes');
+  // $params = array();
+  // $records = exec_sql_query($db, $sql, $params)->fetchAll(PDO::FETCH_ASSOC);
+  // var_dump('h');
+  // foreach($records as $record) {
+    var_dump('g');
+    $sql = "DELETE FROM events WHERE id = " . $record['id']. "";
+    $params = array();
+    exec_sql_query($db, $sql, $params);
+
+  // }
+}
+ ?>
+
+<?php
 function print_event($record) {
   ?>
   <tr>
@@ -66,14 +83,18 @@ function print_event($record) {
     <td><?php echo htmlspecialchars($record["location"]);?></td>
     <td><?php echo htmlspecialchars($record["description"]);?></td>
     <td>
-      <form id="editevent" action="edit_events.php" method="post">
-        <button name="submit_edit" type="submit">Edit</button>
+       <button><a href='edit_events.php?id='<?php echo $record['id'] ?>>Edit</a></button>
+    </td>
+    <td>
+      <form id="editevent" action="events.php" method="post">
+        <button name="submit_delete" type="submit" id= <?php echo $record['id'] ?>>Delete</button>
       </form>
     </td>
   </tr>
   <?php
 }
 ?>
+
 
 <!DOCTYPE html>
 <html lang ="en">
@@ -86,7 +107,6 @@ function print_event($record) {
 <body>
   <?php include("includes/header.php");?>
   <div id="content-wrap">
-
     <?php
     $sql = "SELECT * FROM events";
     $params = array();
@@ -106,8 +126,6 @@ function print_event($record) {
         }
         ?>
       </table>
-
-
     <h2>Add an Event</h2>
     <form id="addevent" action="events.php" method="post">
       <ul>
@@ -141,8 +159,6 @@ function print_event($record) {
       </ul>
     </form>
   </div>
-
   <?php include("includes/footer.php");?>
-
 </body>
 </html>
