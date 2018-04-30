@@ -2,7 +2,7 @@
 
 include('includes/init.php');
 
-$current_page_id="index";
+$current_page_id="gallery";
 
 const IMG_UPLOADS_PATH = "uploads/images/";
 const MAX_FILE_SIZE = 1000000;
@@ -82,7 +82,7 @@ if (isset($_POST["submit_upload"])) {
         echo "<h2>Photo was successfully deleted.</h2>";
       }
     ?>
-      <h1 id="article-title">Browse Gallery</h1>
+      <h1 id="page_header"> Gallery</h1>
         <p>Browse gallery.</p>
 
       <form id="uploadFile" action="gallery.php" method="post" enctype="multipart/form-data">
