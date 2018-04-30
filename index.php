@@ -17,7 +17,12 @@ $current_page_id = "index";
 <body>
   <?php include("includes/header.php");?>
   <h1 class = "page_header">About</h1>
-
+<!--Awards:
+NY District Club Spirit Award
+NY District Club Apparel Award
+NY District Club Growth Award
+NY District Unsung Hero Award
+-->
 
   <?php include( "includes/footer.php" ); ?>
 </body>
