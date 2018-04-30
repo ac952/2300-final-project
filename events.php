@@ -54,20 +54,18 @@ if (isset($_POST["submit_insert"])) {
 
 <?php
 // if click on delete, delete row in db by event name (make unique)
-// var_dump(no);
-if(isset($_POST['submit_delete'])){
-  // $sql = "SELECT * FROM events";
-  // var_dump('yes');
-  // $params = array();
-  // $records = exec_sql_query($db, $sql, $params)->fetchAll(PDO::FETCH_ASSOC);
-  // var_dump('h');
-  // foreach($records as $record) {
-    var_dump('g');
-    $sql = "DELETE FROM events WHERE id = " . $record['id']. "";
+var_dump('no');
+if(isset($_GET['submit_delete'])){
+  // var_dump($_POST['submit_delete']);
+    // $id = $record['id'];
+    $id = $_GET['submit_delete'];
+    // var_dump($id);
+    // var_dump('g');
+    // $sql = "DELETE FROM events WHERE id = " . $record['id']. "";
+    $sql = "DELETE FROM events WHERE id='$id'";
+    // var_dump('g');
     $params = array();
     exec_sql_query($db, $sql, $params);
-
-  // }
 }
  ?>
 
@@ -83,18 +81,20 @@ function print_event($record) {
     <td><?php echo htmlspecialchars($record["location"]);?></td>
     <td><?php echo htmlspecialchars($record["description"]);?></td>
     <td>
-       <button><a href='edit_events.php?id='<?php echo $record['id'] ?>>Edit</a></button>
+      <form action ="edit_events.php" method ="post">
+        <button type="submit" value='<?php echo $record['id'] ?>' name="submit_edit">Edit</button>
+      </form>
+       <!-- <button name="submit_edit"><a href='edit_events.php?id='>Edit</a></button> -->
     </td>
     <td>
-      <form id="editevent" action="events.php" method="post">
-        <button name="submit_delete" type="submit" id= <?php echo $record['id'] ?>>Delete</button>
+      <form action ="events.php" method ="get">
+        <button type="submit" value='<?php echo $record['id'] ?>' name="submit_delete">Delete</button>
       </form>
     </td>
   </tr>
   <?php
 }
 ?>
-
 
 <!DOCTYPE html>
 <html lang ="en">
@@ -109,7 +109,7 @@ function print_event($record) {
   <h1 class = "page_header">Events</h1>
   <div id="content-wrap">
     <?php
-    $sql = "SELECT * FROM events";
+    $sql = "SELECT * FROM events;";
     $params = array();
     $records = exec_sql_query($db, $sql, $params)->fetchAll();
     ?>

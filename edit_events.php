@@ -58,7 +58,10 @@ if (isset($_POST["submit_changes"])) {
         <li>
           <label>Event Name:</label>
           <input type="text" name="event_name"
-          value =" <?php foreach($records as $record) {echo $record['event_name'];}?> "/>
+          value =" <?php foreach($records as $record) {
+            if ($id == $record['id']);
+            echo $record['event_name'];
+          }?> "/>
         </li>
         <li>
           <label>Date:</label>
