@@ -7,7 +7,7 @@ CREATE TABLE `images` (
 	`user_id` INTEGER NOT NULL
 );
 
-INSERT INTO images (id, img_name, img_ext, user_id) VALUES (1,'1.jpg','jpg',1);
+INSERT INTO images (img_name, img_ext, user_id) VALUES ('1.jpg','jpg',1);
 
 
 
@@ -22,9 +22,9 @@ CREATE TABLE `events`(
   'description' TEXT NOT NULL
 );
 
-INSERT INTO events (id, event_name, event_month, event_date, event_year, event_time, location, description) VALUES (1,'djknkwe', 05,28,18,'4:00pm','Uris', 'gngkbml');
-INSERT INTO events (id, event_name, event_month, event_date, event_year, event_time, location, description) VALUES (2,'nwe',05,24,18,'2:00pm','Olin', 'gngdkbml');
-INSERT INTO events (id, event_name, event_month, event_date, event_year, event_time, location, description) VALUES (3,'dkwe',05,18.18,'1:00pm','Klarman', 'gngfweckbml');
+INSERT INTO events (event_name, event_month, event_date, event_year, event_time, location, description) VALUES ('djknkwe', 05,28,18,'4:00pm','Uris', 'gngkbml');
+INSERT INTO events (event_name, event_month, event_date, event_year, event_time, location, description) VALUES ('nwe',05,24,18,'2:00pm','Olin', 'gngdkbml');
+INSERT INTO events (event_name, event_month, event_date, event_year, event_time, location, description) VALUES ('dkwe',05,18,18,'1:00pm','Klarman', 'gngfweckbml');
 
 
 /* TODO: initial seed data */
