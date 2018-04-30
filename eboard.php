@@ -13,7 +13,7 @@ $current_page_id = "eboard";
 
   <title>Eboard</title>
 </head>
-<!--Brendon Nguyen (President)
+<!--Brendon Nguyen (President) 
 Year + Major: Computer Science (Minor in Education!), 2020
 Hometown: Mansfield, TX
 Hobby: Speedsolving rubik’s cubes
