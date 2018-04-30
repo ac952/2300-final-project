@@ -7,7 +7,8 @@ $pages = array(
   "eboard" => "Eboard",
   "events" => "Events",
   "gallery" => "Gallery",
-  "login" => "Login");
+  "login" => "Login"
+  "logout" => "Logout");
 
 // An array to deliver messages to the user.
 $messages = array();
