@@ -2,7 +2,7 @@
 
 include('includes/init.php');
 
-$current_page_id="index";
+$current_page_id="gallery";
 
 const IMG_UPLOADS_PATH = "uploads/images/";
 const MAX_FILE_SIZE = 1000000;
@@ -10,11 +10,8 @@ const MAX_FILE_SIZE = 1000000;
 if (isset($_POST['delete_photo'])) {
   $delete_photo = TRUE;
   $img_id = filter_input(INPUT_GET, 'delete_photo', FILTER_SANITIZE_STRING);
-  echo "found a delete_photo";
-  echo $img_id." is id";
   }
 else {
-  echo " wtf";
   $delete_photo = FALSE;
   $img_id = NULL;
 }
@@ -32,11 +29,11 @@ if (isset($_POST["submit_upload"])) {
     if($upload_ext=="jpg" || $upload_ext=="jpeg" || $upload_ext=="png"){
       //$user_id = $current_user;
 
-      $sql = "INSERT INTO images (img_name,img_ext,user_id) VALUES (:img_name,:img_ext,:user_id)";
+      $sql = "INSERT INTO images (img_name,img_ext,user_id) VALUES (:img_name,:img_ext,1)";
       $params = array(
         ':img_name' => $img_name,
         ':img_ext' => $upload_ext,
-        ':user_id' => $user_id
+        //':user_id' => $user_id
       );
       $result = exec_sql_query($db, $sql, $params);
 
@@ -71,7 +68,7 @@ if (isset($_POST["submit_upload"])) {
 <body>
   <?php include("includes/header.php");?>
     <div id="content-wrap">
-    <title>Home - <?php echo $title;?></title>
+    <title>Gallery</title>
     <?php
       if($delete_photo){
         $sql = "DELETE FROM images WHERE id=:img_id;";
@@ -85,7 +82,7 @@ if (isset($_POST["submit_upload"])) {
         echo "<h2>Photo was successfully deleted.</h2>";
       }
     ?>
-      <h1 id="article-title">Browse Gallery</h1>
+      <h1 id="page_header"> Gallery</h1>
         <p>Browse gallery.</p>
 
       <form id="uploadFile" action="gallery.php" method="post" enctype="multipart/form-data">
@@ -115,11 +112,10 @@ if (isset($_POST["submit_upload"])) {
         $records = exec_sql_query($db, $sql, $params)->fetchAll();
         foreach($records as $record){
           $owner_id = $record["user_id"];
-         echo htmlspecialchars($record["id"]);
         //if($current_user) {
         //if($current_user==$owner_id){?>
 
-          <form id="uploadFile" action=<?php echo "gallery.php" ?>
+          <form id="uploadFile" action=<?php echo "gallery.php?delete_photo=".htmlspecialchars($record["id"]) ?>
             method="post" enctype="multipart/form-data">
             <ul>
               <li>
