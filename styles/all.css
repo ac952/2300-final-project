@@ -107,8 +107,23 @@ footer {
   margin: 5%;
 }
 
-td, th {
+td {
   text-align: left;
   padding: 5px;
   border-bottom: 1px solid #ddd;
+}
+
+th{
+  background-color:#4CAF50;
+  color: white;
+  text-align: left;
+  padding: 5px;
+}
+
+tr:hover {
+  background-color: 		#90EE90;
+}
+
+table {
+  border-collapse: collapse;
 }
