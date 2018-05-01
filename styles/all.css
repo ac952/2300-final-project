@@ -134,6 +134,12 @@ tr:hover {
   color: #A80F2A;
 }
 
+.about_subheadings {
+  font-size: 25px;
+  font-weight: bold;
+  color: #A80F2A;
+}
+
 .size {
   font-size: 19px;
 }

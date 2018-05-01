@@ -18,34 +18,54 @@ $current_page_id = "index";
   <?php include("includes/header.php");?>
   <h1 class = "page_header">About</h1>
 
-<p><span class="color_emphasis">Mission:</span> Circle K International is comprised
-  of college and university students who are responsible citizens and leaders
-  sharing a lifelong commitment to community service worldwide. Circle K inspires
-  people to better our world. Its motto, the same as Kiwanis International’s, is
-  “We Build.” Circle K provides constructive opportunities for students to become
-  involved on their campuses and in their communities through service work to
-  others in need. Circle K members have the chance to work with fellow students,
-  children in the community, and other adults in need of special programs.</p>
+<span class="about_subheadings">History</span><br>
+<p>In 1936, the "Circle K House" at Washington State College was established by
+  the Kiwanis Club of Pullman, Washington. Organized as a fraternity, Kappa Iota
+  Phi served men who needed financial aid to attend college. Kiwanians also wanted
+  to provide collegiate students leadership opportunities for their future careers
+  and work service projects to better their communities while having a sense of
+  giving back. Now, Circle K International is the largest university service
+  leadership organization in the world, performing half a million hours of service
+  each year. With more than 13,700 members in 19 nations, CKI is making a positive
+  impact on the world every day.</p>
 
-<p>Circle K International, the largest university service leadership organization
-  in the world, performs half a million hours of service each year. With more than
-  13,700 members in 19 nations, CKI is making a positive impact on the world every
-  day.</p>
+<span class="about_subheadings">Mission</span><br>
+<p>Cornell Circle K is a part of Circle K International. Our organization is
+  based around the 3 tenets of <span class="color_emphasis">service</span>,
+  <span class="color_emphasis">leadership</span>, and <span class="color_emphasis">fellowship</span>.
+  It is comprised of college and university students who are responsible citizens
+  and leaders sharing a lifelong commitment to community service worldwide. Circle
+  K inspires people to better our world. Its motto, the same as Kiwanis International’s,
+  is <span class="color_emphasis">“We Build.”</span> Circle K provides constructive
+  opportunities for students to become involved on their campuses and in their
+  communities through service work to others in need. Members have the chance to
+  work with fellow students, children in the community, and other adults in need
+  of special programs.</p>
 
-<p><span class="about_emphasis">Pledge:</span> to uphold the Objects of Circle K
-  International, to foster compassion and goodwill toward others through service
-  and leadership, to develop my abilities and the abilities of all people, and
-  to dedicate myself to the realization of mankind's potential."</p>
+<span class="about_subheadings">Pledge</span><br>
+<p>To uphold the Objects of Circle K International, to foster compassion and
+  goodwill toward others through service and leadership, to develop our abilities
+  and the abilities of all people, and to dedicate ourselves to the realization
+  of mankind's potential.</p>
 
-<p><span class="about_emphasis">Number of national members:</span> 13,770+, spanning 17 nations</p>
-<p><span class="about_emphasis">Founded:</span> 1936</p>
-<p><span class="about_emphasis">Awards:</span></p>
+<span class="about_subheadings">Philanthropy Initiatives</span><br>
+<p>CKI raises funds for various causes. The major intitiative is "Focusing on the
+  Future: Children" which aims to help children aged six to thirteen. This year,
+  Cornell Circle K is focusing on the ways we can do small acts of service to
+  improve the day to day lives of those in our community.</p>
+
+<p><span class="about_subheadings">Awards</span></p>
 <ul id="awards">
   <li>NY District Club Spirit Award</li>
   <li>NY District Club Apparel Award</li>
   <li>NY District Club Growth Award</li>
   <li>NY District Unsung Hero Award</li>
 </ul>
+
+<p><span class="about_subheadings">Meetings</span></p>
+<span class="color_emphasis">Date:</span> Mondays<br>
+<span class="color_emphasis">Time:</span> 5-6 PM<br>
+<span class="color_emphasis">Location:</span> Stimson G01<br><br>
 
   <?php include( "includes/footer.php" ); ?>
 </body>
