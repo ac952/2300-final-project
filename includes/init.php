@@ -136,6 +136,5 @@ if (isset($_POST['login'])) {
 }
   // check if logged in
   $current_user = check_login();
-echo $current_user;
 
 ?>
