@@ -103,6 +103,28 @@ footer {
   background-color: #E9967A;
 }
 
+#content-wrap {
+  margin-left: 5%;
+  margin-right: 5%;
+  padding-top: 0px;
+}
+
+td {
+  text-align: left;
+  padding: 5px;
+  border-bottom: 1px solid #ddd;
+}
+
+th{
+  background-color:#A80F2A;
+  color: white;
+  text-align: left;
+  padding: 5px;
+}
+
+tr:hover {
+  background-color: #90EE90;
+}
 #awards {
   list-style: none;
 }
@@ -119,3 +141,58 @@ footer {
 .position {
   font-style: italic;
 }
+
+label {
+  display: block;
+}
+
+input {
+  border-radius: 2px;
+  outline: none;
+  display: inline;
+  position: relative;
+}
+
+textarea {
+  border-radius: 2px;
+  outline: none;
+  display: inline;
+  position: relative;
+  transition: width 0.4s ease-in-out;
+}
+
+input[type=text] {
+  transition: width 0.4s ease-in-out;
+}
+
+input[type=number] {
+  width: 50px;
+}
+
+input[type=text]:focus {
+  border: 1px solid #98FB98;
+  width: 20%;
+}
+
+input[type=number]:focus {
+  border: 1px solid #98FB98;
+}
+
+textarea:focus {
+  border: 1px solid #98FB98;
+  width: 40%;
+}
+
+button[type=submit] {
+    background-color: #4CAF50;
+    border-radius: 1px;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    margin: 2px 1px;
+    cursor: pointer;
+}
+
+/* #ckilogo {
+  float:right;
+} */
