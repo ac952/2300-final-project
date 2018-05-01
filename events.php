@@ -136,26 +136,32 @@ function print_event($record) {
           <label>Event Name:</label>
           <input type="text" name="event_name" required/>
         </li>
+        <br>
         <li>
           <label>Date:</label>
           <input type="number" name="event_month" placeholder="MM" required/>/
           <input type="number" name="event_date" placeholder="DD" required/>/
           <input type="number" name="event_year" placeholder="YYYY" required/>
         </li>
+        <br>
         <li>
           <label>Time:</label>
           <input type="text" name="event_time" placeholder="format: 4:00pm" required/>
         </li>
+        <br>
         <li>
           <label>Location:</label>
           <input type="text" name="location" required/>
         </li>
+        <br>
         <li>
           <label>Description:</label>
         </li>
+        <br>
         <li>
           <textarea type="text" name="description" cols="40" rows="5"></textarea>
         </li>
+        <br>
         <li>
           <button name="submit_insert" type="submit">Add Event</button>
         </li>
