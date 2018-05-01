@@ -10,17 +10,16 @@ if (isset($_POST["submit_changes"])) {
   $event_time = filter_input(INPUT_POST, 'event_time', FILTER_SANITIZE_STRING);
   $location = filter_input(INPUT_POST, 'location', FILTER_SANITIZE_STRING);
   $description = filter_input(INPUT_POST, 'description', FILTER_SANITIZE_STRING);
-  }
 
-  // php for sticky form
-  $sql = "SELECT * FROM events";
-  // $sql = "SELECT * FROM events WHERE id = $record[id]";
-  $params = array();
-  $records = exec_sql_query($db, $sql, $params)->fetchAll(PDO::FETCH_ASSOC);
+  }
+  // $sql = "SELECT * FROM events";
+  // $params = array();
+  // $records = exec_sql_query($db, $sql, $params)->fetchAll(PDO::FETCH_ASSOC);
 
   // php for updating any changes to events page AND db
   if (isset($_POST["submit_changes"])){
     // $sql = "UPDATE MyGuests SET lastname='Doe' WHERE id=2";
+    // use insert
     $sql = "UPDATE events SET event_month='$event_month', event_date='$event_date',
     event_year='$event_year', location='$location', description='$description'
     WHERE event_name = '$event_name'";
@@ -28,7 +27,11 @@ if (isset($_POST["submit_changes"])) {
     // event_year='$event_year', location='$location', description='$description'
     // WHERE id = '$id'";
     $params = array();
+    var_dump($params);
     $records = exec_sql_query($db, $sql, $params)->fetchAll(PDO::FETCH_ASSOC);
+    var_dump($records);
+    // $records = exec_sql_query($db, $sql, $params)->fetchAll(PDO::FETCH_ASSOC);
+
     // echo changes in the events.php page
     // var_dump('pass');
     // if sql is executed successfully, echo success
@@ -36,20 +39,20 @@ if (isset($_POST["submit_changes"])) {
       echo 'Your changes have been updated!';
     }
     echo 'Changes have not been updated. Please fill out form again.';
-    // deletes prefilled info
+    // deletes prefilled info :(
   }
 
 
+  // php for sticky form
   // check if the edit button is pressed in the edit.php file
   if(isset($_GET['submit_edit'])){
     $id = $_GET['submit_edit'];
     // get the sql query (row info) for that id
     $sql = "SELECT * FROM events WHERE id = '$id'";
     $params = array();
-    $records = exec_sql_query($db, $sql, $params)->fetchAll();
+    $records = exec_sql_query($db, $sql, $params)->fetchAll(PDO::FETCH_ASSOC);
     // var_dump($records);
   }
-
 
 ?>
 <!DOCTYPE html>
@@ -70,36 +73,43 @@ if (isset($_POST["submit_changes"])) {
         <li>
           <label>Event Name:</label>
           <input type="text" name="event_name"
-          value =" <?php foreach($records as $record) {echo htmlspecialchars($record['event_name']);}?> "/>
+          value =" <?php foreach($records as $record)
+          {echo htmlspecialchars($record['event_name']);}?> "/>
         </li>
         <li>
           <label>Date:</label>
           <input type="text" name="event_month" placeholder="MM"
-          value =" <?php foreach($records as $record) {echo htmlspecialchars(intval($record['event_month']));}
+          value =" <?php foreach($records as $record)
+          {echo htmlspecialchars(intval($record['event_month']));}
           ?> "/>/
           <input type="text" name="event_date" placeholder="DD"
-          value =" <?php foreach($records as $record) {echo htmlspecialchars(intval($record['event_date']));}?> "/>/
+          value =" <?php foreach($records as $record)
+          {echo htmlspecialchars(intval($record['event_date']));}?> "/>/
           <input type="text" name="event_year" placeholder="YYYY"
-          value =" <?php foreach($records as $record) {echo htmlspecialchars(intval($record['event_year']));}?> "/>
+          value =" <?php foreach($records as $record)
+          {echo htmlspecialchars(intval($record['event_year']));}?> "/>
         </li>
         <li>
           <label>Time:</label>
           <input type="text" name="event_time" placeholder="format: 4:00pm"
-          value =" <?php foreach($records as $record) {echo htmlspecialchars($record['event_time']);}?> " />
+          value =" <?php foreach($records as $record)
+          {echo htmlspecialchars($record['event_time']);}?> " />
         </li>
         <li>
           <label>Location:</label>
           <input type="text" name="location"
-          value =" <?php foreach($records as $record) {echo htmlspecialchars($record['location']);}?> "/>
+          value =" <?php foreach($records as $record)
+          {echo htmlspecialchars($record['location']);}?> "/>
         </li>
         <li>
           <label>Description:</label>
         </li>
-        <li>
-          <textarea type="text" name="description" cols="40" rows="5"
-          value =" <?php foreach($records as $record) {echo htmlspecialchars($record['description']);}?> ">
-          </textarea>
-        </li>
+        <!-- <li> -->
+          <input type="text" name="description" cols="40" rows="5"
+          value =" <?php foreach($records as $record)
+          {echo htmlspecialchars($record['description']);}?> ">
+        </input>
+        <!-- </li> -->
         <li>
           <button name="submit_changes" type="submit">Update Changes</button>
         </li>

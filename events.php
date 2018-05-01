@@ -79,13 +79,14 @@ function print_event($record) {
     <td><?php echo htmlspecialchars($record["description"]);?></td>
     <td>
       <form action ="edit_events.php" method ="get">
-        <button type="submit" value='<?php echo $record['id'] ?>' name="submit_edit">Edit</button>
+        <button type="submit" value='<?php echo $record['id'] ?>'
+          name="submit_edit">Edit</button>
       </form>
-       <!-- <button name="submit_edit"><a href='edit_events.php?id='>Edit</a></button> -->
     </td>
     <td>
       <form action ="events.php" method ="get">
-        <button type="submit" value='<?php echo $record['id'] ?>' name="submit_delete">Delete</button>
+        <button type="submit" value='<?php echo $record['id'] ?>'
+          name="submit_delete">Delete</button>
       </form>
     </td>
   </tr>
