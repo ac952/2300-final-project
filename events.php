@@ -27,7 +27,6 @@ if (isset($_POST["submit_insert"])) {
     array_push($messages, "Failed to add event.");
       // var_dump("no");
   } else {
-
     $sql = "INSERT INTO events (event_name, event_month, event_date ,
       event_year, event_time, location, description)
     VALUES (:event_name, :event_month, :event_date,:event_year,
@@ -41,7 +40,6 @@ if (isset($_POST["submit_insert"])) {
       ':location' => $location,
       ':description' => $description
     );
-
     $result = exec_sql_query($db, $sql, $params);
     if ($result) {
       array_push($messages, "Your event has been added.");
@@ -138,26 +136,32 @@ function print_event($record) {
           <label>Event Name:</label>
           <input type="text" name="event_name" required/>
         </li>
+        <br>
         <li>
           <label>Date:</label>
           <input type="number" name="event_month" placeholder="MM" required/>/
           <input type="number" name="event_date" placeholder="DD" required/>/
           <input type="number" name="event_year" placeholder="YYYY" required/>
         </li>
+        <br>
         <li>
           <label>Time:</label>
-          <input type="text" name="event_time" placeholder="format: 4:00pm" required/>
+          <input type="text" name="event_time" placeholder="1:00pm" required/>
         </li>
+        <br>
         <li>
           <label>Location:</label>
           <input type="text" name="location" required/>
         </li>
+        <br>
         <li>
           <label>Description:</label>
         </li>
+        <br>
         <li>
           <textarea type="text" name="description" cols="40" rows="5"></textarea>
         </li>
+        <br>
         <li>
           <button name="submit_insert" type="submit">Add Event</button>
         </li>
@@ -166,6 +170,9 @@ function print_event($record) {
   <?php }?>
 
   </div>
+  <!-- <div id="ckilogo">
+  <img src="logo2.png" alt="ckilogo">
+</div> -->
   <?php include("includes/footer.php");?>
 </body>
 </html>
