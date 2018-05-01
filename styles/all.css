@@ -102,3 +102,12 @@ footer {
   transition: 0.5s;
   background-color: #E9967A;
 }
+
+#content-wrap {
+  margin: 5%;
+}
+
+td, th {
+  text-align: left;
+  padding: 5px;
+}
