@@ -103,37 +103,19 @@ footer {
   background-color: #E9967A;
 }
 
-<<<<<<< HEAD
 #awards {
   list-style: none;
 }
 
-.about_emphasis {
+.color_emphasis {
   font-weight: bold;
   color: #A80F2A;
-=======
-#content-wrap {
-  margin: 5%;
 }
 
-td {
-  text-align: left;
-  padding: 5px;
-  border-bottom: 1px solid #ddd;
+.size {
+  font-size: 19px;
 }
 
-th{
-  background-color:#4CAF50;
-  color: white;
-  text-align: left;
-  padding: 5px;
-}
-
-tr:hover {
-  background-color: 		#90EE90;
-}
-
-table {
-  border-collapse: collapse;
->>>>>>> dcd3a399a5e4fe586ce91e8f5c3a837440ddf83e
+.position {
+  font-style: italic;
 }

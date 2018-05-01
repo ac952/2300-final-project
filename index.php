@@ -18,7 +18,7 @@ $current_page_id = "index";
   <?php include("includes/header.php");?>
   <h1 class = "page_header">About</h1>
 
-<p><span class="about_emphasis">Mission:</span> Circle K International is comprised
+<p><span class="color_emphasis">Mission:</span> Circle K International is comprised
   of college and university students who are responsible citizens and leaders
   sharing a lifelong commitment to community service worldwide. Circle K inspires
   people to better our world. Its motto, the same as Kiwanis International’s, is
@@ -37,7 +37,7 @@ $current_page_id = "index";
   and leadership, to develop my abilities and the abilities of all people, and
   to dedicate myself to the realization of mankind's potential."</p>
 
-<p><span class="about_emphasis">Number of national members:</span> 13,770+, spans 17 nations</p>
+<p><span class="about_emphasis">Number of national members:</span> 13,770+, spanning 17 nations</p>
 <p><span class="about_emphasis">Founded:</span> 1936</p>
 <p><span class="about_emphasis">Awards:</span></p>
 <ul id="awards">
