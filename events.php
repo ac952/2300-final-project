@@ -27,7 +27,6 @@ if (isset($_POST["submit_insert"])) {
     array_push($messages, "Failed to add event.");
       // var_dump("no");
   } else {
-
     $sql = "INSERT INTO events (event_name, event_month, event_date ,
       event_year, event_time, location, description)
     VALUES (:event_name, :event_month, :event_date,:event_year,
@@ -41,7 +40,6 @@ if (isset($_POST["submit_insert"])) {
       ':location' => $location,
       ':description' => $description
     );
-
     $result = exec_sql_query($db, $sql, $params);
     if ($result) {
       array_push($messages, "Your event has been added.");
