@@ -11,7 +11,7 @@ $current_page_id = "login";
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" type="text/css" href="styles/all.css" media="all" />
 
-  <title>Login</title>
+  <title id = "loginheader">Login</title>
 </head>
 
 <body>
@@ -22,13 +22,14 @@ $current_page_id = "login";
   <h1 class = "page_header">Login</h1>
 
   <?php
-  print_messages();
+  // print_messages();
   ?>
 
     <?php
-    if ($current_user) {
-      echo "Logged in as $current_user";
-    } else {
+    // if ($current_user) {
+    //   echo "Logged in as $current_user";
+    // } else {
+    if (!isset($_POST['login'])) {
       //show form
       ?>
 
@@ -49,7 +50,11 @@ $current_page_id = "login";
           </li>
         </ul>
       </form>
+      <?php
+    }  else {
+      print_messages();
     }
+      ?>
   </div>
 
   <?php include( "includes/footer.php" ); ?>

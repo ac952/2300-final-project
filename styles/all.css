@@ -61,3 +61,17 @@ footer {
   color: white;
   height: 90px;
 }
+
+#circleklogin ul {
+  list-style-type: none;
+  padding-right: 3%;
+}
+
+#login-wrap {
+  text-align: center;
+}
+
+#menu li:hover {
+  transition: 0.5s;
+  background-color: skyblue;
+}

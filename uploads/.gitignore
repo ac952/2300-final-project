@@ -10,8 +10,7 @@
 !/uploads/
 /uploads/*
 
-# Tell Git to NOT ignore your EACH seed file in your your upload folders.
-!/box/1.pdf
+# Tell Git to NOT ignore your EACH seed file in your upload folders.
 
 !/images
 !/images/2.jpg

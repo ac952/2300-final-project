@@ -1,6 +1,11 @@
 <?php
 include('includes/init.php');
 $current_page_id = "logout";
+
+log_out();
+if (!$current_user) {
+  record_message("You've been successfully logged out.");
+}
 ?>
 
 <!DOCTYPE html>

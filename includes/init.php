@@ -20,13 +20,13 @@ function record_message($message) {
   array_push($messages, $message);
 }
 
-function exec_sql_query($db, $sql, $params = array()) {
-  $query = $db->prepare($sql);
-  if ($query and $query->execute($params)) {
-    return $query;
-  }
-  return NULL;
-}
+// function exec_sql_query($db, $sql, $params = array()) {
+//   $query = $db->prepare($sql);
+//   if ($query and $query->execute($params)) {
+//     return $query;
+//   }
+//   return NULL;
+// }
 
 // Write out any messages to the user.
 function print_messages() {
@@ -36,6 +36,21 @@ function print_messages() {
   }
 }
 
+function handle_db_error($exception) {
+  echo '<p><strong>' . htmlspecialchars('Exception : ' . $exception->getMessage()) . '</strong></p>';
+}
+// execute an SQL query and return the results.
+function exec_sql_query($db, $sql, $params = array()) {
+  try {
+    $query = $db->prepare($sql);
+    if ($query and $query->execute($params)) {
+      return $query;
+    }
+  } catch (PDOException $exception) {
+    handle_db_error($exception);
+  }
+  return NULL;
+}
 // YOU MAY COPY & PASTE THIS FUNCTION WITHOUT ATTRIBUTION.
 // open connection to database
 function open_or_init_sqlite_db($db_filename, $init_sql_filename) {
@@ -68,11 +83,11 @@ function open_or_init_sqlite_db($db_filename, $init_sql_filename) {
 // open connection to database
 $db = open_or_init_sqlite_db("website.sqlite", "init/init.sql");
 
-//log-in
+//log-in and log-out code below
 
 function check_login() {
-  if (isset($_SESSION['current_user'])) {
-    return $_SESSION['current_user'];
+  if (isset($_SESSION['currentuser'])) {
+    return $_SESSION['currentuser'];
   }
   return NULL;
 }
@@ -85,11 +100,11 @@ function log_in($username, $password) {
     );
     $records = exec_sql_query($db, $sql, $params)->fetchAll();
     if ($records) {
-      // 1 UNIQUE username.
+      // 1 UNIQUE username allowed
       $account = $records[0];
-      // Check password
+      // Verify password
       if (password_verify($password, $account['password'])) {
-        $_SESSION['current_user'] = $username;
+        $_SESSION['currentuser'] = $username;
       } else {
         record_message("Username or password not valid.");
       }
@@ -101,15 +116,15 @@ function log_in($username, $password) {
   }
   return NULL;
 }
-//log out
+//log out function and session destroy
 
 function log_out() {
   global $current_user;
   $current_user = NULL;
-  unset($_SESSION['current_user']);
+  unset($_SESSION['currentuser']);
   session_destroy();
 }
-// log in user
+// log in the user and start session
 session_start();
 if (isset($_POST['login'])) {
   $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
