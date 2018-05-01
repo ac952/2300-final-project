@@ -10,10 +10,10 @@ if (isset($_POST["submit_changes"])) {
   $event_time = filter_input(INPUT_POST, 'event_time', FILTER_SANITIZE_STRING);
   $location = filter_input(INPUT_POST, 'location', FILTER_SANITIZE_STRING);
   $description = filter_input(INPUT_POST, 'description', FILTER_SANITIZE_STRING);
-  }
+  // }
 
   // php for updating any changes to events page AND db
-  if (isset($_POST["submit_changes"])){
+  // if (isset($_POST["submit_changes"])){
     $id = $_POST['submit_changes'];
     // use INSERT events
     $sql = "UPDATE events SET event_name = '$event_name', event_month ='$event_month',
@@ -34,15 +34,16 @@ if (isset($_POST["submit_changes"])) {
     // if sql is executed successfully, echo success
     if ($records){
       echo 'Your changes have been updated!';
-    }
-    echo 'Changes have not been updated. Please fill out form again.';
-    // deletes prefilled info :(
-    $id = $_POST['submit_changes'];
-    // $sql = "SELECT * FROM events";
-    $sql = "SELECT * FROM events WHERE id = '$id'";
-    $params = array();
-    $records = exec_sql_query($db, $sql, $params)->fetchAll(PDO::FETCH_ASSOC);
+    } else {
+      echo 'Changes have not been updated. Please fill out form again.';
+      // deletes prefilled info :(
+      $id = $_POST['submit_changes'];
+      // $sql = "SELECT * FROM events";
+      $sql = "SELECT * FROM events WHERE id = '$id'";
+      $params = array();
+      $records = exec_sql_query($db, $sql, $params)->fetchAll(PDO::FETCH_ASSOC);
   }
+}
   // php for sticky form
   // check if the edit button is pressed in the edit.php file
   if(isset($_GET['submit_edit'])){
@@ -52,7 +53,6 @@ if (isset($_POST["submit_changes"])) {
     // $sql = "SELECT * FROM events";
     $params = array();
     $records = exec_sql_query($db, $sql, $params)->fetchAll(PDO::FETCH_ASSOC);
-    // var_dump($records);
   }
 
 ?>
