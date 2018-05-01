@@ -68,6 +68,7 @@ if(isset($_GET['submit_delete'])){
 
 <?php
 function print_event($record) {
+  global $current_user;
   ?>
   <tr>
     <td><?php echo htmlspecialchars($record["event_name"]);?></td>
@@ -77,6 +78,8 @@ function print_event($record) {
     <td><?php echo htmlspecialchars($record["event_time"]);?></td>
     <td><?php echo htmlspecialchars($record["location"]);?></td>
     <td><?php echo htmlspecialchars($record["description"]);?></td>
+
+    <?php if($current_user) { ?>
     <td>
       <form action ="edit_events.php" method ="get">
         <button type="submit" value='<?php echo $record['id'] ?>'
@@ -89,6 +92,7 @@ function print_event($record) {
           name="submit_delete">Delete</button>
       </form>
     </td>
+  <?php }?>
   </tr>
   <?php
 }
@@ -125,6 +129,8 @@ function print_event($record) {
         }
         ?>
       </table>
+
+  <?php if($current_user) { ?>
     <h2>Add an Event</h2>
     <form id="addevent" action="events.php" method="post">
       <ul>
@@ -157,6 +163,8 @@ function print_event($record) {
         </li>
       </ul>
     </form>
+  <?php }?>
+
   </div>
   <?php include("includes/footer.php");?>
 </body>
