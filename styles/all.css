@@ -102,3 +102,12 @@ footer {
   transition: 0.5s;
   background-color: #E9967A;
 }
+
+#awards {
+  list-style: none;
+}
+
+.about_emphasis {
+  font-weight: bold;
+  color: #A80F2A;
+}
