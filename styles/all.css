@@ -16,8 +16,13 @@ footer {
   color: white;
 }
 
+
 #menu {
   display: inline;
+}
+
+.page_header {
+  margin: 20px;
 }
 
 #menu ul {
@@ -62,16 +67,10 @@ footer {
   height: 90px;
 }
 
-#circleklogin ul {
-  list-style-type: none;
-  padding-right: 3%;
+#addevent ul {
+  list-style: none;
 }
 
-#login-wrap {
-  text-align: center;
-}
-
-#menu li:hover {
-  transition: 0.5s;
-  background-color: skyblue;
+#uploadFile ul {
+  list-style: none;
 }
