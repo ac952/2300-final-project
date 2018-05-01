@@ -62,17 +62,18 @@ footer {
 
 #facebook_logo {
   float: right;
-  padding-right: 5px;
+  padding-right: 10px;
 }
 
 #copyright_message {
   float: left;
-  padding-left: 5px;
+  padding-left: 10px;
 }
 .site-footer {
   background-color: #A80F2A;
   color: white;
-  position: fixed;
+  position: relative;
+  height: 80px;
   margin: 0px;
   left: 0;
   bottom: 0;
