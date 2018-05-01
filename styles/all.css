@@ -16,8 +16,13 @@ footer {
   color: white;
 }
 
+
 #menu {
   display: inline;
+}
+
+.page_header {
+  margin: 20px;
 }
 
 #menu ul {
@@ -60,4 +65,12 @@ footer {
   background-color: #A80F2A;
   color: white;
   height: 90px;
+}
+
+#addevent ul {
+  list-style: none;
+}
+
+#uploadFile ul {
+  list-style: none;
 }
