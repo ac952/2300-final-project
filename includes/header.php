@@ -24,4 +24,11 @@
       </ul>
     </nav>
   </div>
+  <p>
+        <?php
+        if ($current_user) {
+          echo "Hi, you are logged in as $current_user.";
+        }
+        ?>
+      </p>
 </header>

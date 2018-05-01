@@ -116,6 +116,7 @@ function log_in($username, $password) {
   }
   return NULL;
 }
+
 //log out function and session destroy
 
 function log_out() {
@@ -124,6 +125,7 @@ function log_out() {
   unset($_SESSION['currentuser']);
   session_destroy();
 }
+
 // log in the user and start session
 session_start();
 if (isset($_POST['login'])) {
@@ -131,8 +133,9 @@ if (isset($_POST['login'])) {
   $username = trim($username);
   $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
   $current_user = log_in($username, $password);
-} else {
+}
   // check if logged in
   $current_user = check_login();
-}
+
+
 ?>
