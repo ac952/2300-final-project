@@ -54,20 +54,17 @@ if (isset($_POST["submit_insert"])) {
 
 <?php
 // if click on delete, delete row in db by event name (make unique)
-var_dump('no');
+// var_dump('no');
 if(isset($_GET['submit_delete'])){
   // var_dump($_POST['submit_delete']);
     // $id = $record['id'];
     $id = $_GET['submit_delete'];
-    // var_dump($id);
-    // var_dump('g');
     // $sql = "DELETE FROM events WHERE id = " . $record['id']. "";
     $sql = "DELETE FROM events WHERE id='$id'";
-    // var_dump('g');
     $params = array();
     exec_sql_query($db, $sql, $params);
 }
- ?>
+?>
 
 <?php
 function print_event($record) {
@@ -81,7 +78,7 @@ function print_event($record) {
     <td><?php echo htmlspecialchars($record["location"]);?></td>
     <td><?php echo htmlspecialchars($record["description"]);?></td>
     <td>
-      <form action ="edit_events.php" method ="post">
+      <form action ="edit_events.php" method ="get">
         <button type="submit" value='<?php echo $record['id'] ?>' name="submit_edit">Edit</button>
       </form>
        <!-- <button name="submit_edit"><a href='edit_events.php?id='>Edit</a></button> -->
@@ -152,7 +149,7 @@ function print_event($record) {
           <label>Description:</label>
         </li>
         <li>
-          <textarea name="description" cols="40" rows="5"></textarea>
+          <textarea type="text" name="description" cols="40" rows="5"></textarea>
         </li>
         <li>
           <button name="submit_insert" type="submit">Add Event</button>

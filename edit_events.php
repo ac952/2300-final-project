@@ -24,9 +24,9 @@ if (isset($_POST["submit_changes"])) {
     $sql = "UPDATE events SET event_month='$event_month', event_date='$event_date',
     event_year='$event_year', location='$location', description='$description'
     WHERE event_name = '$event_name'";
-
-    // var_dump($sql);
-
+    // $sql = "UPDATE events SET event_name = '$event_name', event_month='$event_month', event_date='$event_date',
+    // event_year='$event_year', location='$location', description='$description'
+    // WHERE id = '$id'";
     $params = array();
     $records = exec_sql_query($db, $sql, $params)->fetchAll(PDO::FETCH_ASSOC);
     // echo changes in the events.php page
@@ -36,8 +36,20 @@ if (isset($_POST["submit_changes"])) {
       echo 'Your changes have been updated!';
     }
     echo 'Changes have not been updated. Please fill out form again.';
-
+    // deletes prefilled info
   }
+
+
+  // check if the edit button is pressed in the edit.php file
+  if(isset($_GET['submit_edit'])){
+    $id = $_GET['submit_edit'];
+    // get the sql query (row info) for that id
+    $sql = "SELECT * FROM events WHERE id = '$id'";
+    $params = array();
+    $records = exec_sql_query($db, $sql, $params)->fetchAll();
+    // var_dump($records);
+  }
+
 
 ?>
 <!DOCTYPE html>
@@ -53,41 +65,39 @@ if (isset($_POST["submit_changes"])) {
   <h1>Edit Event </h1>
     <!-- get the info from db based on selected cell id-->
     <!-- echo inside input -->
-    <form id="event" action="events.php" method="post">
+    <form id="event" action="edit_events.php" method="post">
       <ul>
         <li>
           <label>Event Name:</label>
           <input type="text" name="event_name"
-          value =" <?php foreach($records as $record) {
-            if ($id == $record['id']);
-            echo $record['event_name'];
-          }?> "/>
+          value =" <?php foreach($records as $record) {echo htmlspecialchars($record['event_name']);}?> "/>
         </li>
         <li>
           <label>Date:</label>
-          <input type="number" name="event_month" placeholder="MM"
-          value =" <?php foreach($records as $record) {echo $record['event_month'];}?> "/>/
-          <input type="number" name="event_date" placeholder="DD"
-          value =" <?php foreach($records as $record) {echo $record['event_date'];}?> "/>/
-          <input type="number" name="event_year" placeholder="YYYY"
-          value =" <?php foreach($records as $record) {echo $record['event_year'];}?> "/>
+          <input type="text" name="event_month" placeholder="MM"
+          value =" <?php foreach($records as $record) {echo htmlspecialchars(intval($record['event_month']));}
+          ?> "/>/
+          <input type="text" name="event_date" placeholder="DD"
+          value =" <?php foreach($records as $record) {echo htmlspecialchars(intval($record['event_date']));}?> "/>/
+          <input type="text" name="event_year" placeholder="YYYY"
+          value =" <?php foreach($records as $record) {echo htmlspecialchars(intval($record['event_year']));}?> "/>
         </li>
         <li>
           <label>Time:</label>
           <input type="text" name="event_time" placeholder="format: 4:00pm"
-          value =" <?php foreach($records as $record) {echo $record['event_time'];}?> " />
+          value =" <?php foreach($records as $record) {echo htmlspecialchars($record['event_time']);}?> " />
         </li>
         <li>
           <label>Location:</label>
           <input type="text" name="location"
-          value =" <?php foreach($records as $record) {echo $record['location'];}?> "/>
+          value =" <?php foreach($records as $record) {echo htmlspecialchars($record['location']);}?> "/>
         </li>
         <li>
           <label>Description:</label>
         </li>
         <li>
-          <textarea name="description" cols="40" rows="5"
-          value =" <?php foreach($records as $record) {echo $record['description'];}?> ">
+          <textarea type="text" name="description" cols="40" rows="5"
+          value =" <?php foreach($records as $record) {echo htmlspecialchars($record['description']);}?> ">
           </textarea>
         </li>
         <li>
