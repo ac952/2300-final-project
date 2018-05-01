@@ -19,7 +19,7 @@ $current_page_id = "eboard";
   <h1 class = "page_header">Eboard</h1>
 
 <div class="eboard_member">
-  <img src="./uploads/images/brendon_nguyen.jpg" alt="Brendon Nguyen" height="400" width="280">
+  <img class= "eboard_pic" src="./uploads/images/brendon_nguyen.jpg" alt="Brendon Nguyen" height="400" width="280"><br>
   <span class="size">Brendon Nguyen</span><br>
   <span class="position">President</span><br>
   <span class="color_emphasis">Year + Major:</span> Computer Science (Minor in Education), 2020<br>
@@ -28,7 +28,7 @@ $current_page_id = "eboard";
 </div>
 
 <div class="eboard_member">
-  <img src="./uploads/images/christine_zhang.jpg" alt="Christine Zhang" height="400" width="280">
+  <img class= "eboard_pic" src="./uploads/images/christine_zhang.jpg" alt="Christine Zhang" height="400" width="280"><br>
   <span class="size">Christine Zhang</span><br>
   <span class="position">President</span><br>
   <span class="color_emphasis">Year + Major:</span> Biology (focus on Neurobiology and Behavior), 2019<br>
@@ -37,7 +37,7 @@ $current_page_id = "eboard";
 </div>
 
 <div class="eboard_member">
-  <img src="./uploads/images/will_pascocello.jpg" alt="Will Pascocello" height="400" width="280">
+  <img class= "eboard_pic" src="./uploads/images/will_pascocello.jpg" alt="Will Pascocello" height="400" width="280"><br>
   <span class="size">Will Pascocello</span><br>
   <span class="position">Vice-President</span><br>
   <span class="color_emphasis">Year + Major:</span> AEM, 2020<br>
@@ -46,7 +46,7 @@ $current_page_id = "eboard";
 </div>
 
 <div class="eboard_member">
-  <!--<img src="./uploads/images/lauren_harper.jpg" alt="Lauren Harper" height="400" width="280">-->
+  <!--<img class= "eboard_pic" src="./uploads/images/lauren_harper.jpg" alt="Lauren Harper" height="400" width="280"><br>-->
   <span class="size">Lauren Harper</span><br>
   <span class="position">Secretary</span><br>
   <span class="color_emphasis">Year + Major:</span> Animal Science, 2020<br>
@@ -55,7 +55,7 @@ $current_page_id = "eboard";
 </div>
 
 <div class="eboard_member">
-  <img src="./uploads/images/adam_fekini.jpg" alt="Adam Fekini" height="400" width="280">
+  <img class= "eboard_pic" src="./uploads/images/adam_fekini.jpg" alt="Adam Fekini" height="400" width="280"><br>
   <span class="size">Adam Fekini</span><br>
   <span class="position">Treasurer</span><br>
   <span class="color_emphasis">Year + Major:</span> AEM, 2021<br>
@@ -64,7 +64,7 @@ $current_page_id = "eboard";
 </div>
 
 <div class="eboard_member">
-  <img src="./uploads/images/jason_lee.jpg" alt="Jason Lee" height="400" width="280">
+  <img class= "eboard_pic" src="./uploads/images/jason_lee.jpg" alt="Jason Lee" height="400" width="280"><br>
   <span class="size">Jason Lee</span><br>
   <span class="position">Editor</span><br>
   <span class="color_emphasis">Year + Major:</span> Biological Sciences, 2020<br>
