@@ -11,27 +11,27 @@ CREATE TABLE `images` (
   `id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`img_name`	TEXT NOT NULL,
 	`img_ext`	TEXT NOT NULL,
-	`user_id` INTEGER NOT NULL
+	`user_id` TEXT NOT NULL
 );
 
-INSERT INTO images (img_name, img_ext, user_id) VALUES ('1.jpeg','jpeg',1);
-INSERT INTO images (img_name, img_ext, user_id) VALUES ('2.jpg','jpg',1);
-INSERT INTO images (img_name, img_ext, user_id) VALUES ('3.jpg','jpg',1);
-INSERT INTO images (img_name, img_ext, user_id) VALUES ('4.jpg','jpg',1);
-INSERT INTO images (img_name, img_ext, user_id) VALUES ('5.jpg','jpg',1);
-INSERT INTO images (img_name, img_ext, user_id) VALUES ('6.jpg','jpg',1);
-INSERT INTO images (img_name, img_ext, user_id) VALUES ('7.jpg','jpg',1);
-INSERT INTO images (img_name, img_ext, user_id) VALUES ('8.jpeg','jpeg',1);
-INSERT INTO images (img_name, img_ext, user_id) VALUES ('9.jpeg','jpeg',1);
-INSERT INTO images (img_name, img_ext, user_id) VALUES ('10.jpeg','jpeg',1);
-INSERT INTO images (img_name, img_ext, user_id) VALUES ('11.jpg','jpg',1);
-INSERT INTO images (img_name, img_ext, user_id) VALUES ('12.jpg','jpg',1);
-INSERT INTO images (img_name, img_ext, user_id) VALUES ('13.jpg','jpg',1);
-INSERT INTO images (img_name, img_ext, user_id) VALUES ('14.jpg','jpg',1);
-INSERT INTO images (img_name, img_ext, user_id) VALUES ('15.jpg','jpg',1);
-INSERT INTO images (img_name, img_ext, user_id) VALUES ('16.jpg','jpg',1);
-INSERT INTO images (img_name, img_ext, user_id) VALUES ('17.jpg','jpg',1);
-INSERT INTO images (img_name, img_ext, user_id) VALUES ('18.jpg','jpg',1);
+INSERT INTO images (img_name, img_ext, user_id) VALUES ('1.jpeg','jpeg','cornellcirclek');
+INSERT INTO images (img_name, img_ext, user_id) VALUES ('2.jpg','jpg','cornellcirclek');
+INSERT INTO images (img_name, img_ext, user_id) VALUES ('3.jpg','jpg','cornellcirclek');
+INSERT INTO images (img_name, img_ext, user_id) VALUES ('4.jpg','jpg','cornellcirclek');
+INSERT INTO images (img_name, img_ext, user_id) VALUES ('5.jpg','jpg','cornellcirclek');
+INSERT INTO images (img_name, img_ext, user_id) VALUES ('6.jpg','jpg','cornellcirclek');
+INSERT INTO images (img_name, img_ext, user_id) VALUES ('7.jpg','jpg','cornellcirclek');
+INSERT INTO images (img_name, img_ext, user_id) VALUES ('8.jpeg','jpeg','cornellcirclek');
+INSERT INTO images (img_name, img_ext, user_id) VALUES ('9.jpeg','jpeg','cornellcirclek');
+INSERT INTO images (img_name, img_ext, user_id) VALUES ('10.jpeg','jpeg','cornellcirclek');
+INSERT INTO images (img_name, img_ext, user_id) VALUES ('11.jpg','jpg','cornellcirclek');
+INSERT INTO images (img_name, img_ext, user_id) VALUES ('12.jpg','jpg','cornellcirclek');
+INSERT INTO images (img_name, img_ext, user_id) VALUES ('13.jpg','jpg','cornellcirclek');
+INSERT INTO images (img_name, img_ext, user_id) VALUES ('14.jpg','jpg','cornellcirclek');
+INSERT INTO images (img_name, img_ext, user_id) VALUES ('15.jpg','jpg','cornellcirclek');
+INSERT INTO images (img_name, img_ext, user_id) VALUES ('16.jpg','jpg','cornellcirclek');
+INSERT INTO images (img_name, img_ext, user_id) VALUES ('17.jpg','jpg','cornellcirclek');
+INSERT INTO images (img_name, img_ext, user_id) VALUES ('18.jpg','jpg','cornellcirclek');
 
 
 CREATE TABLE `events`(

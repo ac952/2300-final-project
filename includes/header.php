@@ -18,7 +18,22 @@
             $css = "";
           }
 
-        echo "<li> <a " . $css . " href='" . $id. ".php'>$name</a></li>";
+          if($current_user){
+            if($name == "Login"){
+              echo "";
+            }
+            else{
+              echo "<li><a " . $css . " href='" . $id. ".php'>$name</a></li>";
+            }
+          }
+          else{
+            if($name == "Logout"){
+              echo "";
+            }
+            else{
+              echo "<li><a " . $css . " href='" . $id. ".php'>$name</a></li>";
+            }
+          }
       }
       ?>
       </ul>

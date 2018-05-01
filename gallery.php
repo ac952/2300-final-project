@@ -27,13 +27,13 @@ if (isset($_POST["submit_upload"])) {
     $upload_ext = strtolower(pathinfo($img_name, PATHINFO_EXTENSION) );
 
     if($upload_ext=="jpg" || $upload_ext=="jpeg" || $upload_ext=="png"){
-      //$user_id = $current_user;
+      $user_id = $current_user;
 
-      $sql = "INSERT INTO images (img_name,img_ext,user_id) VALUES (:img_name,:img_ext,1)";
+      $sql = "INSERT INTO images (img_name,img_ext,user_id) VALUES (:img_name,:img_ext,:user_id)";
       $params = array(
         ':img_name' => $img_name,
         ':img_ext' => $upload_ext,
-        //':user_id' => $user_id
+        ':user_id' => $user_id
       );
       $result = exec_sql_query($db, $sql, $params);
 
@@ -84,6 +84,8 @@ if (isset($_POST["submit_upload"])) {
     ?>
       <h1 id="page_header"> Gallery</h1>
         <p>Browse gallery.</p>
+      <?php
+      if($current_user) { ?>
 
       <form id="uploadFile" action="gallery.php" method="post" enctype="multipart/form-data">
       <ul>
@@ -97,6 +99,8 @@ if (isset($_POST["submit_upload"])) {
         </li>
       </ul>
     </form>
+    <?php }?>
+
 
     <?php
       $records = exec_sql_query($db, "SELECT * FROM images")->fetchAll(PDO::FETCH_ASSOC);
@@ -112,8 +116,9 @@ if (isset($_POST["submit_upload"])) {
         $records = exec_sql_query($db, $sql, $params)->fetchAll();
         foreach($records as $record){
           $owner_id = $record["user_id"];
-        //if($current_user) {
-        //if($current_user==$owner_id){?>
+
+        if($current_user) {
+          if($current_user==$owner_id){?>
 
           <form id="uploadFile" action=<?php echo "gallery.php?delete_photo=".htmlspecialchars($record["id"]) ?>
             method="post" enctype="multipart/form-data">
@@ -127,7 +132,7 @@ if (isset($_POST["submit_upload"])) {
             </ul>
           </form>
         <?php }}
-            //}}
+            }}
          ?>
     </div>
   </body>
