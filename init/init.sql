@@ -50,8 +50,3 @@ INSERT INTO events (event_name, event_month, event_date, event_year, event_time,
 INSERT INTO events (event_name, event_month, event_date, event_year, event_time, location, description) VALUES ('Girls Adventures in Math',04,29,18,'2:30pm','On Campus', 'Helping proctor, grade, and play games at a team-based math competition for girls in the 3rd-8th grade.');
 INSERT INTO events (event_name, event_month, event_date, event_year, event_time, location, description) VALUES ('Circle K Social',05,05,18,'6:00pm','Helen Newmann Bowling Alleys', 'To recap and recognize our philanthropic efforts thorughout this past semester. Free drinks and pizza!');
 INSERT INTO events (event_name, event_month, event_date, event_year, event_time, location, description) VALUES ('Adopt a Highway',05,06,18,'10:00am','Brooktondale Baptist Church', 'Picking up trash along local Ithaca highways to keep roads clean.');
-
-
-
-
-/* TODO: initial seed data */
