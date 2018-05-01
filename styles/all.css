@@ -104,7 +104,9 @@ footer {
 }
 
 #content-wrap {
-  margin: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
+  padding-top: 0px;
 }
 
 td {
@@ -114,16 +116,71 @@ td {
 }
 
 th{
-  background-color:#4CAF50;
+  background-color:#A80F2A;
   color: white;
   text-align: left;
   padding: 5px;
 }
 
 tr:hover {
-  background-color: 		#90EE90;
+  background-color: #90EE90;
 }
 
 table {
   border-collapse: collapse;
 }
+
+label {
+  display: block;
+}
+
+input {
+  border-radius: 2px;
+  outline: none;
+  display: inline;
+  position: relative;
+}
+
+textarea {
+  border-radius: 2px;
+  outline: none;
+  display: inline;
+  position: relative;
+  transition: width 0.4s ease-in-out;
+}
+
+input[type=text] {
+  transition: width 0.4s ease-in-out;
+}
+
+input[type=number] {
+  width: 50px;
+}
+
+input[type=text]:focus {
+  border: 1px solid #98FB98;
+  width: 20%;
+}
+
+input[type=number]:focus {
+  border: 1px solid #98FB98;
+}
+
+textarea:focus {
+  border: 1px solid #98FB98;
+  width: 40%;
+}
+
+button[type=submit] {
+    background-color: #4CAF50;
+    border-radius: 1px;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    margin: 2px 1px;
+    cursor: pointer;
+}
+
+/* #ckilogo {
+  float:right;
+} */

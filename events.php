@@ -146,7 +146,7 @@ function print_event($record) {
         <br>
         <li>
           <label>Time:</label>
-          <input type="text" name="event_time" placeholder="format: 4:00pm" required/>
+          <input type="text" name="event_time" placeholder="1:00pm" required/>
         </li>
         <br>
         <li>
@@ -170,6 +170,9 @@ function print_event($record) {
   <?php }?>
 
   </div>
+  <!-- <div id="ckilogo">
+  <img src="logo2.png" alt="ckilogo">
+</div> -->
   <?php include("includes/footer.php");?>
 </body>
 </html>
