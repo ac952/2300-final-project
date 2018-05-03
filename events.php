@@ -141,7 +141,7 @@ function print_event($record) {
           <label>Date:</label>
           <input type="number" name="event_month" placeholder="MM" required/>/
           <input type="number" name="event_date" placeholder="DD" required/>/
-          <input type="number" name="event_year" placeholder="YYYY" required/>
+          <input type="number" name="event_year" placeholder="YY" required/>
         </li>
         <br>
         <li>

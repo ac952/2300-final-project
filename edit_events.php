@@ -19,18 +19,10 @@ if (isset($_POST["submit_changes"])) {
     $sql = "UPDATE events SET event_name = '$event_name', event_month ='$event_month',
     event_date='$event_date',event_year='$event_year', location='$location',
     description='$description' WHERE id = '$id'";
-    // $sql = "UPDATE events SET event_name = '$event_name', event_month='$event_month',
-    // event_date='$event_date',
-    // event_year='$event_year', location='$location', description='$description'
-    // WHERE id = '$id'";
     $params = array();
-    var_dump($params);
-    $records = exec_sql_query($db, $sql, $params)->fetchAll(PDO::FETCH_ASSOC);
-    var_dump($records);
-    // $records = exec_sql_query($db, $sql, $params)->fetchAll(PDO::FETCH_ASSOC);
+    $records = exec_sql_query($db, $sql, $params);
 
-    // echo changes in the events.php page
-    // var_dump('pass');
+    // echo changes in the edit_events.php page
     // if sql is executed successfully, echo success
     if ($records){
       echo 'Your changes have been updated!';
@@ -106,7 +98,7 @@ if (isset($_POST["submit_changes"])) {
           <label>Description:</label>
         </li>
         <!-- <li> -->
-          <input type="text" name="description" cols="40" rows="5"
+          <input id="description-box" type="text" name="description" cols="40" rows="5"
           value =" <?php foreach($records as $record)
           {echo htmlspecialchars($record['description']);}?> ">
         </input>
