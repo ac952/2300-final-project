@@ -207,6 +207,14 @@ button[type=submit] {
   height: 50px;
 }
 
+.message{
+  position:absolute;
+  top:355px;
+  left: 40%;
+  /* text-align: left; */
+  color:red;
+}
+
 /* #ckilogo {
   float:right;
 } */

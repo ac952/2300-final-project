@@ -25,9 +25,9 @@ if (isset($_POST["submit_changes"])) {
     // echo changes in the edit_events.php page
     // if sql is executed successfully, echo success
     if ($records){
-      echo 'Your changes have been updated!';
+      echo '<h3 class="message">Your changes have been updated!</h3>';
     } else {
-      echo 'Changes have not been updated. Please fill out form again.';
+      echo '<h3 class="message">Changes have not been updated. </h3>';
       // deletes prefilled info :(
       $id = $_POST['submit_changes'];
       // $sql = "SELECT * FROM events";
