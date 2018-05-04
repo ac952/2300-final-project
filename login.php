@@ -15,6 +15,7 @@ $current_page_id = "login";
 </head>
 
 <body>
+  <article>
   <?php include("includes/header.php");?>
 
   <div id="login-wrap">
@@ -58,5 +59,6 @@ $current_page_id = "login";
   </div>
 
   <?php include( "includes/footer.php" ); ?>
+</article>
 </body>
 </html>

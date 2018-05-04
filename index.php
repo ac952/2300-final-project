@@ -15,6 +15,7 @@ $current_page_id = "index";
 </head>
 
 <body>
+  <article>
   <?php include("includes/header.php");?>
   <h1 class = "page_header">About</h1>
 
@@ -68,5 +69,6 @@ $current_page_id = "index";
 <span class="color_emphasis">Location:</span> Stimson G01<br><br>
 
   <?php include( "includes/footer.php" ); ?>
+</article>
 </body>
 </html>

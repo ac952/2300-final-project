@@ -66,6 +66,7 @@ if (isset($_POST["submit_upload"])) {
 </head>
 
 <body>
+  <article>
   <?php include("includes/header.php");?>
     <div id="content-wrap">
     <title>Gallery</title>
@@ -135,6 +136,7 @@ if (isset($_POST["submit_upload"])) {
             }}
          ?>
     </div>
+  </article>
   </body>
 
   <?php include("includes/footer.php");?>

@@ -20,6 +20,7 @@ if (!$current_user) {
 </head>
 
 <body>
+  <article>
   <?php include("includes/header.php");?>
 
   <div id="logout-wrap">
@@ -30,5 +31,6 @@ if (!$current_user) {
   </div>
 
   <?php include( "includes/footer.php" ); ?>
+</article>
 </body>
 </html>

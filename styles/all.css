@@ -7,22 +7,51 @@ header {
   color: white;
 }
 
-header, div {
+/* header, div {
   margin: 0px;
+} */
+
+html, body {
+  margin:0;
+  padding:0;
+  height:100%;
+
 }
 
-body {
-  margin: 0px;
-  padding-bottom: 0px;
+.container {
+  min-height: 100%;
 }
 
-footer {
+/* footer {
   width: 100%;
   background-color: #A80F2A;
   margin: 0px;
   color: white;
+  bottom: 0;
+  position: absolute;
+
+} */
+
+.site-footer {
+  background-color: #A80F2A;
+  color: white;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height:80px;
 }
 
+footer {
+  width: 100%;
+  margin-bottom: 0px;
+}
+
+article {
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 100%;
+}
 
 #menu {
   display: inline;
@@ -64,22 +93,12 @@ footer {
 #facebook_logo {
   float: right;
   padding-right: 10px;
+  padding-top: 5px;
 }
 
 #copyright_message {
   float: left;
   padding-left: 10px;
-}
-.site-footer {
-  background-color: #A80F2A;
-  color: white;
-  position: relative;
-  height: 80px;
-  margin: 0px;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  padding-top: 10px;
 }
 
 #addevent ul {
@@ -215,6 +234,177 @@ button[type=submit] {
   color:red;
 }
 
-/* #ckilogo {
+/**/
+.memberBox{
+  padding:15px;
+  color:black;
+  font-size:20px;
+  border:solid white 3px;
+  width:334px;
+  height:334px;
+  float:left;
+  background-color: white;
+  margin-right:30px;
+  margin-top:6px;
+  margin-bottom:60px;
+  margin-left:30px;
+}
+
+#memberTitle{
+color:white;
+}
+
+#memberTitle{
+  font-size: 70px;
+  margin-left:25px;
+  margin-bottom:15px;
+}
+
+.memberProPic {
+  width:100%;
+  opacity:1;
+  transition: 1s;
+  display:block;
+}
+
+.memberName{
+  opacity:0;
+  position:absolute;
+  color:black;
+  font-weight:bold;
+  font-size:35px;
+  width:330px;
+  margin-top:-450px;
+  text-align: left;
+  padding: 10px;
+}
+
+.memberMajor {
+  opacity:0;
+  position:absolute;
+  color:black;
+  font-weight:bold;
+  font-size:25px;
+  width:300px;
+  margin-top:-140px;
+  text-align: left;
+  padding-left: 10px;
+}
+
+.memberHome {
+  opacity:0;
+  position:absolute;
+  color:black;
+  font-weight:bold;
+  font-size:20px;
+  width:330px;
+  margin-top:-100px;
+  text-align: left;
+  padding-left: 10px;
+}
+
+.memberHobby {
+  opacity:0;
+  position:absolute;
+  color:black;
+  font-weight:bold;
+  font-size:20px;
+  width:330px;
+  margin-top:-75px;
+  text-align: left;
+  padding-left: 10px;
+}
+/*above learned from w3 schools */
+
+.memberBox:hover .memberProPic{
+  opacity: 0.25;
+}
+.memberBox:hover .memberName{
+  opacity:1;
+}
+
+.memberBox:hover .memberMajor{
+  opacity:1;
+}
+
+.memberBox:hover .memberHome{
+  opacity:1;
+}
+
+.memberBox:hover .memberHobby{
+  opacity:1;
+}
+/*styling of image to fade in opacity when hovering over the image with a cursor learned from W3 Schools*/
+.memberInfoBox{
+  color: white;
+  font-size: 20px;
+  margin: 25px;
+  text-align: left;
+  background-color: #F08080;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.nameTitle{
+  margin-bottom: 10px;
+  background: #A80F2A;
+  padding: 20px;
+  flex: 1;
+  font-size:40px;
+}
+
+.circles{
+  width:100%;
+}
+.circle{
+  width:180px;
+  height:180px;
+  border-radius:50%;
+  background-color:#A80F2A;
+  color:white;
+  text-align:center;
+  padding: 40px;
   float:right;
-} */
+  margin-right: 35%;
+  /* margin-left:35px;
+  margin-top:20px;
+  margin-bottom:20px; */
+}
+.circleVal{
+  width:180px;
+  height:180px;
+  border-radius:50%;
+  background-color:white;
+  color:black;
+  font-size:20px;
+  text-align:center;
+  padding:40px;
+  float:left;
+  margin-left:70px;
+  margin-top:20px;
+  margin-bottom:20px;
+}
+
+.circleTitle{
+  font-size: 25px;
+  font-weight: bold;
+  padding-top: 10px;
+}
+
+.circleYear, .circleMajor{
+  margin-top: 10px;
+  font-size: 50px;
+}
+
+.circleContent{
+  margin-top: 10px;
+  font-size: 35px;
+}
+
+.memberHighlight{
+width:100%;
+padding-left:32%;
+padding-right:50%;
+margin-top:2%;
+}

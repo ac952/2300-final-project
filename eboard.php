@@ -1,3 +1,4 @@
+
 <?php
 include('includes/init.php');
 $current_page_id = "eboard";
@@ -5,19 +6,51 @@ $current_page_id = "eboard";
 
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" type="text/css" href="styles/all.css" media="all" />
-
-  <title>Eboard</title>
 </head>
 
+<div class="container">
+  <title>Eboard</title>
+
+<div class="body">
 <body>
+  <article>
   <?php include("includes/header.php");?>
   <h1 class = "page_header">Eboard</h1>
 
+  <div id='boxes'>
+      <!-- <a class="clickMember" href="member1.php"> -->
+        <div class="memberBox">
+          <div class="memberPic">
+            <img src="./uploads/images/brendon_nguyen.jpg" alt ="memberFace" class="memberProPic">
+            <div class="middleText">
+              <div class="memberName">
+                President:
+                <br>Brendon Nguyen
+              </div>
+              <div class="memberMajor">
+                Major: Computer Science
+              </div>
+              <div class="memberHome">
+                Hometown: Mansfield, TX
+              </div>
+              <div class="memberHobby">
+                Hobby: Rubik's cubes
+              </div>
+            </div>
+          </div>
+        </div>
+      <!-- </a> -->
+    </div>
+    <!-- <div class="circles">
+    <div class="circle">
+      <div class="circleTitle"> Major</div>
+    <div class="circleMajor">Computer Science</div>
+     </div> -->
+<!--
 <div class="eboard_member">
   <img class= "eboard_pic" src="./uploads/images/brendon_nguyen.jpg" alt="Brendon Nguyen" height="400" width="280"><br>
   <span class="size">Brendon Nguyen</span><br>
@@ -25,9 +58,9 @@ $current_page_id = "eboard";
   <span class="color_emphasis">Year + Major:</span> Computer Science (Minor in Education), 2020<br>
   <span class="color_emphasis">Hometown:</span> Mansfield, TX<br>
   <span class="color_emphasis">Hobby:</span> Speedsolving Rubik’s cubes<br><br>
-</div>
+</div> -->
 
-<div class="eboard_member">
+<!-- <div class="eboard_member">
   <img class= "eboard_pic" src="./uploads/images/christine_zhang.jpg" alt="Christine Zhang" height="400" width="280"><br>
   <span class="size">Christine Zhang</span><br>
   <span class="position">President</span><br>
@@ -46,7 +79,7 @@ $current_page_id = "eboard";
 </div>
 
 <div class="eboard_member">
-  <!--<img class= "eboard_pic" src="./uploads/images/lauren_harper.jpg" alt="Lauren Harper" height="400" width="280"><br>-->
+  <img class= "eboard_pic" src="./uploads/images/lauren_harper.jpg" alt="Lauren Harper" height="400" width="280"><br>
   <span class="size">Lauren Harper</span><br>
   <span class="position">Secretary</span><br>
   <span class="color_emphasis">Year + Major:</span> Animal Science, 2020<br>
@@ -70,8 +103,11 @@ $current_page_id = "eboard";
   <span class="color_emphasis">Year + Major:</span> Biological Sciences, 2020<br>
   <span class="color_emphasis">Hometown:</span> Cupertino, CA<br>
   <span class="color_emphasis">Hobby:</span> Cooking<br><br>
+</div> -->
+  <?php include( "includes/footer.php" ); ?>
+</article>
+</body>
 </div>
 
-  <?php include( "includes/footer.php" ); ?>
-</body>
+</div>
 </html>
