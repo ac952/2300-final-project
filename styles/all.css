@@ -39,6 +39,7 @@ html, body {
   bottom: 0;
   width: 100%;
   height:80px;
+  /* margin-top: 50px; */
 }
 
 footer {
@@ -235,19 +236,25 @@ button[type=submit] {
 }
 
 /**/
+
+#boxes {
+  width: 100%;
+  height: 100%;
+}
+
 .memberBox{
   padding:15px;
   color:black;
   font-size:20px;
   border:solid white 3px;
-  width:334px;
+  width:25%;
   height:334px;
   float:left;
   background-color: white;
-  margin-right:30px;
+  margin-right:20px;
   margin-top:6px;
   margin-bottom:60px;
-  margin-left:30px;
+  margin-left:20px;
 }
 
 #memberTitle{
@@ -258,6 +265,7 @@ color:white;
   font-size: 70px;
   margin-left:25px;
   margin-bottom:15px;
+  margin-top: 10%;
 }
 
 .memberProPic {
@@ -273,13 +281,25 @@ color:white;
   color:black;
   font-weight:bold;
   font-size:35px;
-  width:330px;
+  width:300px;
   margin-top:-450px;
   text-align: left;
   padding: 10px;
 }
 
 .memberMajor {
+  opacity:0;
+  position:absolute;
+  color:black;
+  font-weight:bold;
+  font-size:25px;
+  width:300px;
+  margin-top:-170px;
+  text-align: left;
+  padding-left: 10px;
+}
+
+.memberYear {
   opacity:0;
   position:absolute;
   color:black;
@@ -297,7 +317,7 @@ color:white;
   color:black;
   font-weight:bold;
   font-size:20px;
-  width:330px;
+  width:300px;
   margin-top:-100px;
   text-align: left;
   padding-left: 10px;
@@ -309,7 +329,7 @@ color:white;
   color:black;
   font-weight:bold;
   font-size:20px;
-  width:330px;
+  width:300px;
   margin-top:-75px;
   text-align: left;
   padding-left: 10px;
@@ -324,6 +344,10 @@ color:white;
 }
 
 .memberBox:hover .memberMajor{
+  opacity:1;
+}
+
+.memberBox:hover .memberYear{
   opacity:1;
 }
 
@@ -407,4 +431,109 @@ width:100%;
 padding-left:32%;
 padding-right:50%;
 margin-top:2%;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  margin-top: 20px;
+}
+
+.membercontainer {
+  position: relative;
+  width: 25%;
+  height: 90%;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 30px;
+  float:left;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+.membercontainer:hover .overlay {
+  opacity: 0.8;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: calc(100% - 30px);
+  width: 100%;
+  opacity: 0;
+  transition: .7s ease;
+  background-color: white;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.membername {
+  color: black;
+  font-size: 30px;
+  font-weight: bold;
+  position: absolute;
+  width: 70%;
+  top: 10%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.major {
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  position: absolute;
+  width: 75%;
+  top: 40%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.year {
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  position: absolute;
+  width: 75%;
+  top: 50%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.hometown {
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  position: absolute;
+  width: 75%;
+  top: 60%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.hobby {
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  position: absolute;
+  width: 75%;
+  top: 70%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.photolabel {
+  text-align: center;
 }

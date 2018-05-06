@@ -19,20 +19,113 @@ $current_page_id = "eboard";
 <body>
   <article>
   <?php include("includes/header.php");?>
-  <h1 class = "page_header">Eboard</h1>
+  <h1 class = "page_header">Executive Board Members</h1>
 
-  <div id='boxes'>
-      <!-- <a class="clickMember" href="member1.php"> -->
+  <div class="container">
+  <div class="membercontainer">
+    <img src="./uploads/images/brendon_nguyen.jpg" alt ="memberFace">
+    <div class="overlay">
+      <div class="membername">Brendon Nguyen</div>
+      <div class="major">Major: Computer Science</div>
+      <div class="year">Year: 2020</div>
+      <div class="hometown">Hometown: Mansfield, TX</div>
+      <div class="hobby">Hobby: Rubiks cubes</div>
+  </div>
+  <div class="photolabel">
+    <p>Co-President</p>
+  </div>
+</div>
+
+<div class="membercontainer">
+  <img src="./uploads/images/christine_zhang.jpg" alt ="memberFace">
+  <div class="overlay">
+    <div class="membername">Christine Zhang</div>
+    <div class="major">Major: Biology</div>
+    <div class="year">Year: 2019</div>
+    <div class="hometown">Hometown: California</div>
+    <div class="hobby">Hobby: Skating</div>
+</div>
+<div class="photolabel">
+  <p>Co-President</p>
+</div>
+</div>
+
+
+<div class="membercontainer">
+  <img src="./uploads/images/will_pascocello.jpg" alt ="memberFace">
+  <div class="overlay">
+    <div class="membername">Will Pascocello</div>
+    <div class="major">Major: AEM</div>
+    <div class="year">Year: 2020</div>
+    <div class="hometown">Hometown: New Rochelle, NY</div>
+    <div class="hobby">Hobby: Tennis</div>
+</div>
+<div class="photolabel">
+  <p>Vice President</p>
+</div>
+</div>
+
+</div>
+
+<div class="container">
+<div class="membercontainer">
+  <img src="./uploads/images/lauren_harper.jpg" alt ="memberFace">
+  <div class="overlay">
+    <div class="membername">Lauren Harper</div>
+    <div class="major">Major: Animal Science</div>
+    <div class="year">Year: 2020</div>
+    <div class="hometown">Hometown: New Egypt, NJ</div>
+    <div class="hobby">Hobby: Knitting</div>
+</div>
+<div class="photolabel">
+  <p>Secretary</p>
+</div>
+</div>
+
+<div class="membercontainer">
+  <img src="./uploads/images/adam_fekini.jpg" alt ="memberFace">
+  <div class="overlay">
+    <div class="membername">Adam Fekini</div>
+    <div class="major">Major: AEM</div>
+    <div class="year">Year: 2021</div>
+    <div class="hometown">Hometown: San Diego, California</div>
+    <div class="hobby">Hobby: Investing</div>
+</div>
+<div class="photolabel">
+  <p>Treasurer</p>
+</div>
+</div>
+
+<div class="membercontainer">
+  <img src="./uploads/images/jason_lee.jpg" alt ="memberFace">
+  <div class="overlay">
+    <div class="membername">Jason Lee</div>
+    <div class="major">Major: Biology</div>
+    <div class="year">Year: 2020</div>
+    <div class="hometown">Hometown: Cupertino, California</div>
+    <div class="hobby">Hobby: Cooking</div>
+</div>
+<div class="photolabel">
+  <p>Editor</p>
+</div>
+</div>
+
+</div>
+  <!-- <div id='boxes'> -->
+      <!-- <a class="clickMember" href="member1.php">
         <div class="memberBox">
           <div class="memberPic">
             <img src="./uploads/images/brendon_nguyen.jpg" alt ="memberFace" class="memberProPic">
             <div class="middleText">
               <div class="memberName">
-                President:
+                Co-President:
                 <br>Brendon Nguyen
               </div>
               <div class="memberMajor">
                 Major: Computer Science
+              </div>
+              <div class="memberYear">
+                Year: 2020
               </div>
               <div class="memberHome">
                 Hometown: Mansfield, TX
@@ -42,9 +135,57 @@ $current_page_id = "eboard";
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
       <!-- </a> -->
-    </div>
+      <!-- <div class="memberBox">
+        <div class="memberPic">
+          <img src="./uploads/images/christine_zhang.jpg" alt ="memberFace" class="memberProPic">
+          <div class="middleText">
+            <div class="memberName">
+              Co-President:
+              <br>Christine Zhang
+            </div>
+            <div class="memberMajor">
+              Major: Biology
+            </div>
+            <div class="memberYear">
+              Year: 2019
+            </div>
+            <div class="memberHome">
+              Hometown: California
+            </div>
+            <div class="memberHobby">
+              Hobby: Eating too much fruit
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+      <!-- <div class="memberBox">
+        <div class="memberPic">
+          <img src="./uploads/images/will_pascocello.jpg" alt ="memberFace" class="memberProPic">
+          <div class="middleText">
+            <div class="memberName">
+              Vice President:
+              <br>Will Pascocello
+            </div>
+            <div class="memberMajor">
+              Major: AEM
+            </div>
+            <div class="memberYear">
+              Year: 2020
+            </div>
+            <div class="memberHome">
+              Hometown: New Rochelle, NY
+            </div>
+            <div class="memberHobby">
+              Hobby: Tennis
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+    <!-- </div> -->
     <!-- <div class="circles">
     <div class="circle">
       <div class="circleTitle"> Major</div>
