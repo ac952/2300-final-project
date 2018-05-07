@@ -4,7 +4,7 @@ $title = "Circle K International";
 
 $pages = array(
   "index" => "About",
-  "eboard" => "Eboard",
+  "eboard" => "E-Board",
   "events" => "Events",
   "gallery" => "Gallery",
   "login" => "Login",

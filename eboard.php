@@ -12,11 +12,12 @@ $current_page_id = "eboard";
   <link rel="stylesheet" type="text/css" href="styles/all.css" media="all" />
 </head>
 
-<div class="container">
-  <title>Eboard</title>
+<!-- <div class="container"> -->
+  <title>EBoard</title>
 
 <div class="body">
 <body>
+
   <article>
   <?php include("includes/header.php");?>
   <h1 class = "page_header">Executive Board Members</h1>
@@ -57,7 +58,7 @@ $current_page_id = "eboard";
     <div class="membername">Will Pascocello</div>
     <div class="major">Major: AEM</div>
     <div class="year">Year: 2020</div>
-    <div class="hometown">Hometown: New Rochelle, NY</div>
+    <div class="hometown">Hometown: Westchester, NY</div>
     <div class="hobby">Hobby: Tennis</div>
 </div>
 <div class="photolabel">
@@ -68,19 +69,6 @@ $current_page_id = "eboard";
 </div>
 
 <div class="container">
-<div class="membercontainer">
-  <img src="./uploads/images/lauren_harper.jpg" alt ="memberFace">
-  <div class="overlay">
-    <div class="membername">Lauren Harper</div>
-    <div class="major">Major: Animal Science</div>
-    <div class="year">Year: 2020</div>
-    <div class="hometown">Hometown: New Egypt, NJ</div>
-    <div class="hobby">Hobby: Knitting</div>
-</div>
-<div class="photolabel">
-  <p>Secretary</p>
-</div>
-</div>
 
 <div class="membercontainer">
   <img src="./uploads/images/adam_fekini.jpg" alt ="memberFace">
@@ -88,7 +76,7 @@ $current_page_id = "eboard";
     <div class="membername">Adam Fekini</div>
     <div class="major">Major: AEM</div>
     <div class="year">Year: 2021</div>
-    <div class="hometown">Hometown: San Diego, California</div>
+    <div class="hometown">Hometown: San Diego, CA</div>
     <div class="hobby">Hobby: Investing</div>
 </div>
 <div class="photolabel">
@@ -102,13 +90,28 @@ $current_page_id = "eboard";
     <div class="membername">Jason Lee</div>
     <div class="major">Major: Biology</div>
     <div class="year">Year: 2020</div>
-    <div class="hometown">Hometown: Cupertino, California</div>
+    <div class="hometown">Hometown: Cupertino, CA</div>
     <div class="hobby">Hobby: Cooking</div>
 </div>
 <div class="photolabel">
   <p>Editor</p>
 </div>
 </div>
+
+<div class="membercontainer">
+  <img id="harper" src="./uploads/images/lauren_harper.jpg" alt ="memberFace" height= "524" width="100%">
+  <div class="overlay">
+    <div class="membername">Lauren Harper</div>
+    <div class="major">Major: Animal Science</div>
+    <div class="year">Year: 2020</div>
+    <div class="hometown">Hometown: New Egypt, NJ</div>
+    <div class="hobby">Hobby: Knitting</div>
+</div>
+<div class="photolabel">
+  <p>Secretary</p>
+</div>
+</div>
+
 
 </div>
   <!-- <div id='boxes'> -->
@@ -250,5 +253,5 @@ $current_page_id = "eboard";
 </body>
 </div>
 
-</div>
+<!-- </div> -->
 </html>

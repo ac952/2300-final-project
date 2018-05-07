@@ -2,6 +2,8 @@ header {
   background-color: #A80F2A;
   padding-bottom: 30px;
   padding-left: 0px;
+  margin-top: 0px;
+  padding-top: 0px;
   width: 100%;
   text-align: center;
   color: white;
@@ -12,8 +14,8 @@ header {
 } */
 
 html, body {
-  margin:0;
-  padding:0;
+  margin:0px;
+  padding:0px;
   height:100%;
 
 }
@@ -130,6 +132,9 @@ article {
   padding-top: 0px;
 }
 
+table {
+  margin-bottom: 20px;
+}
 td {
   text-align: left;
   padding: 5px;
@@ -237,7 +242,7 @@ button[type=submit] {
 
 /**/
 
-#boxes {
+/* #boxes {
   width: 100%;
   height: 100%;
 }
@@ -336,7 +341,7 @@ color:white;
 }
 /*above learned from w3 schools */
 
-.memberBox:hover .memberProPic{
+/* .memberBox:hover .memberProPic{
   opacity: 0.25;
 }
 .memberBox:hover .memberName{
@@ -359,7 +364,7 @@ color:white;
   opacity:1;
 }
 /*styling of image to fade in opacity when hovering over the image with a cursor learned from W3 Schools*/
-.memberInfoBox{
+/* .memberInfoBox{
   color: white;
   font-size: 20px;
   margin: 25px;
@@ -369,18 +374,19 @@ color:white;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-}
-.nameTitle{
+} */
+/* .nameTitle{
   margin-bottom: 10px;
   background: #A80F2A;
   padding: 20px;
   flex: 1;
   font-size:40px;
-}
+}   */
 
 .circles{
   width:100%;
 }
+
 .circle{
   width:180px;
   height:180px;
@@ -433,11 +439,11 @@ padding-right:50%;
 margin-top:2%;
 }
 
-.container {
+/* .container {
   width: 100%;
   height: 100%;
   margin-top: 20px;
-}
+} */
 
 .membercontainer {
   position: relative;
@@ -446,6 +452,7 @@ margin-top:2%;
   margin-left: 50px;
   margin-right: 50px;
   margin-bottom: 30px;
+  padding-bottom: 5px;
   float:left;
   background-color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -471,9 +478,14 @@ margin-top:2%;
 img {
   display: block;
   max-width: 100%;
-  height: auto;
+  /* height: auto; */
 }
 
+img #harper {
+  height: 524px;
+  max-width: 100%;
+  display: block;
+}
 .membername {
   color: black;
   font-size: 30px;
@@ -491,9 +503,9 @@ img {
   font-size: 20px;
   font-weight: bold;
   position: absolute;
-  width: 75%;
+  width: 80%;
   top: 40%;
-  left: 45%;
+  left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
 }
@@ -503,9 +515,9 @@ img {
   font-size: 20px;
   font-weight: bold;
   position: absolute;
-  width: 75%;
+  width: 80%;
   top: 50%;
-  left: 45%;
+  left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
 }
@@ -515,9 +527,9 @@ img {
   font-size: 20px;
   font-weight: bold;
   position: absolute;
-  width: 75%;
+  width: 80%;
   top: 60%;
-  left: 45%;
+  left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
 }
@@ -527,9 +539,9 @@ img {
   font-size: 20px;
   font-weight: bold;
   position: absolute;
-  width: 75%;
+  width: 80%;
   top: 70%;
-  left: 45%;
+  left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
 }
