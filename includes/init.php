@@ -3,7 +3,7 @@
 $title = "Circle K International";
 
 $pages = array(
-  "index" => "About",
+  "about" => "About",
   "eboard" => "E-Board",
   "events" => "Events",
   "gallery" => "Gallery",

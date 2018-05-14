@@ -101,7 +101,7 @@ article {
 #facebook_logo {
   float: right;
   padding-right: 10px;
-  padding-top: 5px;
+  padding-top: 10px;
 }
 
 #copyright_message {
@@ -135,6 +135,31 @@ article {
   margin-left: 5%;
   margin-right: 5%;
   padding-top: 0px;
+}
+
+.homepage img {
+    width: 100%;
+    height: auto;
+}
+
+.homepage .btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: gray;
+    color: white;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.homepage .btn:hover {
+    background-color: #A80F2A;
 }
 
 table {
