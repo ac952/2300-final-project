@@ -63,9 +63,10 @@ if (isset($_POST["submit_changes"])) {
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" type="text/css" href="styles/all.css" media="all" />
-  <title>Edit Events</title>
 </head>
+
 <body>
+  <article>
   <?php include("includes/header.php");?>
   <h1>Edit Event </h1>
     <!-- get the info from db based on selected cell id-->
@@ -122,6 +123,6 @@ if (isset($_POST["submit_changes"])) {
     </form>
 
   <?php include("includes/footer.php");?>
-
+</article>
 </body>
 </html>
