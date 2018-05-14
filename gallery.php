@@ -71,6 +71,9 @@ if (isset($_POST["submit_upload"])) {
     <div id="content-wrap">
     <title>Gallery</title>
     <?php
+print_messages();
+?>
+    <?php
       if($delete_photo){
         $sql = "DELETE FROM images WHERE id=:img_id;";
         $params = array(
