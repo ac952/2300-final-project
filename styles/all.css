@@ -148,7 +148,7 @@ article {
     left: 50%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-    background-color: #A80F2A;
+    background-color: gray;
     color: white;
     font-size: 16px;
     padding: 25px 40px;
