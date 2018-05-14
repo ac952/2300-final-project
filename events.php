@@ -106,8 +106,8 @@ function print_event($record) {
 </head>
 <body>
   <?php include("includes/header.php");?>
-  <h1 class = "page_header">Events</h1>
   <div id="content-wrap">
+    <h1 id="page_header"> Events</h1>
     <?php
     $sql = "SELECT * FROM events;";
     $params = array();
