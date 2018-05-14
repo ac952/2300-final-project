@@ -34,9 +34,9 @@ if (isset($_POST["submit_changes"])) {
     // if sql is executed successfully, echo success
     // if records and regex match then continue
     if ($records && $date_confirm) {
-      echo '<h3 class="message">Your changes have been updated!</h3>';
+      echo '<h3 id="success">Your changes have been updated!</h3>';
     } else {
-      echo '<h3 class="message">Changes have not been updated. </h3>';
+      echo '<h3 id="fail">Changes have not been updated. </h3>';
       // deletes prefilled info :(
       $id = $_POST['submit_changes'];
       // $sql = "SELECT * FROM events";
@@ -68,18 +68,19 @@ if (isset($_POST["submit_changes"])) {
 <body>
   <article>
   <?php include("includes/header.php");?>
-  <h1>Edit Event </h1>
     <!-- get the info from db based on selected cell id-->
     <!-- echo inside input -->
     <form id="event" action="edit_events.php" method="post">
-      <!-- <ul>
-        <li> -->
+
+      <ul>
+        <h1>Edit Event </h1>
+        <li>
           <label>Event Name:</label>
           <input type="text" name="event_name"
           value =" <?php foreach($records as $record)
           {echo htmlspecialchars($record['event_name']);}?> "/>
-        <!-- </li>
-        <li> -->
+        </li>
+        <li>
           <label>Date:</label>
           <input type="text" name="event_month" placeholder="MM"
           value =" <?php foreach($records as $record)
@@ -91,35 +92,35 @@ if (isset($_POST["submit_changes"])) {
           <input type="text" name="event_year" placeholder="YYYY"
           value =" <?php foreach($records as $record)
           {echo htmlspecialchars(intval($record['event_year']));}?> "/>
-        <!-- </li>
-        <li> -->
+        </li>
+        <li>
           <label>Time:</label>
           <input type="text" name="event_time" placeholder="format: 4:00pm"
           value =" <?php foreach($records as $record)
           {echo htmlspecialchars($record['event_time']);}?> " />
-        <!-- </li>
-        <li> -->
+        </li>
+        <li>
           <label>Location:</label>
           <input type="text" name="location"
           value =" <?php foreach($records as $record)
           {echo htmlspecialchars($record['location']);}?> "/>
-        <!-- </li>
-        <li> -->
+        </li>
+        <li>
           <label>Description:</label>
-        <!-- </li> -->
-        <!-- <li> -->
+        </li>
+        <li>
           <input id="description-box" type="text" name="description" cols="40" rows="5"
           value =" <?php foreach($records as $record)
           {echo htmlspecialchars($record['description']);}?> ">
         </input>
-        <!-- </li> -->
-        <!-- <li> -->
+        </li>
+        <li>
         <br>
           <button name="submit_changes" type="submit"
           value='<?php foreach($records as $record) {echo $record['id'];}
           ?>'>Update Changes</button>
-        <!-- </li> -->
-      <!-- </ul> -->
+        </li>
+      </ul>
     </form>
 
   <?php include("includes/footer.php");?>

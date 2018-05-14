@@ -109,7 +109,7 @@ article {
   padding-left: 10px;
 }
 
-#addevent ul {
+#addevent, #event ul {
   list-style: none;
 }
 
@@ -264,12 +264,20 @@ button[type=submit] {
   height: 50px;
 }
 
-.message{
+#fail{
   position:absolute;
   top:355px;
   left: 40%;
   /* text-align: left; */
   color:red;
+}
+
+#success{
+  position:absolute;
+  top:355px;
+  left: 40%;
+  /* text-align: left; */
+  color:green;
 }
 
 /**/
