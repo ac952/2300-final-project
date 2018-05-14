@@ -32,6 +32,8 @@ INSERT INTO images (img_name, img_ext, user_id) VALUES ('15.jpg','jpg','cornellc
 INSERT INTO images (img_name, img_ext, user_id) VALUES ('16.jpg','jpg','cornellcirclek');
 INSERT INTO images (img_name, img_ext, user_id) VALUES ('17.jpg','jpg','cornellcirclek');
 INSERT INTO images (img_name, img_ext, user_id) VALUES ('18.jpg','jpg','cornellcirclek');
+INSERT INTO images (img_name, img_ext, user_id) VALUES ('19.jpg','jpg','cornellcirclek');
+INSERT INTO images (img_name, img_ext, user_id) VALUES ('20.jpg','jpg','cornellcirclek');
 
 
 CREATE TABLE `events`(
