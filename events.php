@@ -105,9 +105,10 @@ function print_event($record) {
   <title>Events</title>
 </head>
 <body>
+  <article>
   <?php include("includes/header.php");?>
-  <h1 class = "page_header">Events</h1>
   <div id="content-wrap">
+    <h1 id="page_header"> Events</h1>
     <?php
     $sql = "SELECT * FROM events;";
     $params = array();
@@ -173,6 +174,7 @@ function print_event($record) {
   <!-- <div id="ckilogo">
   <img src="logo2.png" alt="ckilogo">
 </div> -->
+  </article>
+  </body>
   <?php include("includes/footer.php");?>
-</body>
 </html>

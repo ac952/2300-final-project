@@ -10,14 +10,13 @@ $current_page_id = "eboard";
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" type="text/css" href="styles/all.css" media="all" />
+  <title>Eboard</title>
 </head>
 
 <!-- <div class="container"> -->
-  <title>EBoard</title>
 
-<div class="body">
+<!-- <div class="body"> -->
 <body>
-
   <article>
   <?php include("includes/header.php");?>
   <h1 class = "page_header">Executive Board Members</h1>
@@ -117,7 +116,7 @@ $current_page_id = "eboard";
   <?php include( "includes/footer.php" ); ?>
 </article>
 </body>
-</div>
+<!-- </div> -->
 
 <!-- </div> -->
 </html>

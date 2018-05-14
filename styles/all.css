@@ -66,7 +66,7 @@ article {
 }
 
 .page_header {
-  margin: 20px;
+  padding-left: 40px;
 }
 
 #menu ul {
@@ -93,7 +93,7 @@ article {
 }
 
 #current_page {
-  font-weight: bold;
+  font-weight: bolder;
   color: black;
   padding: 2px 2px 2px 2px;
 }
@@ -109,7 +109,7 @@ article {
   padding-left: 10px;
 }
 
-#addevent ul {
+#addevent, #event ul {
   list-style: none;
 }
 
@@ -148,7 +148,7 @@ article {
     left: 50%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-    background-color: #A80F2A;
+    background-color: gray;
     color: white;
     font-size: 16px;
     padding: 25px 40px;
@@ -264,12 +264,20 @@ button[type=submit] {
   height: 50px;
 }
 
-.message{
+#fail{
   position:absolute;
   top:355px;
   left: 40%;
   /* text-align: left; */
   color:red;
+}
+
+#success{
+  position:absolute;
+  top:355px;
+  left: 40%;
+  /* text-align: left; */
+  color:green;
 }
 
 /**/

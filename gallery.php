@@ -63,17 +63,18 @@ if (isset($_POST["submit_upload"])) {
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" type="text/css" href="styles/all.css" media="all" />
+  <title>Gallery</title>
 </head>
 
 <body>
   <article>
   <?php include("includes/header.php");?>
     <div id="content-wrap">
-    <title>Gallery</title>
+    <h1 id="page_header"> Gallery</h1>
+
     <?php
-print_messages();
-?>
-    <?php
+      print_messages();
+
       if($delete_photo){
         $sql = "DELETE FROM images WHERE id=:img_id;";
         $params = array(
@@ -86,9 +87,7 @@ print_messages();
         echo "<h2>Photo was successfully deleted.</h2>";
       }
     ?>
-      <h1 id="page_header"> Gallery</h1>
-        <p>Browse gallery.</p>
-      <?php
+    <?php
       if($current_user) { ?>
 
       <form id="uploadFile" action="gallery.php" method="post" enctype="multipart/form-data">
@@ -102,8 +101,8 @@ print_messages();
           <button name="submit_upload" type="submit">Upload</button>
         </li>
       </ul>
-    </form>
-    <?php }?>
+      </form>
+      <?php }?>
 
 
     <?php
@@ -143,7 +142,5 @@ print_messages();
     </div>
   </article>
   </body>
-
   <?php include("includes/footer.php");?>
-
 </html>

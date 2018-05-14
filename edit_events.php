@@ -4,13 +4,21 @@ $current_page_id = "edit_events";
 
 if (isset($_POST["submit_changes"])) {
   $event_name = filter_input(INPUT_POST, 'event_name', FILTER_SANITIZE_STRING);
-  $event_month = filter_input(INPUT_POST, 'event_month', FILTER_VALIDATE_INT);
-  $event_date = filter_input(INPUT_POST, 'event_date', FILTER_VALIDATE_INT);
-  $event_year = filter_input(INPUT_POST, 'event_year', FILTER_VALIDATE_INT);
   $event_time = filter_input(INPUT_POST, 'event_time', FILTER_SANITIZE_STRING);
   $location = filter_input(INPUT_POST, 'location', FILTER_SANITIZE_STRING);
   $description = filter_input(INPUT_POST, 'description', FILTER_SANITIZE_STRING);
-  // }
+
+  $date_confirm = false;
+  $event_month = filter_input(INPUT_POST, 'event_month', FILTER_VALIDATE_INT);
+  $event_date = filter_input(INPUT_POST, 'event_date', FILTER_VALIDATE_INT);
+  $event_year = filter_input(INPUT_POST, 'event_year', FILTER_VALIDATE_INT);
+  if (preg_match('/^\d{1,2}$/' , $event_month) && $event_month <= 12
+      && preg_match('/^\d{1,2}$/' , $event_date) && $event_date <= 31
+      && preg_match('/^\d{2}$/' , $event_year)){
+      $date_confirm = true;
+    } else {
+    echo 'Enter date in proper format';
+  }
 
   // php for updating any changes to events page AND db
   // if (isset($_POST["submit_changes"])){
@@ -24,10 +32,11 @@ if (isset($_POST["submit_changes"])) {
 
     // echo changes in the edit_events.php page
     // if sql is executed successfully, echo success
-    if ($records){
-      echo '<h3 class="message">Your changes have been updated!</h3>';
+    // if records and regex match then continue
+    if ($records && $date_confirm) {
+      echo '<h3 id="success">Your changes have been updated!</h3>';
     } else {
-      echo '<h3 class="message">Changes have not been updated. </h3>';
+      echo '<h3 id="fail">Changes have not been updated. </h3>';
       // deletes prefilled info :(
       $id = $_POST['submit_changes'];
       // $sql = "SELECT * FROM events";
@@ -54,15 +63,20 @@ if (isset($_POST["submit_changes"])) {
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" type="text/css" href="styles/all.css" media="all" />
-  <title>Edit Events</title>
 </head>
+
 <body>
+  <article>
   <?php include("includes/header.php");?>
-  <h1>Edit Event </h1>
+
+  <div id="content-wrap">
+
+
     <!-- get the info from db based on selected cell id-->
     <!-- echo inside input -->
     <form id="event" action="edit_events.php" method="post">
       <ul>
+        <h1>Edit Event </h1>
         <li>
           <label>Event Name:</label>
           <input type="text" name="event_name"
@@ -97,13 +111,14 @@ if (isset($_POST["submit_changes"])) {
         <li>
           <label>Description:</label>
         </li>
-        <!-- <li> -->
+        <li>
           <input id="description-box" type="text" name="description" cols="40" rows="5"
           value =" <?php foreach($records as $record)
           {echo htmlspecialchars($record['description']);}?> ">
         </input>
-        <!-- </li> -->
+        </li>
         <li>
+        <br>
           <button name="submit_changes" type="submit"
           value='<?php foreach($records as $record) {echo $record['id'];}
           ?>'>Update Changes</button>
@@ -111,7 +126,9 @@ if (isset($_POST["submit_changes"])) {
       </ul>
     </form>
 
-  <?php include("includes/footer.php");?>
+</div>
+<?php include("includes/footer.php");?>
 
+</article>
 </body>
 </html>
