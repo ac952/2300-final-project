@@ -25,9 +25,9 @@ html, body {
   font-family: "Jura", "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 
-.container {
+/* .container {
   min-height: 100%;
-}
+} */
 
 /* footer {
   width: 100%;
@@ -139,7 +139,7 @@ article {
 
 .homepage img {
     width: 100%;
-    height: auto;
+    height: 100%;
 }
 
 .homepage .btn {
@@ -148,10 +148,10 @@ article {
     left: 50%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-    background-color: gray;
+    background-color: #A80F2A;
     color: white;
     font-size: 16px;
-    padding: 12px 24px;
+    padding: 25px 40px;
     border: none;
     cursor: pointer;
     border-radius: 5px;
@@ -473,7 +473,7 @@ margin-top:2%;
 
 .container {
   width: 100%;
-  height: 650px;
+  height: 50%;
 }
 
 #left {
@@ -526,7 +526,15 @@ margin-top:2%;
   background-color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+.leftmembercontainer:hover .overlay {
+  opacity: 0.8;
+}
+
 .membercontainer:hover .overlay {
+  opacity: 0.8;
+}
+
+.rightmembercontainer:hover .overlay {
   opacity: 0.8;
 }
 
@@ -554,7 +562,7 @@ img {
   font-size: 30px;
   font-weight: bold;
   position: absolute;
-  width: 70%;
+  max-width: 70%;
   top: 10%;
   left: 40%;
   transform: translate(-50%, -50%);
@@ -603,7 +611,7 @@ img {
   font-weight: bold;
   position: absolute;
   width: 80%;
-  top: 70%;
+  top: 75%;
   left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
@@ -625,4 +633,12 @@ img {
 
 ul {
   list-style-type: none;
+}
+
+div.gallery {
+  margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 180px;
+    height: 200px;
 }
