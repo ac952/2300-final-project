@@ -55,7 +55,7 @@ $current_page_id = "index";
   Cornell Circle K is focusing on the ways we can do small acts of service to
   improve the day to day lives of those in our community.</p>
 
-<p class="aboutp"><span class="about_subheadings">Awards</span></p>
+<span class="about_subheadings">Awards</span>
 <ul id="awards">
   <li>NY District Club Spirit Award</li>
   <li>NY District Club Apparel Award</li>
@@ -63,7 +63,7 @@ $current_page_id = "index";
   <li>NY District Unsung Hero Award</li>
 </ul>
 
-<p class="aboutp"><span class="about_subheadings">Meetings</span></p>
+<span class="about_subheadings">Meetings</span>
 <ul>
 <li><span class="meetinginfo">Date:</span> Mondays</li>
 <li><span class="meetinginfo">Time:</span> 5-6 PM</li>
