@@ -459,7 +459,7 @@ margin-top:2%;
   margin-left: 50px;
   margin-right: 50px;
   margin-bottom: 30px;
-  padding-bottom: 5px;
+  padding-bottom: 10px;
   float:left;
   background-color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -488,7 +488,7 @@ img {
   /* height: auto; */
 }
 
-img #harper {
+#harper {
   height: 524px;
   max-width: 100%;
   display: block;
@@ -555,4 +555,18 @@ img #harper {
 
 .photolabel {
   text-align: center;
+}
+
+.aboutp {
+  padding-left: 40px;
+  /* padding-right: ; */
+  width: 90%;
+}
+
+.about_subheadings, .meetinginfo {
+  padding-left: 40px;
+}
+
+ul {
+  list-style-type: none;
 }
