@@ -4,13 +4,9 @@ $current_page_id = "edit_events";
 
 if (isset($_POST["submit_changes"])) {
   $event_name = filter_input(INPUT_POST, 'event_name', FILTER_SANITIZE_STRING);
-  // $event_month = filter_input(INPUT_POST, 'event_month', FILTER_VALIDATE_INT);
-  $event_date = filter_input(INPUT_POST, 'event_date', FILTER_VALIDATE_INT);
-  $event_year = filter_input(INPUT_POST, 'event_year', FILTER_VALIDATE_INT);
   $event_time = filter_input(INPUT_POST, 'event_time', FILTER_SANITIZE_STRING);
   $location = filter_input(INPUT_POST, 'location', FILTER_SANITIZE_STRING);
   $description = filter_input(INPUT_POST, 'description', FILTER_SANITIZE_STRING);
-  // regex for date (make it a function)
 
   $date_confirm = false;
   $event_month = filter_input(INPUT_POST, 'event_month', FILTER_VALIDATE_INT);
@@ -37,7 +33,6 @@ if (isset($_POST["submit_changes"])) {
     // echo changes in the edit_events.php page
     // if sql is executed successfully, echo success
     // if records and regex match then continue
-    // if ($records && $month_confirm && $date_confirm && $year_confirm){
     if ($records && $date_confirm) {
       echo '<h3 class="message">Your changes have been updated!</h3>';
     } else {
