@@ -68,10 +68,13 @@ if (isset($_POST["submit_changes"])) {
 <body>
   <article>
   <?php include("includes/header.php");?>
+
+  <div id="content-wrap">
+
+
     <!-- get the info from db based on selected cell id-->
     <!-- echo inside input -->
     <form id="event" action="edit_events.php" method="post">
-
       <ul>
         <h1>Edit Event </h1>
         <li>
@@ -123,7 +126,9 @@ if (isset($_POST["submit_changes"])) {
       </ul>
     </form>
 
-  <?php include("includes/footer.php");?>
+</div>
+<?php include("includes/footer.php");?>
+
 </article>
 </body>
 </html>
