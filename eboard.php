@@ -26,7 +26,7 @@ $current_page_id = "eboard";
     <img src="./uploads/images/brendon_nguyen.jpg" alt ="memberFace">
     <div class="overlay">
       <div class="membername">Brendon Nguyen</div>
-      <div class="major">Major: Computer Science</div>
+      <div class="major">Major: CS</div>
       <div class="year">Year: 2020</div>
       <div class="hometown">Hometown: Mansfield, TX</div>
       <div class="hobby">Hobby: Rubiks cubes</div>

@@ -4,13 +4,25 @@ $current_page_id = "edit_events";
 
 if (isset($_POST["submit_changes"])) {
   $event_name = filter_input(INPUT_POST, 'event_name', FILTER_SANITIZE_STRING);
-  $event_month = filter_input(INPUT_POST, 'event_month', FILTER_VALIDATE_INT);
+  // $event_month = filter_input(INPUT_POST, 'event_month', FILTER_VALIDATE_INT);
   $event_date = filter_input(INPUT_POST, 'event_date', FILTER_VALIDATE_INT);
   $event_year = filter_input(INPUT_POST, 'event_year', FILTER_VALIDATE_INT);
   $event_time = filter_input(INPUT_POST, 'event_time', FILTER_SANITIZE_STRING);
   $location = filter_input(INPUT_POST, 'location', FILTER_SANITIZE_STRING);
   $description = filter_input(INPUT_POST, 'description', FILTER_SANITIZE_STRING);
-  // }
+  // regex for date (make it a function)
+
+  $date_confirm = false;
+  $event_month = filter_input(INPUT_POST, 'event_month', FILTER_VALIDATE_INT);
+  $event_date = filter_input(INPUT_POST, 'event_date', FILTER_VALIDATE_INT);
+  $event_year = filter_input(INPUT_POST, 'event_year', FILTER_VALIDATE_INT);
+  if (preg_match('/^\d{1,2}$/' , $event_month) && $event_month <= 12
+      && preg_match('/^\d{1,2}$/' , $event_date) && $event_date <= 31
+      && preg_match('/^\d{2}$/' , $event_year)){
+      $date_confirm = true;
+    } else {
+    echo 'Enter date in proper format';
+  }
 
   // php for updating any changes to events page AND db
   // if (isset($_POST["submit_changes"])){
@@ -24,7 +36,9 @@ if (isset($_POST["submit_changes"])) {
 
     // echo changes in the edit_events.php page
     // if sql is executed successfully, echo success
-    if ($records){
+    // if records and regex match then continue
+    // if ($records && $month_confirm && $date_confirm && $year_confirm){
+    if ($records && $date_confirm) {
       echo '<h3 class="message">Your changes have been updated!</h3>';
     } else {
       echo '<h3 class="message">Changes have not been updated. </h3>';
@@ -63,14 +77,14 @@ if (isset($_POST["submit_changes"])) {
     <!-- get the info from db based on selected cell id-->
     <!-- echo inside input -->
     <form id="event" action="edit_events.php" method="post">
-      <ul>
-        <li>
+      <!-- <ul>
+        <li> -->
           <label>Event Name:</label>
           <input type="text" name="event_name"
           value =" <?php foreach($records as $record)
           {echo htmlspecialchars($record['event_name']);}?> "/>
-        </li>
-        <li>
+        <!-- </li>
+        <li> -->
           <label>Date:</label>
           <input type="text" name="event_month" placeholder="MM"
           value =" <?php foreach($records as $record)
@@ -82,34 +96,35 @@ if (isset($_POST["submit_changes"])) {
           <input type="text" name="event_year" placeholder="YYYY"
           value =" <?php foreach($records as $record)
           {echo htmlspecialchars(intval($record['event_year']));}?> "/>
-        </li>
-        <li>
+        <!-- </li>
+        <li> -->
           <label>Time:</label>
           <input type="text" name="event_time" placeholder="format: 4:00pm"
           value =" <?php foreach($records as $record)
           {echo htmlspecialchars($record['event_time']);}?> " />
-        </li>
-        <li>
+        <!-- </li>
+        <li> -->
           <label>Location:</label>
           <input type="text" name="location"
           value =" <?php foreach($records as $record)
           {echo htmlspecialchars($record['location']);}?> "/>
-        </li>
-        <li>
+        <!-- </li>
+        <li> -->
           <label>Description:</label>
-        </li>
+        <!-- </li> -->
         <!-- <li> -->
           <input id="description-box" type="text" name="description" cols="40" rows="5"
           value =" <?php foreach($records as $record)
           {echo htmlspecialchars($record['description']);}?> ">
         </input>
         <!-- </li> -->
-        <li>
+        <!-- <li> -->
+        <br>
           <button name="submit_changes" type="submit"
           value='<?php foreach($records as $record) {echo $record['id'];}
           ?>'>Update Changes</button>
-        </li>
-      </ul>
+        <!-- </li> -->
+      <!-- </ul> -->
     </form>
 
   <?php include("includes/footer.php");?>
