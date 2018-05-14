@@ -21,7 +21,6 @@ $current_page_id = "index";
       <a href = "about.php">
           <button class="btn">Enter</button> </a>
       <img id = "homepage" src = "uploads/images/group.png" alt = "Cornell Circle K Home"> </a>
-
     </div>
 
 </article>
