@@ -23,7 +23,7 @@ $current_page_id = "eboard";
   <h1 class = "page_header">Executive Board Members</h1>
 
   <div class="container">
-  <div class="membercontainer">
+  <div class="leftmembercontainer">
     <img src="./uploads/images/brendon_nguyen.jpg" alt ="memberFace">
     <div class="overlay">
       <div class="membername">Brendon Nguyen</div>
@@ -52,7 +52,7 @@ $current_page_id = "eboard";
 </div>
 
 
-<div class="membercontainer">
+<div class="rightmembercontainer">
   <img src="./uploads/images/will_pascocello.jpg" alt ="memberFace">
   <div class="overlay">
     <div class="membername">Will Pascocello</div>
@@ -69,7 +69,7 @@ $current_page_id = "eboard";
 </div>
 
 <div class="container">
-<div class="membercontainer">
+<div class="leftmembercontainer">
   <img src="./uploads/images/adam_fekini.jpg" alt ="memberFace">
   <div class="overlay">
     <div class="membername">Adam Fekini</div>
@@ -97,8 +97,8 @@ $current_page_id = "eboard";
 </div>
 </div>
 
-<div class="membercontainer">
-  <img id="harper" src="./uploads/images/donna_yu.jpg" alt ="memberFace">
+<div class="rightmembercontainer">
+  <img src="./uploads/images/donna_yu.jpg" alt ="memberFace">
   <div class="overlay">
     <div class="membername">Donna Yu</div>
     <div class="major">Major: AEM</div>
