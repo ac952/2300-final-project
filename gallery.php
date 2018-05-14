@@ -71,6 +71,9 @@ if (isset($_POST["submit_upload"])) {
     <div id="content-wrap">
     <title>Gallery</title>
     <?php
+print_messages();
+?>
+    <?php
       if($delete_photo){
         $sql = "DELETE FROM images WHERE id=:img_id;";
         $params = array(
@@ -106,8 +109,8 @@ if (isset($_POST["submit_upload"])) {
     <?php
       $records = exec_sql_query($db, "SELECT * FROM images")->fetchAll(PDO::FETCH_ASSOC);
       foreach($records as $record){
-        echo "<img src=\"" .IMG_UPLOADS_PATH. htmlspecialchars($record["id"].".".$record["img_ext"]) .
-        "\">" ."</a></div>";
+        echo "<div class=\"gallery\"><img src=\"" .IMG_UPLOADS_PATH. htmlspecialchars($record["id"].".".$record["img_ext"]) .
+        "\">" ."</div>";
 
         //checks if user is owner and logged in before showing delete option
         $sql = "SELECT * FROM images WHERE id = :img_id";

@@ -1,6 +1,6 @@
 @font-face {
-    font-family: 'Jura';
-    src: url("fonts/Jura/Jura-Regular.ttf") format("truetype");
+    font-family: Jura;
+    src: url("/fonts/Jura/Jura-Regular.ttf") format("truetype");
 }
 
 header {
@@ -25,9 +25,9 @@ html, body {
   font-family: "Jura", "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 
-.container {
+/* .container {
   min-height: 100%;
-}
+} */
 
 /* footer {
   width: 100%;
@@ -101,7 +101,7 @@ article {
 #facebook_logo {
   float: right;
   padding-right: 10px;
-  padding-top: 5px;
+  padding-top: 10px;
 }
 
 #copyright_message {
@@ -135,6 +135,31 @@ article {
   margin-left: 5%;
   margin-right: 5%;
   padding-top: 0px;
+}
+
+.homepage img {
+    width: 100%;
+    height: 100%;
+}
+
+.homepage .btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #A80F2A;
+    color: white;
+    font-size: 16px;
+    padding: 25px 40px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.homepage .btn:hover {
+    background-color: #A80F2A;
 }
 
 table {
@@ -390,7 +415,7 @@ color:white;
   font-size:40px;
 }   */
 
-.circles{
+/* .circles{
   width:100%;
 }
 
@@ -407,7 +432,7 @@ color:white;
   /* margin-left:35px;
   margin-top:20px;
   margin-bottom:20px; */
-}
+/* }
 .circleVal{
   width:180px;
   height:180px;
@@ -437,35 +462,79 @@ color:white;
 .circleContent{
   margin-top: 10px;
   font-size: 35px;
-}
+} */
 
-.memberHighlight{
+/* .memberHighlight{
 width:100%;
 padding-left:32%;
 padding-right:50%;
 margin-top:2%;
-}
-
-/* .container {
-  width: 100%;
-  height: 100%;
-  margin-top: 20px;
 } */
 
-.membercontainer {
+.container {
+  width: 100%;
+  height: 50%;
+}
+
+#left {
+  float: left;
+}
+
+#right {
+  float:right;
+}
+
+.leftmembercontainer {
   position: relative;
   width: 25%;
-  height: 90%;
-  margin-left: 50px;
-  margin-right: 50px;
+  /* height: auto; */
+  margin-left: 5%;
+  margin-right: 5%;
   margin-bottom: 30px;
-  padding-bottom: 5px;
+  padding-bottom: 10px;
   float:left;
   background-color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
 }
+
+.membercontainer {
+  position: relative;
+  width: 25%;
+  /* height: auto; */
+  margin-left: 3%;
+  margin-right: 1%;
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+  float: left;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+
+.rightmembercontainer {
+  position: relative;
+  width: 25%;
+  /* height: auto; */
+  /* margin-left: 20px; */
+  margin-right: 5%;
+  margin-left: 5%;
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+  float:right;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.leftmembercontainer:hover .overlay {
+  opacity: 0.8;
+}
+
 .membercontainer:hover .overlay {
+  opacity: 0.8;
+}
+
+.rightmembercontainer:hover .overlay {
   opacity: 0.8;
 }
 
@@ -488,17 +557,12 @@ img {
   /* height: auto; */
 }
 
-img #harper {
-  height: 524px;
-  max-width: 100%;
-  display: block;
-}
 .membername {
   color: black;
   font-size: 30px;
   font-weight: bold;
   position: absolute;
-  width: 70%;
+  max-width: 70%;
   top: 10%;
   left: 40%;
   transform: translate(-50%, -50%);
@@ -547,7 +611,7 @@ img #harper {
   font-weight: bold;
   position: absolute;
   width: 80%;
-  top: 70%;
+  top: 75%;
   left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
@@ -555,4 +619,26 @@ img #harper {
 
 .photolabel {
   text-align: center;
+}
+
+.aboutp {
+  padding-left: 40px;
+  /* padding-right: ; */
+  width: 90%;
+}
+
+.about_subheadings, .meetinginfo {
+  padding-left: 40px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+div.gallery {
+  margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 180px;
+    height: 200px;
 }
