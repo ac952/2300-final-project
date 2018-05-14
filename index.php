@@ -65,9 +65,9 @@ $current_page_id = "index";
 
 <span class="about_subheadings">Meetings</span>
 <ul>
-<li><span class="meetinginfo">Date:</span> Mondays</li>
-<li><span class="meetinginfo">Time:</span> 5-6 PM</li>
-<li><span class="meetinginfo">Location:</span> Stimson G01</li>
+<li>Date: Mondays</li>
+<li>Time: 5-6 PM</li>
+<li>Location: Stimson G01</li>
 </ul>
 
   <?php include( "includes/footer.php" ); ?>

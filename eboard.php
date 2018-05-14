@@ -98,12 +98,12 @@ $current_page_id = "eboard";
 </div>
 
 <div class="membercontainer">
-  <img id="harper" src="./uploads/images/lauren_harper.jpg" alt ="memberFace">
+  <img id="harper" src="./uploads/images/donna_yu.jpg" alt ="memberFace">
   <div class="overlay">
-    <div class="membername">Lauren Harper</div>
-    <div class="major">Major: Animal Science</div>
-    <div class="year">Year: 2020</div>
-    <div class="hometown">Hometown: New Egypt, NJ</div>
+    <div class="membername">Donna Yu</div>
+    <div class="major">Major: AEM</div>
+    <div class="year">Year: 2019</div>
+    <div class="hometown">Hometown: Stekaut, NY</div>
     <div class="hobby">Hobby: Knitting</div>
 </div>
 <div class="photolabel">
