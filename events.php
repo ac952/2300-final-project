@@ -105,6 +105,7 @@ function print_event($record) {
   <title>Events</title>
 </head>
 <body>
+  <article>
   <?php include("includes/header.php");?>
   <div id="content-wrap">
     <h1 id="page_header"> Events</h1>
@@ -173,6 +174,7 @@ function print_event($record) {
   <!-- <div id="ckilogo">
   <img src="logo2.png" alt="ckilogo">
 </div> -->
+  </article>
+  </body>
   <?php include("includes/footer.php");?>
-</body>
 </html>
