@@ -1,6 +1,8 @@
 <?php include('includes/init.php');
 
 $current_page_id = "edit_events";
+$messages = array();
+
 
 if (isset($_POST["submit_changes"])) {
   $event_name = filter_input(INPUT_POST, 'event_name', FILTER_SANITIZE_STRING);
@@ -17,7 +19,8 @@ if (isset($_POST["submit_changes"])) {
       && preg_match('/^\d{2}$/' , $event_year)){
       $date_confirm = true;
     } else {
-    echo 'Enter date in proper format';
+    // echo 'Enter date in proper format';
+    array_push($messages, "*Enter date in proper format");
   }
 
   // php for updating any changes to events page AND db
@@ -70,8 +73,6 @@ if (isset($_POST["submit_changes"])) {
   <?php include("includes/header.php");?>
 
   <div id="content-wrap">
-
-
     <!-- get the info from db based on selected cell id-->
     <!-- echo inside input -->
     <form id="event" action="edit_events.php" method="post">
@@ -95,6 +96,11 @@ if (isset($_POST["submit_changes"])) {
           <input type="text" name="event_year" placeholder="YYYY"
           value =" <?php foreach($records as $record)
           {echo htmlspecialchars(intval($record['event_year']));}?> "/>
+          <?php
+          foreach ($messages as $mess){
+              echo '<p id="date-format">'.$mess .'</p>';
+            }
+            ?>
         </li>
         <li>
           <label>Time:</label>

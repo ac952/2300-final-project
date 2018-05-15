@@ -7,24 +7,41 @@ $events = exec_sql_query($db, "SELECT DISTINCT event_name FROM events", NULL)->f
 
 if (isset($_POST["submit_insert"])) {
   $event_name = filter_input(INPUT_POST, 'event_name', FILTER_SANITIZE_STRING);
-  $event_month = filter_input(INPUT_POST, 'event_month', FILTER_VALIDATE_INT);
-  $event_date = filter_input(INPUT_POST, 'event_date', FILTER_VALIDATE_INT);
-  $event_year = filter_input(INPUT_POST, 'event_year', FILTER_VALIDATE_INT);
+  // $event_month = filter_input(INPUT_POST, 'event_month', FILTER_VALIDATE_INT);
+  // $event_date = filter_input(INPUT_POST, 'event_date', FILTER_VALIDATE_INT);
+  // $event_year = filter_input(INPUT_POST, 'event_year', FILTER_VALIDATE_INT);
   $event_time = filter_input(INPUT_POST, 'event_time', FILTER_SANITIZE_STRING);
   $location = filter_input(INPUT_POST, 'location', FILTER_SANITIZE_STRING);
   $description = filter_input(INPUT_POST, 'description', FILTER_SANITIZE_STRING);
 
-  $invalid_review = TRUE;
+  // $invalid_review = TRUE;
 
-  if ( !in_array($event_name, $events) ) {
-    $invalid_review = FALSE;
+  $event_month = filter_input(INPUT_POST, 'event_month', FILTER_VALIDATE_INT);
+  $event_date = filter_input(INPUT_POST, 'event_date', FILTER_VALIDATE_INT);
+  $event_year = filter_input(INPUT_POST, 'event_year', FILTER_VALIDATE_INT);
+
+  // $invalid_review = TRUE;
+  $invalid_review = FALSE;
+  if (preg_match('/^\d{1,2}$/' , $event_month) && $event_month > 12
+      && preg_match('/^\d{1,2}$/' , $event_date) && $event_date > 31
+      && preg_match('/^\d{2}$/' , $event_year)){
+      $invalid_review = FALSE;
+      // echo 'pass';
+    }
+    else {
+      $invalid_review = TRUE;
+      // echo 'no';
   }
-  // regex
-  // if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
-  //     $nameErr = "Only letters and white space allowed";
-  //   }
+
+  // $invalid_review = FALSE;
+  // if (!in_array($event_name, $events) ) {
+  //   // $invalid_review = FALSE;
+  //   $invalid_review = TRUE;
+  // }
+
   if ($invalid_review) {
-    array_push($messages, "Failed to add event.");
+    // array_push($messages, "Failed to add event.");
+    echo 'Failed to add event.';
       // var_dump("no");
   } else {
     $sql = "INSERT INTO events (event_name, event_month, event_date ,
