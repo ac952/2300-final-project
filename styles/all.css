@@ -177,6 +177,11 @@ th{
   color: white;
   text-align: left;
   padding: 5px;
+  /* width: 15%; */
+}
+
+#date{
+  width: 10%;
 }
 
 tr:hover {
@@ -283,6 +288,11 @@ button[type=submit] {
 #date-format{
   font-size: 15px;
   color: red;
+}
+
+#eventAdd{
+  text-align: center;
+  color:green;
 }
 
 /**/

@@ -10,34 +10,35 @@ if (isset($_POST["submit_changes"])) {
   $location = filter_input(INPUT_POST, 'location', FILTER_SANITIZE_STRING);
   $description = filter_input(INPUT_POST, 'description', FILTER_SANITIZE_STRING);
 
-  $date_confirm = false;
-  $event_month = filter_input(INPUT_POST, 'event_month', FILTER_VALIDATE_INT);
-  $event_date = filter_input(INPUT_POST, 'event_date', FILTER_VALIDATE_INT);
-  $event_year = filter_input(INPUT_POST, 'event_year', FILTER_VALIDATE_INT);
-  if (preg_match('/^\d{1,2}$/' , $event_month) && $event_month <= 12
-      && preg_match('/^\d{1,2}$/' , $event_date) && $event_date <= 31
-      && preg_match('/^\d{2}$/' , $event_year)){
-      $date_confirm = true;
-    } else {
-    // echo 'Enter date in proper format';
-    array_push($messages, "*Enter date in proper format");
+
+  $event_date = filter_input(INPUT_POST, 'event_date', FILTER_SANITIZE_STRING);
+  // $event_date= preg_replace('/\s+/', ' ', $event_date);
+  $date_confirm = FALSE;
+  if (preg_match("/^(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])-[0-9]{2}$/",$event_date)){
+      $date_confirm = TRUE;
+    }
+    else {
+      $date_confirm = FALSE;
+      array_push($messages, "*Enter date in proper format");
   }
 
   // php for updating any changes to events page AND db
   // if (isset($_POST["submit_changes"])){
-    $id = $_POST['submit_changes'];
-    // use INSERT events
-    $sql = "UPDATE events SET event_name = '$event_name', event_month ='$event_month',
-    event_date='$event_date',event_year='$event_year', location='$location',
-    description='$description' WHERE id = '$id'";
-    $params = array();
-    $records = exec_sql_query($db, $sql, $params);
+
 
     // echo changes in the edit_events.php page
     // if sql is executed successfully, echo success
     // if records and regex match then continue
-    if ($records && $date_confirm) {
+    if ($date_confirm) {
       echo '<h3 id="success">Your changes have been updated!</h3>';
+      $id = $_POST['submit_changes'];
+      // use INSERT events
+      $sql = "UPDATE events SET event_name = '$event_name',
+      event_date='$event_date', location='$location',
+      description='$description' WHERE id = '$id'";
+      $params = array();
+      $records = exec_sql_query($db, $sql, $params);
+      
     } else {
       echo '<h3 id="fail">Changes have not been updated. </h3>';
       // deletes prefilled info :(
@@ -82,37 +83,28 @@ if (isset($_POST["submit_changes"])) {
           <label>Event Name:</label>
           <input type="text" name="event_name"
           value =" <?php foreach($records as $record)
-          {echo htmlspecialchars($record['event_name']);}?> "/>
+          {echo htmlspecialchars($record['event_name']);}?> " required/>
         </li>
         <li>
           <label>Date:</label>
-          <input type="text" name="event_month" placeholder="MM"
-          value =" <?php foreach($records as $record)
-          {echo htmlspecialchars(intval($record['event_month']));}
-          ?> "/>/
-          <input type="text" name="event_date" placeholder="DD"
-          value =" <?php foreach($records as $record)
-          {echo htmlspecialchars(intval($record['event_date']));}?> "/>/
-          <input type="text" name="event_year" placeholder="YYYY"
-          value =" <?php foreach($records as $record)
-          {echo htmlspecialchars(intval($record['event_year']));}?> "/>
+          <input type="date" name="event_date" placeholder="MM-DD-YY" required/>
           <?php
-          foreach ($messages as $mess){
-              echo '<p id="date-format">'.$mess .'</p>';
+          foreach ($messages as $date){
+              echo '<p id="date-format">'.$date.'</p>';
             }
             ?>
         </li>
         <li>
           <label>Time:</label>
-          <input type="text" name="event_time" placeholder="format: 4:00pm"
+          <input type="text" name="event_time"
           value =" <?php foreach($records as $record)
-          {echo htmlspecialchars($record['event_time']);}?> " />
+          {echo htmlspecialchars($record['event_time']);}?> " required/>
         </li>
         <li>
           <label>Location:</label>
           <input type="text" name="location"
           value =" <?php foreach($records as $record)
-          {echo htmlspecialchars($record['location']);}?> "/>
+          {echo htmlspecialchars($record['location']);}?> " required/>
         </li>
         <li>
           <label>Description:</label>
@@ -120,7 +112,7 @@ if (isset($_POST["submit_changes"])) {
         <li>
           <input id="description-box" type="text" name="description" cols="40" rows="5"
           value =" <?php foreach($records as $record)
-          {echo htmlspecialchars($record['description']);}?> ">
+          {echo htmlspecialchars($record['description']);}?> " required/>
         </input>
         </li>
         <li>
