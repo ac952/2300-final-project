@@ -16,15 +16,13 @@ if (isset($_POST["submit_insert"])) {
 
   // $invalid_review = TRUE;
 
-  $event_month = filter_input(INPUT_POST, 'event_month', FILTER_VALIDATE_INT);
-  $event_date = filter_input(INPUT_POST, 'event_date', FILTER_VALIDATE_INT);
-  $event_year = filter_input(INPUT_POST, 'event_year', FILTER_VALIDATE_INT);
+  // $event_month = filter_input(INPUT_POST, 'event_month', FILTER_VALIDATE_INT);
+  $event_date = filter_input(INPUT_POST, 'event_date', FILTER_VALIDATE_STRING);
+  // $event_year = filter_input(INPUT_POST, 'event_year', FILTER_VALIDATE_INT);
 
   // $invalid_review = TRUE;
   $invalid_review = FALSE;
-  if (preg_match('/^\d{1,2}$/' , $event_month) && $event_month <= 12
-      && preg_match('/^\d{1,2}$/' , $event_date) && $event_date <= 31
-      && preg_match('/^\d{2}$/' , $event_year)){
+  if (preg_match("/^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$/" , $event_date)){
       $invalid_review = FALSE;
       // echo 'pass';
     }
@@ -33,7 +31,6 @@ if (isset($_POST["submit_insert"])) {
       // echo 'no';
   }
 
-  // $invalid_review = FALSE;
   // if (!in_array($event_name, $events) ) {
   //   // $invalid_review = FALSE;
   //   $invalid_review = TRUE;
@@ -50,9 +47,9 @@ if (isset($_POST["submit_insert"])) {
        :event_time, :location, :description)";
     $params = array(
       ':event_name' => $event_name,
-      ':event_month' => $event_month,
+      // ':event_month' => $event_month,
       ':event_date' => $event_date,
-      ':event_year' => $event_year,
+      // ':event_year' => $event_year,
       ':event_time' => $event_time,
       ':location' => $location,
       ':description' => $description
@@ -87,9 +84,7 @@ function print_event($record) {
   ?>
   <tr>
     <td><?php echo htmlspecialchars($record["event_name"]);?></td>
-    <td><?php echo htmlspecialchars($record["event_month"]);
-    ?>/<?php echo htmlspecialchars($record["event_date"]);
-    ?>/<?php echo htmlspecialchars($record["event_year"]);?></td>
+    <td><?php echo htmlspecialchars($record["event_date"]);?></td>
     <td><?php echo htmlspecialchars($record["event_time"]);?></td>
     <td><?php echo htmlspecialchars($record["location"]);?></td>
     <td><?php echo htmlspecialchars($record["description"]);?></td>
@@ -157,9 +152,9 @@ function print_event($record) {
         <br>
         <li>
           <label>Date:</label>
-          <input type="number" name="event_month" placeholder="MM" required/>/
-          <input type="number" name="event_date" placeholder="DD" required/>/
-          <input type="number" name="event_year" placeholder="YY" required/>
+          <!-- <input type="number" name="event_month" placeholder="MM" required/>/ -->
+          <input type="text" name="event_date" placeholder="MM/DD/YY" required/>
+          <!-- <input type="number" name="event_year" placeholder="YY" required/> -->
         </li>
         <br>
         <li>
