@@ -269,12 +269,13 @@ button[type=submit] {
   height: 50px;
 }
 
-#fail{
+.fail{
   text-align: center;
   color:red;
+  font-weight: bold;
 }
 
-#date-format{
+.date-format{
   font-size: 15px;
   color: red;
 }
@@ -282,6 +283,7 @@ button[type=submit] {
 .eventAdd{
   text-align: center;
   color:green;
+  font-weight: bold;
 }
 
 /**/

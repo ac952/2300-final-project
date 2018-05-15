@@ -47,7 +47,7 @@ if (isset($_POST["submit_changes"])) {
 
     } else {
       // echo '<h3 id="fail">Changes have not been updated. </h3>';
-      array_push($messages, "<h3 id='fail'> Changes have not been updated.</h3>");
+      array_push($messages, "<h3 class='fail'> Changes have not been updated.</h3>");
       // deletes prefilled info :(
       $id = $_POST['submit_changes'];
       // $sql = "SELECT * FROM events";
@@ -102,7 +102,7 @@ if (isset($_POST["submit_changes"])) {
           <input type="text" name="event_date" placeholder="MM-DD-YY" required/>
           <?php
           foreach ($date_messages as $date){
-              echo '<p id="date-format">'.$date.'</p>';
+              echo '<p class="date-format">'.$date.'</p>';
             }
             ?>
         </li>
@@ -132,6 +132,7 @@ if (isset($_POST["submit_changes"])) {
           <button name="submit_changes" type="submit"
           value='<?php foreach($records as $record) {echo $record['id'];}
           ?>'>Update Changes</button>
+
         </li>
       </ul>
     </form>

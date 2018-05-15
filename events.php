@@ -2,7 +2,7 @@
 
 $current_page_id = "events";
 $messages = array();
-
+$date_messages = array();
 // Get the list of events from the database.
 $events = exec_sql_query($db, "SELECT DISTINCT event_name FROM events", NULL)->fetchAll(PDO::FETCH_COLUMN);
 
@@ -23,7 +23,8 @@ if (isset($_POST["submit_insert"])) {
 
   if ($invalid_review) {
     // array_push($messages, "Failed to add event.");
-    echo 'Failed to add event.';
+    array_push($messages, "<h3 class='fail'>Failed to add event. *Fix your field inputs</h3>");
+    array_push($date_messages, "*Enter date in proper format");
       // var_dump("no");
   } else {
     $sql = "INSERT INTO events (event_name, event_date, event_time,
@@ -38,9 +39,9 @@ if (isset($_POST["submit_insert"])) {
     );
     $result = exec_sql_query($db, $sql, $params);
     if ($result) {
-      array_push($messages, "Your event has been added!");
+      array_push($messages, "<h3 class='eventAdd'>Your event has been added!</h3>");
     } else {
-      array_push($messages, "Failed to add event.");
+      array_push($messages, "<h3 class='fail'>Failed to add event. *Fix your field inputs </h3>");
     }
   }
 }
@@ -104,7 +105,7 @@ function print_event($record) {
   <div id="content-wrap">
     <?php
     foreach ($messages as $message){
-        echo '<h3 class="eventAdd">'.$message.'</h3>';
+        echo $message;
       }
       ?>
 
@@ -130,6 +131,7 @@ function print_event($record) {
       </table>
 
   <?php if($current_user) { ?>
+
     <h2>Add an Event</h2>
     <form id="addevent" action="events.php" method="post">
       <ul>
@@ -141,6 +143,11 @@ function print_event($record) {
         <li>
           <label>Date:</label>
           <input type="text" name="event_date" placeholder="MM-DD-YY" required/>
+          <?php
+          foreach ($date_messages as $date){
+              echo '<p class="date-format">'.$date.'</p>';
+            }
+            ?>
         </li>
         <br>
         <li>
