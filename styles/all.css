@@ -649,10 +649,13 @@ ul {
 
 div.gallery {
   margin: 5px;
-    border: 1px solid #ccc;
     float: left;
     width: 23%;
     height: auto;
+}
+
+div.gallery img {
+  border: 1px solid #ccc;
 }
 
 #deletephoto {
