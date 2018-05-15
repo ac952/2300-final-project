@@ -667,7 +667,7 @@ clear session and display message to user whether or not log out was successful
 ## Milestone 3: Updates
 
 [If you make any changes to your plan or design, make a list of the changes here.]
-We decided to take out the edit eboard function, because we decided that the organization will only edit the eboard section once a year (as opposed to every couple weeks for the gallery and the events pages). It makes more sense to incorporate the ability to edit for those two pages on the website, and have more long-term edits be allowed in the code. Thus, editing the eboard will be left in the hands of a future webmaster. 
+We decided to take out the edit eboard function, because we decided that the organization will only edit the eboard section once a year (as opposed to every couple weeks for the gallery and the events pages). It makes more sense to incorporate the ability to edit for those two pages on the website, and have more long-term edits be allowed in the code. Thus, editing the eboard will be left in the hands of a future webmaster.
 
 
 ## Milestone 4: Updates
@@ -678,6 +678,263 @@ We decided to take out the edit eboard function, because we decided that the org
 ## Milestone 5: Cognitive Walkthrough
 
 [Copy your tasks here from Milestone 2. Update them if you need to and then conduct another cognitive walkthrough.]
+
+Below are the three tasks performed in the cognitive walkthrough in Milestone 2. Given the structure of the website as it relates to these particular tasks did not change drastically, there is no need to update them for Milestone 5.
+
+Task 1: Find the name and contact details for the VP of Finance.
+
+  1. Move the mouse to the Eboard tab in the navigation.
+  2. Click on the Eboard tab.
+  3. Scroll through the page until they find the VP of Finance and their information.
+
+Task 2: Login and add a gallery photo.
+
+1. Move the mouse to the Login tab in the navigation.
+2. Click on the Login tab.
+3. Select the username field by clicking on it.
+4. Enter the username (provided)
+5. Select the password field by clicking on it.
+6. Enter the password (provided)
+7. Click on the Login button.
+8. Move the mouse to the Gallery tab in the navigation.
+10. Click the add button near on the page, which allows a logged-in user to make edits via a form.
+11. Click on 'upload image'.
+12. Select image from the desktop (provided).
+13. Click on submit button.
+
+Task 3: Determine when and where the weekly meetings are held.
+
+1. Move the mouse to the About tab in the navigation.
+2. Click on the About tab.
+3. Scroll through the page to find the section detailing the time and location of weekly meetings.
+
+#### Task 1 - Cognitive Walkthrough
+
+**Task name: Find the name and contact details for the VP of Finance**
+
+**Subgoal #1 : Navigate to eBoard tab**
+
+  - Will Abby have formed this sub-goal as a step to their overall goal?
+    - Yes, maybe or no: Yes
+    - Why? This should be intuitive for Abby as a navigation bar is a familiar way for a user to find their way around a webpage, and the Eboard tab is clearly labeled and self-explanatory.
+
+    **Action #1 : Move the mouse to the Eboard tab in the navigation**
+
+      - Will Abby know what to do at this step?
+        - Yes, maybe or no: Yes
+        - Why? We know that Abby has low confidence about doing unfamiliar computing tasks, so something as simple as moving the mouse should not be an issue. She is competent enough to work with spreadsheets, so moving a mouse and clicking on clearly labeled links is easy and familiar for her.
+
+      - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+        - Yes, maybe or no: Yes
+        - Why? We have styled the page such that a tab is highlighted when the user hovers over it. This is common practice across many webpages, and will likely be a familiar signifier to Abby that she is on the right track.
+
+    **Action #2 : Click on the Eboard tab**
+
+      - Will Abby know what to do at this step?
+        - Yes, maybe or no: Yes
+        - Why? As mentioned above, she is comfortable with simple computing tasks, so moving the mouse and selecting clearly navigable links are within the scope of her comfort zone.
+
+      - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+        - Yes, maybe or no: Yes
+        - Why? She will see that the page she is looking for has loaded.
+
+**Subgoal #2 : Scroll through the page until they find the VP of Finance and their information**
+
+    - Will Abby have formed this sub-goal as a step to their overall goal?
+      - Yes, maybe or no: Yes
+      - Why? This should be intuitive for Abby as most users' first instinct will be to skim through the page for information. The members and their roles are largely and clearly labeled so will be quickly visible to a viewer, and the CSS ensures user engagement as additional information is visible when the user hovers over a photo. Further, the position titles are visible at all times.
+
+#### Task 2 - Cognitive Walkthrough
+
+**Task name: Login and add a gallery photo.**
+
+**Subgoal #1 : Login**
+
+  - Will Abby have formed this sub-goal as a step to their overall goal?
+    - Yes, maybe or no: Yes
+    - Why? It is in the description of the goal, and she has been provided the username and password.
+
+    **Action #1 : Move the mouse to the Login tab in the navigation**
+
+      - Will Abby know what to do at this step?
+        - Yes, maybe or no: Yes
+        - Why? We know that Abby has low confidence about doing unfamiliar computing tasks, so something as simple as moving the mouse should not be an issue. She is competent enough to work with spreadsheets, so moving a mouse and clicking on clearly labeled links is easy and familiar for her.
+
+      - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+        - Yes, maybe or no: Yes
+        - Why? We have styled the page such that a tab is highlighted when the user hovers over it. This is common practice across many webpages, and will likely be a familiar signifier to Abby that she is on the right track.
+
+    **Action #2 : Click on the Login tab**
+
+      - Will Abby know what to do at this step?
+        - Yes, maybe or no: Yes
+        - Why? As mentioned above, she is comfortable with simple computing tasks, so moving the mouse and selecting clearly navigable links are within the scope of her comfort zone.
+
+      - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+        - Yes, maybe or no: Yes
+        - Why? She will see that the page she is looking for has loaded.
+
+    **Action #3 : Select the username field by clicking on it**
+
+      - Will Abby know what to do at this step?
+        - Yes, maybe or no: Yes
+        - Why? Abby writes and edits spreadsheet formulae for work, which means she knows that to input something into a cell, the cell must be clicked on.
+
+      - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+        - Yes, maybe or no: Yes
+        - Why? Yes. Firstly, when she passes the mouse over the cell, the cursor changes from an arrow to a text marker. When she clicks on it the cell elongates, is now circled in red, and contains a blinking marker. These are all clear, familiar, and commonplace signifiers for the user to type something in, and she has been given the username.
+
+    **Action #4 : Enter the username (provided)**
+
+    - Will Abby know what to do at this step?
+      - Yes, maybe or no: Yes
+      - Why? Abby is comfortable with process-oriented learning. She writes and edits spreadsheet formulae for work, which suggests she would know how to log in to a portal (whether computer, email, or a website - the username/password process is similar across many platforms). Given the username, she would know to input it into the correctly labeled field.
+
+    - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+      - Yes, maybe or no: No
+      - Why? Not yet, but she will know when she clicks on the login button. There, either the webpage will confirm she is logged in as the user provided, or will provide an error message stating that either the username or password is incorrect, in which case she can double check she inputted both correctly.
+
+    **Action #5 : Select the password field by clicking on it**
+
+    - Will Abby know what to do at this step?
+      - Yes, maybe or no: Yes
+      - Why? Abby writes and edits spreadsheet formulae for work, which means she knows that to input something into a cell, the cell must be clicked on.
+
+    - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+      - Yes, maybe or no: Yes
+      - Why? Yes. Firstly, when she passes the mouse over the cell, the cursor changes from an arrow to a text marker. When she clicks on it the cell elongates, is now circled in red, and contains a blinking marker. These are all clear, familiar, and commonplace signifiers for the user to type something in, and she has been given the password.
+
+    **Action #6 : Enter the password (provided)**
+
+    - Will Abby know what to do at this step?
+      - Yes, maybe or no: Yes
+      - Why? Abby is comfortable with process-oriented learning. She writes and edits spreadsheet formulae for work, which suggests she would know how to log in to a portal (whether computer, email, or a website - the username/password process is similar across many platforms). Given the password, she would know to input it into the correctly labeled field.
+
+    - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+      - Yes, maybe or no: No
+      - Why? Not yet, but she will know when she clicks on the login button. There, either the webpage will confirm she is logged in as the user provided, or will provide an error message stating that either the username or password is incorrect, in which case she can double check she inputted both correctly.
+
+    **Action #7 : Click on the Login button**
+
+    - Will Abby know what to do at this step?
+      - Yes, maybe or no: Yes
+      - Why? As mentioned above, she is used to process-oriented learning and so is familiar with the similar login methods across platforms. The logical step after inputting the username and password provided her is to press the login button.
+
+    - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+      - Yes, maybe or no: Yes
+      - Why? Either the webpage will confirm she is logged in as the user provided, or will provide an error message stating that either the username or password is incorrect, in which case she can double check she inputted both correctly.
+
+**Subgoal #2 : Add a new photo to the gallery ***
+
+    - Will Abby have formed this sub-goal as a step to their overall goal?
+      - Yes, maybe or no: Yes
+      - Why? This is the main thing that is required of her in the task.
+
+    **Action #1 : Move the mouse to the Gallery tab in the navigation**
+
+        - Will Abby know what to do at this step?
+          - Yes, maybe or no: Yes
+          - Why? We know that Abby has low confidence about doing unfamiliar computing tasks, so something as simple as moving the mouse should not be an issue. She is competent enough to work with spreadsheets, so moving a mouse and clicking on clearly labeled links is easy and familiar for her.
+
+        - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+          - Yes, maybe or no: Yes
+          - Why? We have styled the page such that a tab is highlighted when the user hovers over it. This is common practice across many webpages, and will likely be a familiar signifier to Abby that she is on the right track.
+
+    **Action #2 : Click on the Gallery tab**
+
+        - Will Abby know what to do at this step?
+          - Yes, maybe or no: Yes
+          - Why? As mentioned above, she is comfortable with simple computing tasks, so moving the mouse and selecting clearly navigable links are within the scope of her comfort zone.
+
+        - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+          - Yes, maybe or no: Yes
+          - Why? She will see that the page she is looking for has loaded.
+
+  **Action #3 : Find the button to add a photo.**
+
+        - Will Abby know what to do at this step?
+          - Yes, maybe or no: Yes
+          - Why? To make it easier for a logged-in user to add photos, we placed the 'Choose File' button at the very top of the page under the heading 'Upload file', ensuring it is the first thing they see when the page loads. It will be immediately visible to Abby.
+
+        - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+          - Yes, maybe or no: Yes
+          - Why? The button is clearly labeled, and there are no ambiguous links or extraneous things on the page to confuse her.
+
+  **Action #4 : Click the 'Choose file' button on the page.**
+
+        - Will Abby know what to do at this step?
+          - Yes, maybe or no: Yes
+          - Why? The 'Upload file' button is clearly visible and labeled, and it is intuitive to click on it to add a photo.
+
+        - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+          - Yes, maybe or no: Yes
+          - Why? When she clicks the button, a page pops up allowing her to browse photos from her computer. This is a clear indication she is on the right path.
+
+  **Action #5 : Click on 'upload image'**
+
+        - Will Abby know what to do at this step?
+          - Yes, maybe or no: Yes
+          - Why? Abby is used to process-oriented learning and so is used to the similar upload methods and mechanisms across platforms. The word 'image' is also a useful sign, as the other input fields will all be text-based.
+
+        - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+          - Yes, maybe or no: Yes
+          - Why? A box will pop up that allows her to choose an image - this is a clear indicator she is on the right track.
+
+  **Action #6 : Select image from the desktop (provided)**
+
+        - Will Abby know what to do at this step?
+          - Yes, maybe or no: Yes
+          - Why? The box that pops up in the previous step will clearly indicate the locations she may choose in image from. She will have been provided the image by us and so will have the file directory.
+
+        - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+          - Yes, maybe or no: Yes
+          - Why? She will see that the image has been selected once she clicks on it as it will change color in the box (highlighted in blue) and the file path will have the name of the image.
+
+  **Action #7 : Click on the Submit button**
+
+        - Will Abby know what to do at this step?
+          - Yes, maybe or no: Yes
+          - Why? As mentioned above, she is used to process-oriented learning and so is used to the similar submission methods across platforms. The logical step after making the change she needed to (i.e. uploading the new image) is to press the submit button.
+
+        - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+          - Yes, maybe or no: Yes
+          - Why? Either the form will return a 'Form Successfully Submitted' response, or will provide an error message stating that the file could not be uploaded - ideally with a reason e.g. file size issue - in which case she can try again after correcting the issue.
+
+#### Task 3 - Cognitive Walkthrough
+
+**Task name: Determine when and where the weekly meetings are held**
+
+**Subgoal #1 : Navigate to About tab**
+
+  - Will Abby have formed this sub-goal as a step to their overall goal?
+    - Yes, maybe or no: Maybe
+    - Why? Locating and selecting a tab should be intuitive for Abby as a nav bar is a familiar way to navigate a webpage, but she may be confused between the About and the Events tabs. Testing various users will allow us to determine which tab is more intuitive to the average viewer of the website in that they would expect it to hold information about the organization's weekly meetings.
+
+    **Action #1 : Move the mouse to the About tab in the navigation**
+
+      - Will Abby know what to do at this step?
+        - Yes, maybe or no: Yes
+        - Why? We know that Abby has low confidence about doing unfamiliar computing tasks, so something as simple as moving the mouse should not be an issue. She is competent enough to work with spreadsheets, so moving a mouse and clicking on clearly labeled links is easy and familiar for her.
+
+      - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+        - Yes, maybe or no: Yes
+        - Why? We have styled the page such that a tab is highlighted when the user hovers over it. This is common practice across many webpages, and will likely be a familiar signifier to Abby that she is on the right track.
+
+    **Action #2 : Click on the About tab**
+
+      - Will Abby know what to do at this step?
+        - Yes, maybe or no: Yes
+        - Why? As mentioned above, she is comfortable with simple computing tasks, so moving the mouse and selecting clearly navigable links are within the scope of her comfort zone.
+
+      - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+        - Yes, maybe or no: Yes
+        - Why? She will see that the page she is looking for has loaded.
+
+**Subgoal #2 : Scroll through the page to find the section detailing the time and location of weekly meetings**
+
+    - Will Abby have formed this sub-goal as a step to their overall goal?
+      - Yes, maybe or no: Yes
+      - Why? This should be intuitive for Abby as most users' first instinct will be to skim through the page for information. The weekly meetings' time and location will be clearly delineated in a differently formatted section under the main About paragraph.
 
 ### Cognitive Walk-though Results
 

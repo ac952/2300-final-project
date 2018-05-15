@@ -111,6 +111,8 @@ if (isset($_POST["submit_upload"])) {
         echo "<div class=\"gallery\"><img src=\"" .IMG_UPLOADS_PATH. htmlspecialchars($record["id"].".".$record["img_ext"]) .
         "\">" ."</div>";
 
+        // OFFICE HOURS NOTES: Put the Delete button inside the above div - have picked it out below
+
         //checks if user is owner and logged in before showing delete option
         $sql = "SELECT * FROM images WHERE id = :img_id";
         $params = array(
@@ -129,6 +131,8 @@ if (isset($_POST["submit_upload"])) {
               <li> -->
               <div id="deletephoto">
                 <caption>Delete this photo:</caption>
+
+                <!-- OFFICE HOURS NOTES: Put the above button INSIDE the photo div -->
               <!-- </li>
               <li> -->
                 <input type="submit" name="delete_photo" value="Delete">
