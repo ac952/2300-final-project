@@ -125,14 +125,16 @@ if (isset($_POST["submit_upload"])) {
 
           <form id="uploadFile" action=<?php echo "gallery.php?delete_photo=".htmlspecialchars($record["id"]) ?>
             method="post" enctype="multipart/form-data">
-            <ul>
-              <li>
-                <label>Delete this photo:</label>
-              </li>
-              <li>
+            <!-- <ul>
+              <li> -->
+              <div id="deletephoto">
+                <caption>Delete this photo:</caption>
+              <!-- </li>
+              <li> -->
                 <input type="submit" name="delete_photo" value="Delete">
-              </li>
-            </ul>
+              </div>
+              <!-- </li>
+            </ul> -->
           </form>
         <?php }}
             }}
