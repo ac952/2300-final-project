@@ -22,8 +22,8 @@ if (isset($_POST["submit_insert"])) {
 
   // $invalid_review = TRUE;
   $invalid_review = FALSE;
-  if (preg_match('/^\d{1,2}$/' , $event_month) && $event_month > 12
-      && preg_match('/^\d{1,2}$/' , $event_date) && $event_date > 31
+  if (preg_match('/^\d{1,2}$/' , $event_month) && $event_month <= 12
+      && preg_match('/^\d{1,2}$/' , $event_date) && $event_date <= 31
       && preg_match('/^\d{2}$/' , $event_year)){
       $invalid_review = FALSE;
       // echo 'pass';
