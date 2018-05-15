@@ -2,7 +2,7 @@
 
 $current_page_id = "edit_events";
 $messages = array();
-
+$date_messages = array();
 
 if (isset($_POST["submit_changes"])) {
   $event_name = filter_input(INPUT_POST, 'event_name', FILTER_SANITIZE_STRING);
@@ -19,18 +19,24 @@ if (isset($_POST["submit_changes"])) {
     }
     else {
       $date_confirm = FALSE;
-      array_push($messages, "*Enter date in proper format");
+      array_push($date_messages, "*Enter date in proper format");
   }
 
   // php for updating any changes to events page AND db
   // if (isset($_POST["submit_changes"])){
 
+  // use INSERT events
+  $id = $_POST['submit_changes'];
+  $sql = "SELECT * FROM events WHERE id = '$id'";
+  $params = array();
+  $records = exec_sql_query($db, $sql, $params)->fetchAll(PDO::FETCH_ASSOC);
 
     // echo changes in the edit_events.php page
     // if sql is executed successfully, echo success
     // if records and regex match then continue
-    if ($date_confirm) {
-      echo '<h3 id="success">Your changes have been updated!</h3>';
+    if ($date_confirm && $records) {
+      // echo '<h3 id="success">Your changes have been updated!</h3>';
+      array_push($messages, "<h3 class='eventAdd'>Your changes have been updated!</h3>");
       $id = $_POST['submit_changes'];
       // use INSERT events
       $sql = "UPDATE events SET event_name = '$event_name',
@@ -38,9 +44,10 @@ if (isset($_POST["submit_changes"])) {
       description='$description' WHERE id = '$id'";
       $params = array();
       $records = exec_sql_query($db, $sql, $params);
-      
+
     } else {
-      echo '<h3 id="fail">Changes have not been updated. </h3>';
+      // echo '<h3 id="fail">Changes have not been updated. </h3>';
+      array_push($messages, "<h3 id='fail'> Changes have not been updated.</h3>");
       // deletes prefilled info :(
       $id = $_POST['submit_changes'];
       // $sql = "SELECT * FROM events";
@@ -74,6 +81,11 @@ if (isset($_POST["submit_changes"])) {
   <?php include("includes/header.php");?>
 
   <div id="content-wrap">
+    <?php
+    foreach ($messages as $message){
+        echo $message;
+      }
+      ?>
     <!-- get the info from db based on selected cell id-->
     <!-- echo inside input -->
     <form id="event" action="edit_events.php" method="post">
@@ -87,9 +99,9 @@ if (isset($_POST["submit_changes"])) {
         </li>
         <li>
           <label>Date:</label>
-          <input type="date" name="event_date" placeholder="MM-DD-YY" required/>
+          <input type="text" name="event_date" placeholder="MM-DD-YY" required/>
           <?php
-          foreach ($messages as $date){
+          foreach ($date_messages as $date){
               echo '<p id="date-format">'.$date.'</p>';
             }
             ?>

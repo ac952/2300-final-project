@@ -270,19 +270,8 @@ button[type=submit] {
 }
 
 #fail{
-  position:absolute;
-  top:320px;
-  left: 40%;
-  /* text-align: left; */
+  text-align: center;
   color:red;
-}
-
-#success{
-  position:absolute;
-  top:320px;
-  left: 40%;
-  /* text-align: left; */
-  color:green;
 }
 
 #date-format{
@@ -290,7 +279,7 @@ button[type=submit] {
   color: red;
 }
 
-#eventAdd{
+.eventAdd{
   text-align: center;
   color:green;
 }

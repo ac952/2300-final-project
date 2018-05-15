@@ -104,7 +104,7 @@ function print_event($record) {
   <div id="content-wrap">
     <?php
     foreach ($messages as $message){
-        echo '<h3 id="eventAdd">'.$message.'</h3>';
+        echo '<h3 class="eventAdd">'.$message.'</h3>';
       }
       ?>
 
