@@ -39,7 +39,8 @@ function print_messages() {
 function handle_db_error($exception) {
   echo '<p><strong>' . htmlspecialchars('Exception : ' . $exception->getMessage()) . '</strong></p>';
 }
-// execute an SQL query and return the results.
+
+// executes SQL query and return results
 function exec_sql_query($db, $sql, $params = array()) {
   try {
     $query = $db->prepare($sql);
@@ -84,19 +85,19 @@ function open_or_init_sqlite_db($db_filename, $init_sql_filename) {
 $db = open_or_init_sqlite_db("website.sqlite", "init/init.sql");
 
 //log-in and log-out code below
-
 function check_login() {
   if (isset($_SESSION['currentuser'])) {
     return $_SESSION['currentuser'];
   }
   return NULL;
 }
-function log_in($username, $password) {
+
+function log_in($user, $password) {
   global $db;
-  if ($username && $password) {
+  if ($user && $password) {
     $sql = "SELECT * FROM accounts WHERE username = :username;";
     $params = array(
-      ':username' => $username
+      ':username' => $user
     );
     $records = exec_sql_query($db, $sql, $params)->fetchAll();
     if ($records) {
@@ -104,7 +105,7 @@ function log_in($username, $password) {
       $account = $records[0];
       // Verify password
       if (password_verify($password, $account['password'])) {
-        $_SESSION['currentuser'] = $username;
+        $_SESSION['currentuser'] = $user;
       } else {
         record_message("Username or password not valid.");
       }
@@ -117,8 +118,7 @@ function log_in($username, $password) {
   return NULL;
 }
 
-//log out function and session destroy
-
+//log out function and session destroy function
 function log_out() {
   global $current_user;
   $current_user = NULL;
@@ -126,7 +126,7 @@ function log_out() {
   session_destroy();
 }
 
-// log in the user and start session
+// logs in the user and starts user session
 session_start();
 if (isset($_POST['login'])) {
   $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
@@ -134,7 +134,6 @@ if (isset($_POST['login'])) {
   $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
   $current_user = log_in($username, $password);
 }
-  // check if logged in
   $current_user = check_login();
 
 ?>

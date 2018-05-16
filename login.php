@@ -38,7 +38,7 @@ $current_page_id = "login";
         <ul>
           <li>
             <label>Username:</label>
-            <input type="text" name="username" required/>
+            <input type="username" name="username" required/>
           </li>
           <li>
             <br>

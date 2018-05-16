@@ -5,7 +5,7 @@ include('includes/init.php');
 $current_page_id="gallery";
 
 const IMG_UPLOADS_PATH = "uploads/images/";
-const MAX_FILE_SIZE = 1000000;
+const MAX_FILE_SIZE = 1000000000;
 
 if (isset($_POST['delete_photo'])) {
   $delete_photo = TRUE;
@@ -94,7 +94,7 @@ if (isset($_POST["submit_upload"])) {
       <ul>
         <li>
           <label>Upload File:</label>
-          <input type="hidden" name="MAX_FILE_SIZE" value="<?php echo MAX_FILE_SIZE; ?>" />
+          <input type="hidden" name="MAX_FILE_SIZE" value="<?php echo MAX_FILE_SIZE;?>" />
           <input type="file" name="photo_file" required>
         </li>
         <li>
@@ -109,7 +109,7 @@ if (isset($_POST["submit_upload"])) {
       $records = exec_sql_query($db, "SELECT * FROM images")->fetchAll(PDO::FETCH_ASSOC);
       foreach($records as $record){
         echo "<div class=\"gallery\">";
-        echo "<img alt = 'image' src=\"" .IMG_UPLOADS_PATH. htmlspecialchars($record["id"].".".$record["img_ext"]) .
+        echo "<img alt =\"image\" src=\"" .IMG_UPLOADS_PATH. htmlspecialchars($record["id"].".".$record["img_ext"]) .
         "\">";
         //checks if user is owner and logged in before showing delete option
         $sql = "SELECT * FROM images WHERE id = :img_id";
@@ -123,8 +123,8 @@ if (isset($_POST["submit_upload"])) {
           if($current_user) {
             if($current_user==$owner_id){ ?>
 
-            <form class="uploadFile" action=<?php echo "gallery.php?delete_photo=".htmlspecialchars($record["id"])?>
-              method="post" enctype="multipart/form-data">
+              <form class="uploadFile" action=<?php echo "\""."gallery.php?delete_photo=".$record["id"] ."\""?>
+                method="post" enctype="multipart/form-data">
               <!-- <ul>
                 <li> -->
                 <div class="deletephoto">
@@ -134,11 +134,14 @@ if (isset($_POST["submit_upload"])) {
                   <!-- OFFICE HOURS NOTES: Put the above button INSIDE the photo div -->
                 <!-- </li>
                 <li> -->
-                  <input type="submit" name="delete_photo" value="Delete">
+                  <form action ="gallery.php" method ="get" >
+                    <button type="submit" value='<?php echo $record['id'] ?>'
+                      name="delete_photo">Delete</button>
+                  </form>
                 </div>
                 <!-- </li>
               </ul> -->
-            </form>
+
           <?php
         }
       }
@@ -147,7 +150,6 @@ if (isset($_POST["submit_upload"])) {
         echo "</div>";
 
         // OFFICE HOURS NOTES: Put the Delete button inside the above div - have picked it out below
-
 
     }
     ?>
