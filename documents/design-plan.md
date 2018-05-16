@@ -157,11 +157,11 @@ Draft of site should be well-rounded by end of Milestone 3. Perfecting details a
 
 [Tip: If you use card sorting for your navigation, show us that work by including a picture!]
 
-- About
-- Executive Board
-- Events
-- Gallery
-- Login/Logout
+*About Us*: list the mission statement, history, philanthropy initiatives, tenets, and awards/achievements.
+*Executive Board*: photos and short biographies of current e-board members in the club so that users can put a face to the leaders of the club
+*Events*: list all dates and times for upcoming events for the current semester, including district and national events. Logged-in members should be able to edit events on this page.
+*Gallery*: display a slideshow of photos showcasing volunteers at a wide range of events
+*Log-in*: A page with a log-in and password box for members to log-in to make changes to gallery and event schedule
 
 ### Wireframes
 
@@ -559,6 +559,7 @@ show message whether a user is currently logged in or not.
 
 ```
 credits to us (names and net ids)
+contact information for Facebook
 
 ```
 #### index.php

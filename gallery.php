@@ -104,7 +104,7 @@ if (isset($_POST["submit_upload"])) {
       </form>
       <?php }?>
 
-
+    <!--All gallery images are owned by Cornell Circle K-->
     <?php
       $records = exec_sql_query($db, "SELECT * FROM images")->fetchAll(PDO::FETCH_ASSOC);
       foreach($records as $record){
