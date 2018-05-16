@@ -36,7 +36,8 @@ if (isset($_POST["submit_changes"])) {
     // if records and regex match then continue
     if ($date_confirm && $records) {
       // echo '<h3 id="success">Your changes have been updated!</h3>';
-      // array_push($messages, "<h3 class='eventAdd'>Your changes have been updated!</h3>");
+      array_push($messages, "<h3 class='eventAdd'>Your changes have been updated!</h3>");
+      // <button><a href="events.php">Back to Events</a></button>
       $id = $_POST['submit_changes'];
       // use INSERT events
       $sql = "UPDATE events SET event_name = '$event_name',
@@ -141,7 +142,8 @@ if (isset($_POST["submit_changes"])) {
           value='<?php foreach($records as $record) {echo $record['id'];}
           ?>'>Update Changes</button>
 
-          <button><a href="events.php">Back to Events</a></button>
+          <button type="submit"><a href="events.php" id="back_button">Back to Events</a></button>
+
 
         </li>
       </ul>

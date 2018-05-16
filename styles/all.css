@@ -262,6 +262,11 @@ button[type=submit] {
     cursor: pointer;
 }
 
+#back_button{
+  text-decoration: none;
+  color: white;
+}
+
 #description-box{
   word-wrap: break-word;
   word-break: break-all;
