@@ -157,11 +157,11 @@ Draft of site should be well-rounded by end of Milestone 3. Perfecting details a
 
 [Tip: If you use card sorting for your navigation, show us that work by including a picture!]
 
-- About
-- Executive Board
-- Events
-- Gallery
-- Login/Logout
+*About Us*: list the mission statement, history, philanthropy initiatives, tenets, and awards/achievements.
+*Executive Board*: photos and short biographies of current e-board members in the club so that users can put a face to the leaders of the club
+*Events*: list all dates and times for upcoming events for the current semester, including district and national events. Logged-in members should be able to edit events on this page.
+*Gallery*: display a slideshow of photos showcasing volunteers at a wide range of events
+*Log-in*: A page with a log-in and password box for members to log-in to make changes to gallery and event schedule
 
 ### Wireframes
 
@@ -559,6 +559,7 @@ show message whether a user is currently logged in or not.
 
 ```
 credits to us (names and net ids)
+contact information for Facebook
 
 ```
 #### index.php
@@ -673,7 +674,7 @@ We decided to take out the edit eboard function, because we decided that the org
 ## Milestone 4: Updates
 
 [If you make any changes to your plan or design based on your peers' feedback, make a list of the changes here.]
-We took feedback from TAs, classmates, and Professor Harms to incorporate a simple Home page with an "enter" button that would navigate the actual content of the website (Professor Harms recommended this because our "about" page has a lot of text and is not appealing as an index page), add regex filters to our Event input; redesign our Eboard page to make it more impressive and interactive with hover effects, better quality pictures, and floating; reorganize the placement of our photos and "delete" buttons on the gallery page; and make our header and footer position sticky. 
+We took feedback from TAs, classmates, and Professor Harms to incorporate a simple Home page with an "enter" button that would navigate the actual content of the website (Professor Harms recommended this because our "about" page has a lot of text and is not appealing as an index page), add regex filters to our Event input; redesign our Eboard page to make it more impressive and interactive with hover effects, better quality pictures, and floating; reorganize the placement of our photos and "delete" buttons on the gallery page; and make our header and footer position sticky.
 
 ## Milestone 5: Cognitive Walkthrough
 
@@ -951,7 +952,11 @@ Task 3: Determine when and where the weekly meetings are held.
 ## Milestone 5: Final Notes to the Graders
 
 [1. Give us three specific strengths of your site that sets it apart from the previous website of the client (if applicable) and/or from other websites. Think of this as your chance to argue for the things you did really well.]
+You can find an old version of the club's site at http://circlekcornell.weebly.com/. This site is extremely poor. Not only is the background plain white and unengaging, but information and pictures are presented in a very blocked, template style with virtually no interactivity, no photos in the gallery, an blunt CKI header slapped onto the top of the pages, and little to no event information directly on the site (most of it linked to an external google doc). They also have a title that says to like them on Facebook but no link to the Facebook page for users to do so. We wanted to make a new site that left the old site in the dust (where it belonged). One strength of our site is the Executive Board Members page. On the old site, the picture of each leader was placed to the left of a block of biographical text and organized in a vertical hierarchy. On our page, the eboard is organized in a concise, horizontal manner with 3 in each row. Surface level, pertinent information (instead of big blocks of biographical text that no one will read) about each board member is neatly contained within each picture and readable upon hovering over their image, using opacity and transition effects to allow for proper contrast. The high-quality images also include a label beneath each photo stating their position, giving a Polaroid resemblance. A second strength is our header and footer. The footer includes a Facebook logo that directs to their new Facebook page upon clicking. The header also includes their club logo and both the header and footer represent the red color that is so characteristics to Circle K. The navigation bar is efficient as well, with each tab changing color upon hovering and the current tab being bolded for proper user feedback. The log-in tab also transforms into a log-out tab when the user is logged in, and vice versa when the user is logged out in order to provide again, clear feedback and prevent redundancy. Clicking on the bear logo will take you back to our sleek Home page that showcases a beautiful picture of the Circle K eboard. Lastly, a third strength of our site is the Events page. Not only are all the upcoming events and their details maintained on the site (rather than externally linked like on the old site), it is organized in minimalistic yet intuitive columns and rows that resemble an Events page on Facebook. Hovering over each individual event will highlight the row of information in a light red color to help centralize the user's attention. Once logged in, the functionality of the Event page pops out, with edit and delete buttons to the right of each events and a form below the table to add more events. All items on this page follow a cohesive color scheme and orient along the same horizontal and vertical axes, making this page both dynamic and easy to process.
+
 
 [2. Tell us about things that don't work, what you wanted to implement, or what you would do if you keep working with the client in the future. Give justifications.]
+One feature we wanted to implement but did not get to was a slideshow that had add/delete functionalities. We thought a slideshow would be less cluttered and contained than a grid-like gallery but were unsure how to code the javascript and php for this. 
+
 
 [3. Tell us anything else you need us to know for when we're looking at the project.]
