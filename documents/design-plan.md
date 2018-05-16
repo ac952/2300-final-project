@@ -157,11 +157,11 @@ Draft of site should be well-rounded by end of Milestone 3. Perfecting details a
 
 [Tip: If you use card sorting for your navigation, show us that work by including a picture!]
 
-- About
-- Executive Board
-- Events
-- Gallery
-- Login/Logout
+*About Us*: list the mission statement, history, philanthropy initiatives, tenets, and awards/achievements.
+*Executive Board*: photos and short biographies of current e-board members in the club so that users can put a face to the leaders of the club
+*Events*: list all dates and times for upcoming events for the current semester, including district and national events. Logged-in members should be able to edit events on this page.
+*Gallery*: display a slideshow of photos showcasing volunteers at a wide range of events
+*Log-in*: A page with a log-in and password box for members to log-in to make changes to gallery and event schedule
 
 ### Wireframes
 
@@ -559,6 +559,7 @@ show message whether a user is currently logged in or not.
 
 ```
 credits to us (names and net ids)
+contact information for Facebook
 
 ```
 #### index.php
@@ -673,7 +674,7 @@ We decided to take out the edit eboard function, because we decided that the org
 ## Milestone 4: Updates
 
 [If you make any changes to your plan or design based on your peers' feedback, make a list of the changes here.]
-
+We took feedback from TAs, classmates, and Professor Harms to incorporate a simple Home page with an "enter" button that would navigate the actual content of the website (Professor Harms recommended this because our "about" page has a lot of text and is not appealing as an index page), add regex filters to our Event input; redesign our Eboard page to make it more impressive and interactive with hover effects, better quality pictures, and floating; reorganize the placement of our photos and "delete" buttons on the gallery page; and make our header and footer position sticky.
 
 ## Milestone 5: Cognitive Walkthrough
 
@@ -689,24 +690,26 @@ Task 1: Find the name and contact details for the VP of Finance.
 
 Task 2: Login and add a gallery photo.
 
-1. Move the mouse to the Login tab in the navigation.
-2. Click on the Login tab.
-3. Select the username field by clicking on it.
-4. Enter the username (provided)
-5. Select the password field by clicking on it.
-6. Enter the password (provided)
-7. Click on the Login button.
-8. Move the mouse to the Gallery tab in the navigation.
-10. Click the add button near on the page, which allows a logged-in user to make edits via a form.
-11. Click on 'upload image'.
-12. Select image from the desktop (provided).
-13. Click on submit button.
+  1. Move the mouse to the Login tab in the navigation.
+  2. Click on the Login tab.
+  3. Select the username field by clicking on it.
+  4. Enter the username (provided)
+  5. Select the password field by clicking on it.
+  6. Enter the password (provided)
+  7. Click on the Login button.
+  8. Move the mouse to the Gallery tab in the navigation.
+  9. Click on the Gallery tab.
+  10. Find the button to add a photo.
+  11. Click the 'Choose file' button.
+  12. Select image from the desktop (provided).
+  13. Click on 'Open'.
+  14. Click on the 'Upload' button.
 
 Task 3: Determine when and where the weekly meetings are held.
 
-1. Move the mouse to the About tab in the navigation.
-2. Click on the About tab.
-3. Scroll through the page to find the section detailing the time and location of weekly meetings.
+  1. Move the mouse to the About tab in the navigation.
+  2. Click on the About tab.
+  3. Scroll through the page to find the section detailing the time and location of weekly meetings.
 
 #### Task 1 - Cognitive Walkthrough
 
@@ -864,41 +867,41 @@ Task 3: Determine when and where the weekly meetings are held.
 
         - Will Abby know what to do at this step?
           - Yes, maybe or no: Yes
-          - Why? The 'Upload file' button is clearly visible and labeled, and it is intuitive to click on it to add a photo.
+          - Why? The 'Choose file' button is clearly visible and labeled, and it is intuitive to click on it to add a photo.
 
         - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
           - Yes, maybe or no: Yes
           - Why? When she clicks the button, a page pops up allowing her to browse photos from her computer. This is a clear indication she is on the right path.
 
-  **Action #5 : Click on 'upload image'**
+  **Action #5 : Select image from the desktop (provided)**
 
         - Will Abby know what to do at this step?
           - Yes, maybe or no: Yes
-          - Why? Abby is used to process-oriented learning and so is used to the similar upload methods and mechanisms across platforms. The word 'image' is also a useful sign, as the other input fields will all be text-based.
-
-        - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
-          - Yes, maybe or no: Yes
-          - Why? A box will pop up that allows her to choose an image - this is a clear indicator she is on the right track.
-
-  **Action #6 : Select image from the desktop (provided)**
-
-        - Will Abby know what to do at this step?
-          - Yes, maybe or no: Yes
-          - Why? The box that pops up in the previous step will clearly indicate the locations she may choose in image from. She will have been provided the image by us and so will have the file directory.
+          - Why? The box that pops up in the previous step will clearly indicate the locations she may choose an image from. She will have been provided the image by us and so will have the file directory.
 
         - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
           - Yes, maybe or no: Yes
           - Why? She will see that the image has been selected once she clicks on it as it will change color in the box (highlighted in blue) and the file path will have the name of the image.
 
-  **Action #7 : Click on the Submit button**
+  **Action #6 : Click on 'Open'**
 
         - Will Abby know what to do at this step?
           - Yes, maybe or no: Yes
-          - Why? As mentioned above, she is used to process-oriented learning and so is used to the similar submission methods across platforms. The logical step after making the change she needed to (i.e. uploading the new image) is to press the submit button.
+          - Why? Abby is used to process-oriented learning and so is used to the similar upload methods and mechanisms across platforms. There are only two buttons available in the popup window, 'Cancel' and 'Open', so it is intuitive to choose the latter.
 
         - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
           - Yes, maybe or no: Yes
-          - Why? Either the form will return a 'Form Successfully Submitted' response, or will provide an error message stating that the file could not be uploaded - ideally with a reason e.g. file size issue - in which case she can try again after correcting the issue.
+          - Why? The name of the file she has chosen will appear next to the 'Choose file' button, clearly indicating if she has succeeded
+
+  **Action #7 : Click on the Upload button**
+
+        - Will Abby know what to do at this step?
+          - Yes, maybe or no: Yes
+          - Why? As mentioned above, she is used to process-oriented learning and so is used to the similar submission methods across platforms. The logical step after making the change she needed to (i.e. uploading the new image) is to press the Upload button.
+
+        - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+          - Yes, maybe or no: Yes
+          - Why? Either the form will return a 'Image Successfully Uploaded' response, or will provide an error message stating that the file could not be uploaded, allowing her to know whether she has successfully completed the task.
 
 #### Task 3 - Cognitive Walkthrough
 
@@ -908,7 +911,7 @@ Task 3: Determine when and where the weekly meetings are held.
 
   - Will Abby have formed this sub-goal as a step to their overall goal?
     - Yes, maybe or no: Maybe
-    - Why? Locating and selecting a tab should be intuitive for Abby as a nav bar is a familiar way to navigate a webpage, but she may be confused between the About and the Events tabs. Testing various users will allow us to determine which tab is more intuitive to the average viewer of the website in that they would expect it to hold information about the organization's weekly meetings.
+    - Why? Locating and selecting a tab should be intuitive for Abby as a nav bar is a familiar way to navigate a webpage, and after some user testing we concluded that the About tab was the most intuitive place to display the information on weekly meetings. Users feedback indicated that the other alternative, the Events tab, gave the impression of only holding information about one-time events that are unique to each semester, while the About page was thought to hold information on more consistent meetings.
 
     **Action #1 : Move the mouse to the About tab in the navigation**
 
@@ -934,9 +937,11 @@ Task 3: Determine when and where the weekly meetings are held.
 
     - Will Abby have formed this sub-goal as a step to their overall goal?
       - Yes, maybe or no: Yes
-      - Why? This should be intuitive for Abby as most users' first instinct will be to skim through the page for information. The weekly meetings' time and location will be clearly delineated in a differently formatted section under the main About paragraph.
+      - Why? This should be intuitive for Abby as most users' first instinct will be to skim through the page for information. The weekly meetings' time and location is clearly delineated in a differently formatted section under the main About information. The font color is different and the information is indented to make it stand out to the user more.
 
 ### Cognitive Walk-though Results
+
+Our cognitive walkthrough remained essentially the same, though for task two the wording for some of the actions changed as we implemented our design. For example, we used 'Upload' instead of 'Submit' as the word is more intuitive for the action of submitting a photo as opposed to a text-based form. We were very careful from the beginning to preempt any gender-inclusiveness bugs in our design, and thankfully did not run across any during the cognitive walkthroughs or in user testing. Users of both genders felt comfortable using the site, commenting that it felt clear, informative, and unbiased. We also made sure to use gender-inclusive pronouns throughout the site, for example in the About section detailing Circle K's mission (except for where the club's history required us to reference a particular gender). We did change 'mankind' to 'humankind' in one of the sections to make the current mission more inclusive.
 
 [Did you discover any issues with your design? What were they? How did you change your design to address the gender-inclusiveness bugs you discovered?]
 
@@ -946,12 +951,44 @@ Task 3: Determine when and where the weekly meetings are held.
 
 [Describe in some detail what the client will do (or would have to do) in order to make this website go live. What is the deployment plan?]
 
+To deploy the website (make it so that the website is accessible to anyone who knows the link), you have two options:
+
+1. Heroku
+  1. Connect your personal project with Heroku (type: cd YOUR_PROJECT'S_LOCATION, heroku login, heroku create)
+  2. Setup configuration files (Copy and paste resources, composer.json and composer.lock files into this project)
+  3. Deploy to Heroku (type: git add -A, git commit -m "prepare deploy to Heroku", git push, git push heroku master)
+  4. View your website live (type: heroku open)
+  5. Set up your own domain name (You must first buy a domain name, and then configure it with Heroku: https://devcenter.heroku.com/articles/custom-domains)
+
+2. Github Pages
+  1. Create a new Github repository, because Cornell's repository is private.
+  2. Go to settings. Under Github Pages, you should see a statement that says: "Your site is ready to be published at ______."
+  3. View your website live at this given link.
+  4. Set up your own domain name (You must first buy a domain name, and then configure the domain name with Github Pages).
+
+  SETTING UP A DOMAIN NAME
+  There are multiple places where you can buy a domain name from. One of the most popular ones is Squarespace, which allows students to get a domain name at no cost for a year.
+
+  You can also buy domains from other sites, including GoDaddy and domain.com.
+
 [Include any other information that your client needs to know about your final website design. For example, what client wants or needs were unable to be realized in your final product? Why were you unable to meet those wants/needs?]
+We were able to cover all the wants and needs that they listed, which included a website design that captured the personality of their organization and log-in functionality for editing events and photos. We even showed them a preview of the site, which they were very happy about!
 
 ## Milestone 5: Final Notes to the Graders
 
 [1. Give us three specific strengths of your site that sets it apart from the previous website of the client (if applicable) and/or from other websites. Think of this as your chance to argue for the things you did really well.]
+You can find an old version of the club's site at http://circlekcornell.weebly.com/. This site is extremely poor. Not only is the background plain white and unengaging, but information and pictures are presented in a very blocked, template style with virtually no interactivity, no photos in the gallery, an blunt CKI header slapped onto the top of the pages, and little to no event information directly on the site (most of it linked to an external google doc). They also have a title that says to like them on Facebook but no link to the Facebook page for users to do so. We wanted to make a new site that left the old site in the dust (where it belonged).
+
+One strength of our site is the Executive Board Members page. On the old site, the picture of each leader was placed to the left of a block of biographical text and organized in a vertical hierarchy. On our page, the eboard is organized in a concise, horizontal manner with 3 in each row. Surface level, pertinent information (instead of big blocks of biographical text that no one will read) about each board member is neatly contained within each picture and readable upon hovering over their image, using opacity and transition effects to allow for proper contrast. The high-quality images also include a label beneath each photo stating their position, giving a Polaroid resemblance.
+
+A second strength is our header and footer. The footer includes a Facebook logo that directs to their new Facebook page upon clicking. The header also includes their club logo and both the header and footer represent the red color that is so characteristics to Circle K. The navigation bar is efficient as well, with each tab changing color upon hovering and the current tab being bolded for proper user feedback. The log-in tab also transforms into a log-out tab when the user is logged in, and vice versa when the user is logged out in order to provide again, clear feedback and prevent redundancy. Clicking on the bear logo will take you back to our sleek Home page that showcases a beautiful picture of the Circle K eboard.
+
+Lastly, a third strength of our site is the Events page. Not only are all the upcoming events and their details maintained on the site (rather than externally linked like on the old site), it is organized in minimalistic yet intuitive columns and rows that resemble an Events page on Facebook. Hovering over each individual event will highlight the row of information in a light red color to help centralize the user's attention. Once logged in, the functionality of the Event page pops out, with edit and delete buttons to the right of each events and a form below the table to add more events. All items on this page follow a cohesive color scheme and orient along the same horizontal and vertical axes, making this page both dynamic and easy to process.
+
 
 [2. Tell us about things that don't work, what you wanted to implement, or what you would do if you keep working with the client in the future. Give justifications.]
+One feature we wanted to implement but did not get to was a slideshow that had add/delete functionalities. We thought a slideshow would be less cluttered and contained than a grid-like gallery but were unsure how to code the javascript and php for this.
+
 
 [3. Tell us anything else you need us to know for when we're looking at the project.]
+We all worked really hard on this, and felt that we worked really well as a team. We just wanted to say that we're really proud of our website.

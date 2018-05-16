@@ -192,7 +192,7 @@ tr:hover {
   list-style: none;
 }
 
-.color_emphasis {
+.color_emphasis, .meetinginfo {
   font-weight: bold;
   color: #A80F2A;
 }
@@ -240,7 +240,7 @@ input[type=number] {
 
 input[type=text]:focus {
   border: 1px solid #F08080;
-  width: 20%;
+  width: auto;
 }
 
 input[type=number]:focus {
@@ -250,6 +250,10 @@ input[type=number]:focus {
 textarea:focus {
   border: 1px solid #F08080;
   width: 40%;
+}
+
+input[type=password]:focus{
+  border: 1px solid #F08080;
 }
 
 button[type=submit] {
@@ -270,7 +274,7 @@ button[type=submit] {
 #description-box{
   word-wrap: break-word;
   word-break: break-all;
-  width:500px;
+  width:800px;
   height: 50px;
 }
 
@@ -659,6 +663,7 @@ div.gallery {
     float: left;
     width: 23%;
     height: auto;
+    padding-left: 10px;
 }
 
 div.gallery img {

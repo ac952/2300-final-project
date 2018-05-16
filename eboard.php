@@ -21,6 +21,7 @@ $current_page_id = "eboard";
   <?php include("includes/header.php");?>
   <h1 class = "page_header">Executive Board Members</h1>
 
+  <!--All eboard member images are owned by Cornell Circle K-->
   <div class="container">
   <div class="leftmembercontainer">
     <img src="./uploads/images/brendon_nguyen.jpg" alt ="memberFace">

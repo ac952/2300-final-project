@@ -19,6 +19,7 @@ $current_page_id = "index";
     <div class="homepage">
       <a href = "about.php">
           <button class="btn">Enter</button> </a>
+      <!--this image is owned by Circle K-->
       <img id = "homepage" src = "uploads/images/group.png" alt = "Cornell Circle K Home"> </a>
     </div>
 
