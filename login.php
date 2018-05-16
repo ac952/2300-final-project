@@ -38,12 +38,12 @@ $current_page_id = "login";
         <ul>
           <li>
             <label>Username:</label>
-            <input id="loginbox" type="text" name="username" required/>
+            <input class="loginbox" type="text" name="username" required/>
           </li>
           <li>
             <br>
             <label>Password:</label>
-            <input id="loginbox" type="password" name="password" required/>
+            <input class="loginbox" type="password" name="password" required/>
           </li>
           <li>
             <br>
