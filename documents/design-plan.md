@@ -947,6 +947,26 @@ Task 3: Determine when and where the weekly meetings are held.
 
 [Describe in some detail what the client will do (or would have to do) in order to make this website go live. What is the deployment plan?]
 
+To deploy the website (make it so that the website is accessible to anyone who knows the link), you have two options:
+
+1. Heroku
+  1. Connect your personal project with Heroku (type: cd YOUR_PROJECT'S_LOCATION, heroku login, heroku create)
+  2. Setup configuration files (Copy and paste resources, composer.json and composer.lock files into this project)
+  3. Deploy to Heroku (type: git add -A, git commit -m "prepare deploy to Heroku", git push, git push heroku master)
+  4. View your website live (type: heroku open)
+  5. Set up your own domain name (You must first buy a domain name, and then configure it with Heroku: https://devcenter.heroku.com/articles/custom-domains)
+
+2. Github Pages
+  1. Create a new Github repository, because Cornell's repository is private.
+  2. Go to settings. Under Github Pages, you should see a statement that says: "Your site is ready to be published at ______."
+  3. View your website live at this given link.
+  4. Set up your own domain name (You must first buy a domain name, and then configure the domain name with Github Pages).
+
+  SETTING UP A DOMAIN NAME
+  There are multiple places where you can buy a domain name from. One of the most popular ones is Squarespace, which allows students to get a domain name at no cost for a year.
+
+  You can also buy domains from other sites, including godaddy and domain.com.
+
 [Include any other information that your client needs to know about your final website design. For example, what client wants or needs were unable to be realized in your final product? Why were you unable to meet those wants/needs?]
 
 ## Milestone 5: Final Notes to the Graders
@@ -956,7 +976,7 @@ You can find an old version of the club's site at http://circlekcornell.weebly.c
 
 
 [2. Tell us about things that don't work, what you wanted to implement, or what you would do if you keep working with the client in the future. Give justifications.]
-One feature we wanted to implement but did not get to was a slideshow that had add/delete functionalities. We thought a slideshow would be less cluttered and contained than a grid-like gallery but were unsure how to code the javascript and php for this. 
+One feature we wanted to implement but did not get to was a slideshow that had add/delete functionalities. We thought a slideshow would be less cluttered and contained than a grid-like gallery but were unsure how to code the javascript and php for this.
 
 
 [3. Tell us anything else you need us to know for when we're looking at the project.]
