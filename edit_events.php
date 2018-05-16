@@ -37,6 +37,7 @@ if (isset($_POST["submit_changes"])) {
     if ($date_confirm && $records) {
       // echo '<h3 id="success">Your changes have been updated!</h3>';
       array_push($messages, "<h3 class='eventAdd'>Your changes have been updated!</h3>");
+      // <button><a href="events.php">Back to Events</a></button>
       $id = $_POST['submit_changes'];
       // use INSERT events
       $sql = "UPDATE events SET event_name = '$event_name',
@@ -44,6 +45,9 @@ if (isset($_POST["submit_changes"])) {
       description='$description' WHERE id = '$id'";
       $params = array();
       $records = exec_sql_query($db, $sql, $params);
+      // header("Location: events.php");
+      // array_push($messages, "<h3 class='eventAdd'>Your changes have been updated!</h3>");
+      // echo "success";
 
     } else {
       // echo '<h3 id="fail">Changes have not been updated. </h3>';
@@ -137,6 +141,9 @@ if (isset($_POST["submit_changes"])) {
           <button name="submit_changes" type="submit"
           value='<?php foreach($records as $record) {echo $record['id'];}
           ?>'>Update Changes</button>
+
+          <!-- <button><a href="events.php" id="back_button">Back to Events</a></button> -->
+
 
         </li>
       </ul>
