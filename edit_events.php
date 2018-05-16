@@ -142,7 +142,7 @@ if (isset($_POST["submit_changes"])) {
           value='<?php foreach($records as $record) {echo $record['id'];}
           ?>'>Update Changes</button>
 
-          <button type="submit"><a href="events.php" id="back_button">Back to Events</a></button>
+          <button><a href="events.php" id="back_button">Back to Events</a></button>
 
 
         </li>
