@@ -30,6 +30,6 @@ Full Names:
 Net IDs:
 (Only include the names/NetIDs of team members who contributed to this milestone.)
 
-Date:
+Date: 
 
 ---
