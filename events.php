@@ -58,7 +58,7 @@ if(isset($_GET['submit_delete'])){
     $sql = "DELETE FROM events WHERE id='$id'";
     $params = array();
     exec_sql_query($db, $sql, $params);
-    array_push($messages, "<h3 class='fail'>Failed to add event. *Fix your field inputs </h3>");
+    array_push($messages, "<h3 class='fail'>Event has been deleted.</h3>");
 }
 ?>
 
