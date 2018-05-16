@@ -14,7 +14,7 @@ if (isset($_POST["submit_changes"])) {
   $event_date = filter_input(INPUT_POST, 'event_date', FILTER_SANITIZE_STRING);
   // $event_date= preg_replace('/\s+/', ' ', $event_date);
   $date_confirm = FALSE;
-  if (preg_match("/^(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])-[0-9]{2}$/",$event_date)){
+  if (preg_match("/^(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])-[0-9]{2}$/",trim($event_date,' '))){
       $date_confirm = TRUE;
     }
     else {
@@ -99,7 +99,10 @@ if (isset($_POST["submit_changes"])) {
         </li>
         <li>
           <label>Date:</label>
-          <input type="text" name="event_date" placeholder="MM-DD-YY" required/>
+          <!-- <input type="text" name="event_date" placeholder="MM-DD-YY" required/> -->
+          <input type="text" name="event_date"
+          value =" <?php foreach($records as $record)
+          {echo htmlspecialchars($record['event_date']);}?> " required/>
           <?php
           foreach ($date_messages as $date){
               echo '<p class="date-format">'.$date.'</p>';
