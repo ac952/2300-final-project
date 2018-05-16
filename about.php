@@ -46,7 +46,7 @@ $current_page_id = "about";
 <p class="aboutp">To uphold the Objects of Circle K International, to foster compassion and
   goodwill toward others through service and leadership, to develop our abilities
   and the abilities of all people, and to dedicate ourselves to the realization
-  of mankind's potential.</p>
+  of humankind's potential.</p>
 
 <span class="about_subheadings">Philanthropy Initiatives</span><br>
 <p class="aboutp">CKI raises funds for various causes. The major intitiative is "Focusing on the

@@ -192,7 +192,7 @@ tr:hover {
   list-style: none;
 }
 
-.color_emphasis {
+.color_emphasis, .meetinginfo {
   font-weight: bold;
   color: #A80F2A;
 }

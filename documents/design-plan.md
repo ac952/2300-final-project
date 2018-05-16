@@ -690,24 +690,26 @@ Task 1: Find the name and contact details for the VP of Finance.
 
 Task 2: Login and add a gallery photo.
 
-1. Move the mouse to the Login tab in the navigation.
-2. Click on the Login tab.
-3. Select the username field by clicking on it.
-4. Enter the username (provided)
-5. Select the password field by clicking on it.
-6. Enter the password (provided)
-7. Click on the Login button.
-8. Move the mouse to the Gallery tab in the navigation.
-10. Click the add button near on the page, which allows a logged-in user to make edits via a form.
-11. Click on 'upload image'.
-12. Select image from the desktop (provided).
-13. Click on submit button.
+  1. Move the mouse to the Login tab in the navigation.
+  2. Click on the Login tab.
+  3. Select the username field by clicking on it.
+  4. Enter the username (provided)
+  5. Select the password field by clicking on it.
+  6. Enter the password (provided)
+  7. Click on the Login button.
+  8. Move the mouse to the Gallery tab in the navigation.
+  9. Click on the Gallery tab.
+  10. Find the button to add a photo.
+  11. Click the 'Choose file' button.
+  12. Select image from the desktop (provided).
+  13. Click on 'Open'.
+  14. Click on the 'Upload' button.
 
 Task 3: Determine when and where the weekly meetings are held.
 
-1. Move the mouse to the About tab in the navigation.
-2. Click on the About tab.
-3. Scroll through the page to find the section detailing the time and location of weekly meetings.
+  1. Move the mouse to the About tab in the navigation.
+  2. Click on the About tab.
+  3. Scroll through the page to find the section detailing the time and location of weekly meetings.
 
 #### Task 1 - Cognitive Walkthrough
 
@@ -865,41 +867,41 @@ Task 3: Determine when and where the weekly meetings are held.
 
         - Will Abby know what to do at this step?
           - Yes, maybe or no: Yes
-          - Why? The 'Upload file' button is clearly visible and labeled, and it is intuitive to click on it to add a photo.
+          - Why? The 'Choose file' button is clearly visible and labeled, and it is intuitive to click on it to add a photo.
 
         - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
           - Yes, maybe or no: Yes
           - Why? When she clicks the button, a page pops up allowing her to browse photos from her computer. This is a clear indication she is on the right path.
 
-  **Action #5 : Click on 'upload image'**
+  **Action #5 : Select image from the desktop (provided)**
 
         - Will Abby know what to do at this step?
           - Yes, maybe or no: Yes
-          - Why? Abby is used to process-oriented learning and so is used to the similar upload methods and mechanisms across platforms. The word 'image' is also a useful sign, as the other input fields will all be text-based.
-
-        - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
-          - Yes, maybe or no: Yes
-          - Why? A box will pop up that allows her to choose an image - this is a clear indicator she is on the right track.
-
-  **Action #6 : Select image from the desktop (provided)**
-
-        - Will Abby know what to do at this step?
-          - Yes, maybe or no: Yes
-          - Why? The box that pops up in the previous step will clearly indicate the locations she may choose in image from. She will have been provided the image by us and so will have the file directory.
+          - Why? The box that pops up in the previous step will clearly indicate the locations she may choose an image from. She will have been provided the image by us and so will have the file directory.
 
         - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
           - Yes, maybe or no: Yes
           - Why? She will see that the image has been selected once she clicks on it as it will change color in the box (highlighted in blue) and the file path will have the name of the image.
 
-  **Action #7 : Click on the Submit button**
+  **Action #6 : Click on 'Open'**
 
         - Will Abby know what to do at this step?
           - Yes, maybe or no: Yes
-          - Why? As mentioned above, she is used to process-oriented learning and so is used to the similar submission methods across platforms. The logical step after making the change she needed to (i.e. uploading the new image) is to press the submit button.
+          - Why? Abby is used to process-oriented learning and so is used to the similar upload methods and mechanisms across platforms. There are only two buttons available in the popup window, 'Cancel' and 'Open', so it is intuitive to choose the latter.
 
         - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
           - Yes, maybe or no: Yes
-          - Why? Either the form will return a 'Form Successfully Submitted' response, or will provide an error message stating that the file could not be uploaded - ideally with a reason e.g. file size issue - in which case she can try again after correcting the issue.
+          - Why? The name of the file she has chosen will appear next to the 'Choose file' button, clearly indicating if she has succeeded
+
+  **Action #7 : Click on the Upload button**
+
+        - Will Abby know what to do at this step?
+          - Yes, maybe or no: Yes
+          - Why? As mentioned above, she is used to process-oriented learning and so is used to the similar submission methods across platforms. The logical step after making the change she needed to (i.e. uploading the new image) is to press the Upload button.
+
+        - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+          - Yes, maybe or no: Yes
+          - Why? Either the form will return a 'Image Successfully Uploaded' response, or will provide an error message stating that the file could not be uploaded, allowing her to know whether she has successfully completed the task.
 
 #### Task 3 - Cognitive Walkthrough
 
@@ -909,7 +911,7 @@ Task 3: Determine when and where the weekly meetings are held.
 
   - Will Abby have formed this sub-goal as a step to their overall goal?
     - Yes, maybe or no: Maybe
-    - Why? Locating and selecting a tab should be intuitive for Abby as a nav bar is a familiar way to navigate a webpage, but she may be confused between the About and the Events tabs. Testing various users will allow us to determine which tab is more intuitive to the average viewer of the website in that they would expect it to hold information about the organization's weekly meetings.
+    - Why? Locating and selecting a tab should be intuitive for Abby as a nav bar is a familiar way to navigate a webpage, and after some user testing we concluded that the About tab was the most intuitive place to display the information on weekly meetings. Users feedback indicated that the other alternative, the Events tab, gave the impression of only holding information about one-time events that are unique to each semester, while the About page was thought to hold information on more consistent meetings.
 
     **Action #1 : Move the mouse to the About tab in the navigation**
 
@@ -935,9 +937,11 @@ Task 3: Determine when and where the weekly meetings are held.
 
     - Will Abby have formed this sub-goal as a step to their overall goal?
       - Yes, maybe or no: Yes
-      - Why? This should be intuitive for Abby as most users' first instinct will be to skim through the page for information. The weekly meetings' time and location will be clearly delineated in a differently formatted section under the main About paragraph.
+      - Why? This should be intuitive for Abby as most users' first instinct will be to skim through the page for information. The weekly meetings' time and location is clearly delineated in a differently formatted section under the main About information. The font color is different and the information is indented to make it stand out to the user more.
 
 ### Cognitive Walk-though Results
+
+Our cognitive walkthrough remained essentially the same, though for task two the wording for some of the actions changed as we implemented our design. For example, we used 'Upload' instead of 'Submit' as the word is more intuitive for the action of submitting a photo as opposed to a text-based form. We were very careful from the beginning to preempt any gender-inclusiveness bugs in our design, and thankfully did not run across any during the cognitive walkthroughs or in user testing. Users of both genders felt comfortable using the site, commenting that it felt clear, informative, and unbiased. We also made sure to use gender-inclusive pronouns throughout the site, for example in the About section detailing Circle K's mission (except for where the club's history required us to reference a particular gender). We did change 'mankind' to 'humankind' in one of the sections to make the current mission more inclusive.
 
 [Did you discover any issues with your design? What were they? How did you change your design to address the gender-inclusiveness bugs you discovered?]
 
