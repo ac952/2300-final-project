@@ -130,7 +130,7 @@ if (isset($_POST["submit_changes"])) {
           <input id="description-box" type="text" name="description"
           value =" <?php foreach($records as $record)
           {echo htmlspecialchars($record['description']);}?> " required/>
-  
+
         </li>
         <li>
         <br>
