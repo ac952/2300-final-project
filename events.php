@@ -110,7 +110,13 @@ function print_event($record) {
       ?>
 
     <h1 id="page_header"> Events</h1>
+
+
     <?php
+    // $msg=$_GET['message'];
+    // echo $msg;
+
+
     $sql = "SELECT * FROM events;";
     $params = array();
     $records = exec_sql_query($db, $sql, $params)->fetchAll();
