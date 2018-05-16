@@ -4,7 +4,7 @@ $current_page_id = "login";
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="UTF-8" />

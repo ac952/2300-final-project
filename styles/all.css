@@ -113,7 +113,7 @@ article {
   list-style: none;
 }
 
-#uploadFile ul {
+.uploadFile ul {
   list-style: none;
 }
 
@@ -660,6 +660,6 @@ div.gallery img {
   border: 1px solid #ccc;
 }
 
-#deletephoto {
+.deletephoto {
   display: inline-block;
 }

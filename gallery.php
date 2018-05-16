@@ -57,7 +57,7 @@ if (isset($_POST["submit_upload"])) {
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang = "en">
 
 <head>
   <meta charset="UTF-8" />
@@ -109,7 +109,7 @@ if (isset($_POST["submit_upload"])) {
       $records = exec_sql_query($db, "SELECT * FROM images")->fetchAll(PDO::FETCH_ASSOC);
       foreach($records as $record){
         echo "<div class=\"gallery\">";
-        echo "<img src=\"" .IMG_UPLOADS_PATH. htmlspecialchars($record["id"].".".$record["img_ext"]) .
+        echo "<img alt = 'image' src=\"" .IMG_UPLOADS_PATH. htmlspecialchars($record["id"].".".$record["img_ext"]) .
         "\">";
         //checks if user is owner and logged in before showing delete option
         $sql = "SELECT * FROM images WHERE id = :img_id";
@@ -123,12 +123,13 @@ if (isset($_POST["submit_upload"])) {
           if($current_user) {
             if($current_user==$owner_id){ ?>
 
-            <form id="uploadFile" action=<?php echo "gallery.php?delete_photo=".htmlspecialchars($record["id"]) ?>
+            <form class="uploadFile" action=<?php echo "gallery.php?delete_photo=".htmlspecialchars($record["id"])?>
               method="post" enctype="multipart/form-data">
               <!-- <ul>
                 <li> -->
-                <div id="deletephoto">
-                  <caption>Delete this photo:</caption>
+                <div class="deletephoto">
+                  <!-- <caption>Delete this photo:</caption> -->
+                  <p>Delete this photo:</p>
 
                   <!-- OFFICE HOURS NOTES: Put the above button INSIDE the photo div -->
                 <!-- </li>
@@ -151,7 +152,8 @@ if (isset($_POST["submit_upload"])) {
     }
     ?>
     </div>
+    <?php include("includes/footer.php");?>
   </article>
   </body>
-  <?php include("includes/footer.php");?>
+
 </html>

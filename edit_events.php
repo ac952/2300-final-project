@@ -74,6 +74,7 @@ if (isset($_POST["submit_changes"])) {
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" type="text/css" href="styles/all.css" media="all" />
+  <title>Edit Events</title>
 </head>
 
 <body>
@@ -89,8 +90,9 @@ if (isset($_POST["submit_changes"])) {
     <!-- get the info from db based on selected cell id-->
     <!-- echo inside input -->
     <form id="event" action="edit_events.php" method="post">
+      <h1>Edit Event </h1>
       <ul>
-        <h1>Edit Event </h1>
+
         <li>
           <label>Event Name:</label>
           <input type="text" name="event_name"
@@ -125,10 +127,10 @@ if (isset($_POST["submit_changes"])) {
           <label>Description:</label>
         </li>
         <li>
-          <input id="description-box" type="text" name="description" cols="40" rows="5"
+          <input id="description-box" type="text" name="description"
           value =" <?php foreach($records as $record)
           {echo htmlspecialchars($record['description']);}?> " required/>
-        </input>
+  
         </li>
         <li>
         <br>

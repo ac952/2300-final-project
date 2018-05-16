@@ -5,4 +5,4 @@
   <div id = "facebook_logo"><a  href = "https://www.facebook.com/cornellcki/"><img src = "./uploads/images/fb_logo.png" alt = "Facebook Logo"> </a></div>
 
 </div>
-<footer>
+</footer>

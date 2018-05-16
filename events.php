@@ -139,7 +139,7 @@ function print_event($record) {
           <label>Event Name:</label>
           <input type="text" name="event_name" required/>
         </li>
-        <br>
+        <!-- <br> -->
         <li>
           <label>Date:</label>
           <input type="text" name="event_date" placeholder="MM-DD-YY" required/>
@@ -149,25 +149,25 @@ function print_event($record) {
             }
             ?>
         </li>
-        <br>
+        <!-- <br> -->
         <li>
           <label>Time:</label>
           <input type="text" name="event_time" placeholder="1:00pm" required/>
         </li>
-        <br>
+        <!-- <br> -->
         <li>
           <label>Location:</label>
           <input type="text" name="location" required/>
         </li>
-        <br>
+        <!-- <br> -->
         <li>
           <label>Description:</label>
         </li>
-        <br>
+        <!-- <br> -->
         <li>
-          <textarea type="text" name="description" cols="40" rows="5"></textarea>
+          <textarea name="description" cols="40" rows="5"></textarea>
         </li>
-        <br>
+        <!-- <br> -->
         <li>
           <button name="submit_insert" type="submit">Add Event</button>
         </li>
@@ -176,10 +176,8 @@ function print_event($record) {
   <?php }?>
 
   </div>
-  <!-- <div id="ckilogo">
-  <img src="logo2.png" alt="ckilogo">
-</div> -->
+<?php include("includes/footer.php");?>
   </article>
   </body>
-  <?php include("includes/footer.php");?>
+
 </html>
