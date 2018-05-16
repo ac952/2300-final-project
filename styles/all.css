@@ -113,7 +113,7 @@ article {
   list-style: none;
 }
 
-#uploadFile ul {
+.uploadFile ul {
   list-style: none;
 }
 
@@ -240,7 +240,7 @@ input[type=number] {
 
 input[type=text]:focus {
   border: 1px solid #F08080;
-  width: 20%;
+  width: auto;
 }
 
 input[type=number]:focus {
@@ -250,6 +250,10 @@ input[type=number]:focus {
 textarea:focus {
   border: 1px solid #F08080;
   width: 40%;
+}
+
+input[type=password]:focus{
+  border: 1px solid #F08080;
 }
 
 button[type=submit] {
@@ -654,12 +658,13 @@ div.gallery {
     float: left;
     width: 23%;
     height: auto;
+    padding-left: 10px;
 }
 
 div.gallery img {
   border: 1px solid #ccc;
 }
 
-#deletephoto {
+.deletephoto {
   display: inline-block;
 }
