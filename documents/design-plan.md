@@ -667,7 +667,7 @@ clear session and display message to user whether or not log out was successful
 ## Milestone 3: Updates
 
 [If you make any changes to your plan or design, make a list of the changes here.]
-We decided to take out the edit eboard function, because we decided that the organization will only edit the eboard section once a year (as opposed to every couple weeks for the gallery and the events pages). It makes more sense to incorporate the ability to edit for those two pages on the website, and have more long-term edits be allowed in the code. Thus, editing the eboard will be left in the hands of a future webmaster. 
+We decided to take out the edit eboard function, because we decided that the organization will only edit the eboard section once a year (as opposed to every couple weeks for the gallery and the events pages). It makes more sense to incorporate the ability to edit for those two pages on the website, and have more long-term edits be allowed in the code. Thus, editing the eboard will be left in the hands of a future webmaster.
 
 
 ## Milestone 4: Updates
