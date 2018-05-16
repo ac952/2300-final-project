@@ -10,24 +10,23 @@ $current_page_id = "eboard";
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" type="text/css" href="styles/all.css" media="all" />
+  <title>Eboard</title>
 </head>
 
 <!-- <div class="container"> -->
-  <title>EBoard</title>
 
-<div class="body">
+<!-- <div class="body"> -->
 <body>
-
   <article>
   <?php include("includes/header.php");?>
   <h1 class = "page_header">Executive Board Members</h1>
 
   <div class="container">
-  <div class="membercontainer">
+  <div class="leftmembercontainer">
     <img src="./uploads/images/brendon_nguyen.jpg" alt ="memberFace">
     <div class="overlay">
       <div class="membername">Brendon Nguyen</div>
-      <div class="major">Major: Computer Science</div>
+      <div class="major">Major: CS</div>
       <div class="year">Year: 2020</div>
       <div class="hometown">Hometown: Mansfield, TX</div>
       <div class="hobby">Hobby: Rubiks cubes</div>
@@ -52,7 +51,7 @@ $current_page_id = "eboard";
 </div>
 
 
-<div class="membercontainer">
+<div class="rightmembercontainer">
   <img src="./uploads/images/will_pascocello.jpg" alt ="memberFace">
   <div class="overlay">
     <div class="membername">Will Pascocello</div>
@@ -69,7 +68,7 @@ $current_page_id = "eboard";
 </div>
 
 <div class="container">
-<div class="membercontainer">
+<div class="leftmembercontainer">
   <img src="./uploads/images/adam_fekini.jpg" alt ="memberFace">
   <div class="overlay">
     <div class="membername">Adam Fekini</div>
@@ -97,13 +96,13 @@ $current_page_id = "eboard";
 </div>
 </div>
 
-<div class="membercontainer">
-  <img id="harper" src="./uploads/images/lauren_harper.jpg" alt ="memberFace">
+<div class="rightmembercontainer">
+  <img src="./uploads/images/donna_yu.jpg" alt ="memberFace">
   <div class="overlay">
-    <div class="membername">Lauren Harper</div>
-    <div class="major">Major: Animal Science</div>
-    <div class="year">Year: 2020</div>
-    <div class="hometown">Hometown: New Egypt, NJ</div>
+    <div class="membername">Donna Yu</div>
+    <div class="major">Major: AEM</div>
+    <div class="year">Year: 2019</div>
+    <div class="hometown">Hometown: Stekaut, NY</div>
     <div class="hobby">Hobby: Knitting</div>
 </div>
 <div class="photolabel">
@@ -117,7 +116,7 @@ $current_page_id = "eboard";
   <?php include( "includes/footer.php" ); ?>
 </article>
 </body>
-</div>
+<!-- </div> -->
 
 <!-- </div> -->
 </html>

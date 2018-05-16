@@ -63,14 +63,18 @@ if (isset($_POST["submit_upload"])) {
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" type="text/css" href="styles/all.css" media="all" />
+  <title>Gallery</title>
 </head>
 
 <body>
   <article>
   <?php include("includes/header.php");?>
     <div id="content-wrap">
-    <title>Gallery</title>
+    <h1 id="page_header"> Gallery</h1>
+
     <?php
+      print_messages();
+
       if($delete_photo){
         $sql = "DELETE FROM images WHERE id=:img_id;";
         $params = array(
@@ -83,9 +87,7 @@ if (isset($_POST["submit_upload"])) {
         echo "<h2>Photo was successfully deleted.</h2>";
       }
     ?>
-      <h1 id="page_header"> Gallery</h1>
-        <p>Browse gallery.</p>
-      <?php
+    <?php
       if($current_user) { ?>
 
       <form id="uploadFile" action="gallery.php" method="post" enctype="multipart/form-data">
@@ -99,46 +101,57 @@ if (isset($_POST["submit_upload"])) {
           <button name="submit_upload" type="submit">Upload</button>
         </li>
       </ul>
-    </form>
-    <?php }?>
+      </form>
+      <?php }?>
 
 
     <?php
       $records = exec_sql_query($db, "SELECT * FROM images")->fetchAll(PDO::FETCH_ASSOC);
       foreach($records as $record){
+        echo "<div class=\"gallery\">";
         echo "<img src=\"" .IMG_UPLOADS_PATH. htmlspecialchars($record["id"].".".$record["img_ext"]) .
-        "\">" ."</a></div>";
-
+        "\">";
         //checks if user is owner and logged in before showing delete option
         $sql = "SELECT * FROM images WHERE id = :img_id";
         $params = array(
           ':img_id' => $record["id"]
         );
         $records = exec_sql_query($db, $sql, $params)->fetchAll();
-        foreach($records as $record){
+        foreach($records as $record) {
           $owner_id = $record["user_id"];
 
-        if($current_user) {
-          if($current_user==$owner_id){?>
+          if($current_user) {
+            if($current_user==$owner_id){ ?>
 
-          <form id="uploadFile" action=<?php echo "gallery.php?delete_photo=".htmlspecialchars($record["id"]) ?>
-            method="post" enctype="multipart/form-data">
-            <ul>
-              <li>
-                <label>Delete this photo:</label>
-              </li>
-              <li>
-                <input type="submit" name="delete_photo" value="Delete">
-              </li>
-            </ul>
-          </form>
-        <?php }}
-            }}
-         ?>
+            <form id="uploadFile" action=<?php echo "gallery.php?delete_photo=".htmlspecialchars($record["id"]) ?>
+              method="post" enctype="multipart/form-data">
+              <!-- <ul>
+                <li> -->
+                <div id="deletephoto">
+                  <caption>Delete this photo:</caption>
+
+                  <!-- OFFICE HOURS NOTES: Put the above button INSIDE the photo div -->
+                <!-- </li>
+                <li> -->
+                  <input type="submit" name="delete_photo" value="Delete">
+                </div>
+                <!-- </li>
+              </ul> -->
+            </form>
+          <?php
+        }
+      }
+    }
+
+        echo "</div>";
+
+        // OFFICE HOURS NOTES: Put the Delete button inside the above div - have picked it out below
+
+
+    }
+    ?>
     </div>
   </article>
   </body>
-
   <?php include("includes/footer.php");?>
-
 </html>

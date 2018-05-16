@@ -3,7 +3,7 @@
 $title = "Circle K International";
 
 $pages = array(
-  "index" => "About",
+  "about" => "About",
   "eboard" => "E-Board",
   "events" => "Events",
   "gallery" => "Gallery",
@@ -14,7 +14,7 @@ $pages = array(
 // An array to deliver messages to the user.
 $messages = array();
 
-// Record a message to display to the user.
+// records message to display to the user.
 function record_message($message) {
   global $messages;
   array_push($messages, $message);
@@ -28,7 +28,7 @@ function record_message($message) {
 //   return NULL;
 // }
 
-// Write out any messages to the user.
+// prints messages to the user.
 function print_messages() {
   global $messages;
   foreach ($messages as $message) {
