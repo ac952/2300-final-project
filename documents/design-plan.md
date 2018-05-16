@@ -968,6 +968,7 @@ To deploy the website (make it so that the website is accessible to anyone who k
   You can also buy domains from other sites, including godaddy and domain.com.
 
 [Include any other information that your client needs to know about your final website design. For example, what client wants or needs were unable to be realized in your final product? Why were you unable to meet those wants/needs?]
+We were able to cover all the wants and needs that they listed, which included a website design that captured the personality of their organization and log-in functionality for editing events and photos. We even showed them a preview of the site, which they were very happy about!
 
 ## Milestone 5: Final Notes to the Graders
 
