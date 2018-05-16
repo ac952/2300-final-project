@@ -673,7 +673,7 @@ We decided to take out the edit eboard function, because we decided that the org
 ## Milestone 4: Updates
 
 [If you make any changes to your plan or design based on your peers' feedback, make a list of the changes here.]
-
+We took feedback from TAs, classmates, and Professor Harms to incorporate a simple Home page with an "enter" button that would navigate the actual content of the website (Professor Harms recommended this because our "about" page has a lot of text and is not appealing as an index page), add regex filters to our Event input; redesign our Eboard page to make it more impressive and interactive with hover effects, better quality pictures, and floating; reorganize the placement of our photos and "delete" buttons on the gallery page; and make our header and footer position sticky. 
 
 ## Milestone 5: Cognitive Walkthrough
 
