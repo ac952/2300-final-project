@@ -965,7 +965,7 @@ To deploy the website (make it so that the website is accessible to anyone who k
   SETTING UP A DOMAIN NAME
   There are multiple places where you can buy a domain name from. One of the most popular ones is Squarespace, which allows students to get a domain name at no cost for a year.
 
-  You can also buy domains from other sites, including godaddy and domain.com.
+  You can also buy domains from other sites, including GoDaddy and domain.com.
 
 [Include any other information that your client needs to know about your final website design. For example, what client wants or needs were unable to be realized in your final product? Why were you unable to meet those wants/needs?]
 We were able to cover all the wants and needs that they listed, which included a website design that captured the personality of their organization and log-in functionality for editing events and photos. We even showed them a preview of the site, which they were very happy about!
@@ -987,3 +987,4 @@ One feature we wanted to implement but did not get to was a slideshow that had a
 
 
 [3. Tell us anything else you need us to know for when we're looking at the project.]
+We all worked really hard on this, and felt that we worked really well as a team. We just wanted to say that we're really proud of our website.
